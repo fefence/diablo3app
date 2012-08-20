@@ -18,6 +18,7 @@
 		F226A0CE15E223A700AFF97D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F226A0CD15E223A700AFF97D /* Storyboard.storyboard */; };
 		F226A0D415E2285E00AFF97D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D315E2285E00AFF97D /* MainViewController.m */; };
 		F226A0D715E2289B00AFF97D /* GemCalcMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D615E2289B00AFF97D /* GemCalcMainController.m */; };
+		F226A0DA15E249BF00AFF97D /* GemCalcSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D915E249BF00AFF97D /* GemCalcSettingsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		F226A0D315E2285E00AFF97D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F226A0D515E2289B00AFF97D /* GemCalcMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcMainController.h; sourceTree = "<group>"; };
 		F226A0D615E2289B00AFF97D /* GemCalcMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcMainController.m; sourceTree = "<group>"; };
+		F226A0D815E249BF00AFF97D /* GemCalcSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcSettingsController.h; sourceTree = "<group>"; };
+		F226A0D915E249BF00AFF97D /* GemCalcSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcSettingsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				F226A0D315E2285E00AFF97D /* MainViewController.m */,
 				F226A0D515E2289B00AFF97D /* GemCalcMainController.h */,
 				F226A0D615E2289B00AFF97D /* GemCalcMainController.m */,
+				F226A0D815E249BF00AFF97D /* GemCalcSettingsController.h */,
+				F226A0D915E249BF00AFF97D /* GemCalcSettingsController.m */,
 			);
 			path = DiabloIIIApp;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				F226A0C715E2238300AFF97D /* DiabloIIIApp.xcdatamodeld in Sources */,
 				F226A0D415E2285E00AFF97D /* MainViewController.m in Sources */,
 				F226A0D715E2289B00AFF97D /* GemCalcMainController.m in Sources */,
+				F226A0DA15E249BF00AFF97D /* GemCalcSettingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
