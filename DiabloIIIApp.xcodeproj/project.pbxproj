@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F226A0B215E2238300AFF97D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B115E2238300AFF97D /* UIKit.framework */; };
+		F226A0B415E2238300AFF97D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B315E2238300AFF97D /* Foundation.framework */; };
+		F226A0B615E2238300AFF97D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B515E2238300AFF97D /* CoreGraphics.framework */; };
+		F226A0B815E2238300AFF97D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B715E2238300AFF97D /* CoreData.framework */; };
+		F226A0BE15E2238300AFF97D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F226A0BC15E2238300AFF97D /* InfoPlist.strings */; };
+		F226A0C015E2238300AFF97D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0BF15E2238300AFF97D /* main.m */; };
+		F226A0C415E2238300AFF97D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0C315E2238300AFF97D /* AppDelegate.m */; };
+		F226A0C715E2238300AFF97D /* DiabloIIIApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F226A0C515E2238300AFF97D /* DiabloIIIApp.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F226A0AD15E2238300AFF97D /* DiabloIIIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabloIIIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F226A0B115E2238300AFF97D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F226A0B315E2238300AFF97D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F226A0B515E2238300AFF97D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F226A0B715E2238300AFF97D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F226A0BB15E2238300AFF97D /* DiabloIIIApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DiabloIIIApp-Info.plist"; sourceTree = "<group>"; };
+		F226A0BD15E2238300AFF97D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F226A0BF15E2238300AFF97D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F226A0C115E2238300AFF97D /* DiabloIIIApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiabloIIIApp-Prefix.pch"; sourceTree = "<group>"; };
+		F226A0C215E2238300AFF97D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F226A0C315E2238300AFF97D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F226A0C615E2238300AFF97D /* DiabloIIIApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiabloIIIApp.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F226A0AA15E2238300AFF97D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F226A0B215E2238300AFF97D /* UIKit.framework in Frameworks */,
+				F226A0B415E2238300AFF97D /* Foundation.framework in Frameworks */,
+				F226A0B615E2238300AFF97D /* CoreGraphics.framework in Frameworks */,
+				F226A0B815E2238300AFF97D /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F226A0A215E2238300AFF97D = {
+			isa = PBXGroup;
+			children = (
+				F226A0B915E2238300AFF97D /* DiabloIIIApp */,
+				F226A0B015E2238300AFF97D /* Frameworks */,
+				F226A0AE15E2238300AFF97D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F226A0AE15E2238300AFF97D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F226A0AD15E2238300AFF97D /* DiabloIIIApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F226A0B015E2238300AFF97D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F226A0B115E2238300AFF97D /* UIKit.framework */,
+				F226A0B315E2238300AFF97D /* Foundation.framework */,
+				F226A0B515E2238300AFF97D /* CoreGraphics.framework */,
+				F226A0B715E2238300AFF97D /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F226A0B915E2238300AFF97D /* DiabloIIIApp */ = {
+			isa = PBXGroup;
+			children = (
+				F226A0C215E2238300AFF97D /* AppDelegate.h */,
+				F226A0C315E2238300AFF97D /* AppDelegate.m */,
+				F226A0C515E2238300AFF97D /* DiabloIIIApp.xcdatamodeld */,
+				F226A0BA15E2238300AFF97D /* Supporting Files */,
+			);
+			path = DiabloIIIApp;
+			sourceTree = "<group>";
+		};
+		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F226A0BB15E2238300AFF97D /* DiabloIIIApp-Info.plist */,
+				F226A0BC15E2238300AFF97D /* InfoPlist.strings */,
+				F226A0BF15E2238300AFF97D /* main.m */,
+				F226A0C115E2238300AFF97D /* DiabloIIIApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F226A0AC15E2238300AFF97D /* DiabloIIIApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F226A0CA15E2238300AFF97D /* Build configuration list for PBXNativeTarget "DiabloIIIApp" */;
+			buildPhases = (
+				F226A0A915E2238300AFF97D /* Sources */,
+				F226A0AA15E2238300AFF97D /* Frameworks */,
+				F226A0AB15E2238300AFF97D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiabloIIIApp;
+			productName = DiabloIIIApp;
+			productReference = F226A0AD15E2238300AFF97D /* DiabloIIIApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F226A0A415E2238300AFF97D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Vesela Popova";
+			};
+			buildConfigurationList = F226A0A715E2238300AFF97D /* Build configuration list for PBXProject "DiabloIIIApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F226A0A215E2238300AFF97D;
+			productRefGroup = F226A0AE15E2238300AFF97D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F226A0AC15E2238300AFF97D /* DiabloIIIApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F226A0AB15E2238300AFF97D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F226A0BE15E2238300AFF97D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F226A0A915E2238300AFF97D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F226A0C015E2238300AFF97D /* main.m in Sources */,
+				F226A0C415E2238300AFF97D /* AppDelegate.m in Sources */,
+				F226A0C715E2238300AFF97D /* DiabloIIIApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F226A0BC15E2238300AFF97D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F226A0BD15E2238300AFF97D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F226A0C815E2238300AFF97D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F226A0C915E2238300AFF97D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F226A0CB15E2238300AFF97D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DiabloIIIApp/DiabloIIIApp-Prefix.pch";
+				INFOPLIST_FILE = "DiabloIIIApp/DiabloIIIApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F226A0CC15E2238300AFF97D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DiabloIIIApp/DiabloIIIApp-Prefix.pch";
+				INFOPLIST_FILE = "DiabloIIIApp/DiabloIIIApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F226A0A715E2238300AFF97D /* Build configuration list for PBXProject "DiabloIIIApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F226A0C815E2238300AFF97D /* Debug */,
+				F226A0C915E2238300AFF97D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F226A0CA15E2238300AFF97D /* Build configuration list for PBXNativeTarget "DiabloIIIApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F226A0CB15E2238300AFF97D /* Debug */,
+				F226A0CC15E2238300AFF97D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F226A0C515E2238300AFF97D /* DiabloIIIApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F226A0C615E2238300AFF97D /* DiabloIIIApp.xcdatamodel */,
+			);
+			currentVersion = F226A0C615E2238300AFF97D /* DiabloIIIApp.xcdatamodel */;
+			path = DiabloIIIApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F226A0A415E2238300AFF97D /* Project object */;
+}
