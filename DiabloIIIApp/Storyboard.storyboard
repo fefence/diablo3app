@@ -36,6 +36,29 @@
             </objects>
             <point key="canvasLocation" x="31" y="73"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Lss-eM-obL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQ4-Wm-xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Z8R-sB-H01" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBx-uc-lv1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dyt-cf-GQv">
+                                <rect key="frame" x="139" y="219" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="29" y="678"/>
+        </scene>
         <!--Gem Calc Main Controller-->
         <scene sceneID="bLW-YP-4d3">
             <objects>
