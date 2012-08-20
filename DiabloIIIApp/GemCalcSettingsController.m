@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[_scrollView setContentSize:CGSizeMake(320, 670)];
+	[_scrollView setContentSize:CGSizeMake(320, 700)];
 }
 
 - (void)viewDidUnload
