@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92E97A915E24BD60043BDAB /* amulet14_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E979D15E24BD60043BDAB /* amulet14_barbarian_male.png */; };
+		D92E97AA15E24BD60043BDAB /* belt_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E979E15E24BD60043BDAB /* belt_206_barbarian_male.png */; };
+		D92E97AB15E24BD60043BDAB /* boots_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E979F15E24BD60043BDAB /* boots_206_barbarian_male.png */; };
+		D92E97AC15E24BD60043BDAB /* bracers_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A015E24BD60043BDAB /* bracers_206_barbarian_male.png */; };
+		D92E97AD15E24BD60043BDAB /* chestarmor_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A115E24BD60043BDAB /* chestarmor_206_barbarian_male.png */; };
+		D92E97AE15E24BD60043BDAB /* gloves_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A215E24BD60043BDAB /* gloves_206_barbarian_male.png */; };
+		D92E97AF15E24BD60043BDAB /* helm_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A315E24BD60043BDAB /* helm_206_barbarian_male.png */; };
+		D92E97B015E24BD60043BDAB /* pants_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A415E24BD60043BDAB /* pants_206_barbarian_male.png */; };
+		D92E97B115E24BD60043BDAB /* ring_23_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A515E24BD60043BDAB /* ring_23_barbarian_male.png */; };
+		D92E97B215E24BD60043BDAB /* shield_207_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A615E24BD60043BDAB /* shield_207_barbarian_male.png */; };
+		D92E97B315E24BD60043BDAB /* shoulders_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A715E24BD60043BDAB /* shoulders_206_barbarian_male.png */; };
+		D92E97B415E24BD60043BDAB /* sword_1h_208_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A815E24BD60043BDAB /* sword_1h_208_barbarian_male.png */; };
 		F226A0B215E2238300AFF97D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B115E2238300AFF97D /* UIKit.framework */; };
 		F226A0B415E2238300AFF97D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B315E2238300AFF97D /* Foundation.framework */; };
 		F226A0B615E2238300AFF97D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B515E2238300AFF97D /* CoreGraphics.framework */; };
@@ -22,6 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D92E979D15E24BD60043BDAB /* amulet14_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amulet14_barbarian_male.png; path = Resources/amulet14_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E979E15E24BD60043BDAB /* belt_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = belt_206_barbarian_male.png; path = Resources/belt_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E979F15E24BD60043BDAB /* boots_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boots_206_barbarian_male.png; path = Resources/boots_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A015E24BD60043BDAB /* bracers_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bracers_206_barbarian_male.png; path = Resources/bracers_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A115E24BD60043BDAB /* chestarmor_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chestarmor_206_barbarian_male.png; path = Resources/chestarmor_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A215E24BD60043BDAB /* gloves_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gloves_206_barbarian_male.png; path = Resources/gloves_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A315E24BD60043BDAB /* helm_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = helm_206_barbarian_male.png; path = Resources/helm_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A415E24BD60043BDAB /* pants_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pants_206_barbarian_male.png; path = Resources/pants_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A515E24BD60043BDAB /* ring_23_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ring_23_barbarian_male.png; path = Resources/ring_23_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A615E24BD60043BDAB /* shield_207_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shield_207_barbarian_male.png; path = Resources/shield_207_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A715E24BD60043BDAB /* shoulders_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoulders_206_barbarian_male.png; path = Resources/shoulders_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D92E97A815E24BD60043BDAB /* sword_1h_208_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sword_1h_208_barbarian_male.png; path = Resources/sword_1h_208_barbarian_male.png; sourceTree = SOURCE_ROOT; };
 		F226A0AD15E2238300AFF97D /* DiabloIIIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabloIIIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F226A0B115E2238300AFF97D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F226A0B315E2238300AFF97D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +131,18 @@
 		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D92E979D15E24BD60043BDAB /* amulet14_barbarian_male.png */,
+				D92E979E15E24BD60043BDAB /* belt_206_barbarian_male.png */,
+				D92E979F15E24BD60043BDAB /* boots_206_barbarian_male.png */,
+				D92E97A015E24BD60043BDAB /* bracers_206_barbarian_male.png */,
+				D92E97A115E24BD60043BDAB /* chestarmor_206_barbarian_male.png */,
+				D92E97A215E24BD60043BDAB /* gloves_206_barbarian_male.png */,
+				D92E97A315E24BD60043BDAB /* helm_206_barbarian_male.png */,
+				D92E97A415E24BD60043BDAB /* pants_206_barbarian_male.png */,
+				D92E97A515E24BD60043BDAB /* ring_23_barbarian_male.png */,
+				D92E97A615E24BD60043BDAB /* shield_207_barbarian_male.png */,
+				D92E97A715E24BD60043BDAB /* shoulders_206_barbarian_male.png */,
+				D92E97A815E24BD60043BDAB /* sword_1h_208_barbarian_male.png */,
 				F226A0BB15E2238300AFF97D /* DiabloIIIApp-Info.plist */,
 				F226A0BC15E2238300AFF97D /* InfoPlist.strings */,
 				F226A0BF15E2238300AFF97D /* main.m */,
@@ -168,6 +204,18 @@
 			files = (
 				F226A0BE15E2238300AFF97D /* InfoPlist.strings in Resources */,
 				F226A0CE15E223A700AFF97D /* Storyboard.storyboard in Resources */,
+				D92E97A915E24BD60043BDAB /* amulet14_barbarian_male.png in Resources */,
+				D92E97AA15E24BD60043BDAB /* belt_206_barbarian_male.png in Resources */,
+				D92E97AB15E24BD60043BDAB /* boots_206_barbarian_male.png in Resources */,
+				D92E97AC15E24BD60043BDAB /* bracers_206_barbarian_male.png in Resources */,
+				D92E97AD15E24BD60043BDAB /* chestarmor_206_barbarian_male.png in Resources */,
+				D92E97AE15E24BD60043BDAB /* gloves_206_barbarian_male.png in Resources */,
+				D92E97AF15E24BD60043BDAB /* helm_206_barbarian_male.png in Resources */,
+				D92E97B015E24BD60043BDAB /* pants_206_barbarian_male.png in Resources */,
+				D92E97B115E24BD60043BDAB /* ring_23_barbarian_male.png in Resources */,
+				D92E97B215E24BD60043BDAB /* shield_207_barbarian_male.png in Resources */,
+				D92E97B315E24BD60043BDAB /* shoulders_206_barbarian_male.png in Resources */,
+				D92E97B415E24BD60043BDAB /* sword_1h_208_barbarian_male.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +339,7 @@
 				F226A0CC15E2238300AFF97D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
