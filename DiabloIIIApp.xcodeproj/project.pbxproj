@@ -15,6 +15,9 @@
 		F226A0C015E2238300AFF97D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0BF15E2238300AFF97D /* main.m */; };
 		F226A0C415E2238300AFF97D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0C315E2238300AFF97D /* AppDelegate.m */; };
 		F226A0C715E2238300AFF97D /* DiabloIIIApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F226A0C515E2238300AFF97D /* DiabloIIIApp.xcdatamodeld */; };
+		F226A0CE15E223A700AFF97D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F226A0CD15E223A700AFF97D /* Storyboard.storyboard */; };
+		F226A0D415E2285E00AFF97D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D315E2285E00AFF97D /* MainViewController.m */; };
+		F226A0D715E2289B00AFF97D /* GemCalcMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D615E2289B00AFF97D /* GemCalcMainController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,11 @@
 		F226A0C215E2238300AFF97D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F226A0C315E2238300AFF97D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F226A0C615E2238300AFF97D /* DiabloIIIApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiabloIIIApp.xcdatamodel; sourceTree = "<group>"; };
+		F226A0CD15E223A700AFF97D /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F226A0D215E2285E00AFF97D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F226A0D315E2285E00AFF97D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F226A0D515E2289B00AFF97D /* GemCalcMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcMainController.h; sourceTree = "<group>"; };
+		F226A0D615E2289B00AFF97D /* GemCalcMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcMainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,11 @@
 				F226A0C315E2238300AFF97D /* AppDelegate.m */,
 				F226A0C515E2238300AFF97D /* DiabloIIIApp.xcdatamodeld */,
 				F226A0BA15E2238300AFF97D /* Supporting Files */,
+				F226A0CD15E223A700AFF97D /* Storyboard.storyboard */,
+				F226A0D215E2285E00AFF97D /* MainViewController.h */,
+				F226A0D315E2285E00AFF97D /* MainViewController.m */,
+				F226A0D515E2289B00AFF97D /* GemCalcMainController.h */,
+				F226A0D615E2289B00AFF97D /* GemCalcMainController.m */,
 			);
 			path = DiabloIIIApp;
 			sourceTree = "<group>";
@@ -149,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F226A0BE15E2238300AFF97D /* InfoPlist.strings in Resources */,
+				F226A0CE15E223A700AFF97D /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +176,8 @@
 				F226A0C015E2238300AFF97D /* main.m in Sources */,
 				F226A0C415E2238300AFF97D /* AppDelegate.m in Sources */,
 				F226A0C715E2238300AFF97D /* DiabloIIIApp.xcdatamodeld in Sources */,
+				F226A0D415E2285E00AFF97D /* MainViewController.m in Sources */,
+				F226A0D715E2289B00AFF97D /* GemCalcMainController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
