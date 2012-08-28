@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GemCalcResults : UIViewController
+@interface GemCalcResults : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *gemTable;
 
 @end

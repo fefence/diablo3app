@@ -11,9 +11,10 @@
 @interface GemBean : NSObject
 
 @property NSString *type;
-@property int available;
-@property int AHPrice;
-@property int craftingPrice;
-@property int amountNeeded;
+@property long available;
+@property long AHPrice;
+@property long craftingPrice;
+@property long amountNeeded;
+@property long amountToCraft;
 
 @end

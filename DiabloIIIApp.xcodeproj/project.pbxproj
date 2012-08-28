@@ -34,6 +34,7 @@
 		F292ABC315E6617300865B52 /* UIView+FormScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = F292ABC215E6617300865B52 /* UIView+FormScroll.m */; };
 		F2E2AA5D15E3B28E003F749C /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */; };
 		F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */; };
+		F2EB16C115ECCF27004742DD /* GemDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EB16C015ECCF27004742DD /* GemDetailsController.m */; };
 		F2ED09F915E8D47000982454 /* GemCalcRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2ED09F815E8D47000982454 /* GemCalcRow.xib */; };
 		F2ED0A0015E8FAEA00982454 /* GemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ED09FF15E8FAEA00982454 /* GemBean.m */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,8 @@
 		F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardBar.m; sourceTree = "<group>"; };
 		F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcResults.h; sourceTree = "<group>"; };
 		F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcResults.m; sourceTree = "<group>"; };
+		F2EB16BF15ECCF27004742DD /* GemDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemDetailsController.h; sourceTree = "<group>"; };
+		F2EB16C015ECCF27004742DD /* GemDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemDetailsController.m; sourceTree = "<group>"; };
 		F2ED09F815E8D47000982454 /* GemCalcRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GemCalcRow.xib; sourceTree = "<group>"; };
 		F2ED09FE15E8FAEA00982454 /* GemBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemBean.h; sourceTree = "<group>"; };
 		F2ED09FF15E8FAEA00982454 /* GemBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemBean.m; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				F2ED09FF15E8FAEA00982454 /* GemBean.m */,
 				F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */,
 				F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */,
+				F2EB16BF15ECCF27004742DD /* GemDetailsController.h */,
+				F2EB16C015ECCF27004742DD /* GemDetailsController.m */,
 			);
 			path = DiabloIIIApp;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				F249ED8015E7720300E79E6B /* GemCalcSettingsController.m in Sources */,
 				F2ED0A0015E8FAEA00982454 /* GemBean.m in Sources */,
 				F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */,
+				F2EB16C115ECCF27004742DD /* GemDetailsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

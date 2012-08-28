@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _gemTypes = [[NSMutableArray alloc] initWithObjects:@"Chipped", @"Flawed", @"Normal", @"Flawless", @"Perfect", @"Radiant", @"Square", @"Flawless Square", @"Perfect Square", @"Radiant Square", @"Star", @"Perfect Star", @"Radiant Star", nil];
+    _gemTypes = [[NSMutableArray alloc] initWithObjects:@"Chipped", @"Flawed", @"Normal", @"Flawless", @"Perfect", @"Radiant", @"Square", @"Flawless Square", @"Perfect Square", @"Radiant Square", @"Star", @"Flawless Star", @"Perfect Star", @"Radiant Star", nil];
     //  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    // // Override point for customization after application launch.
    // self.window.backgroundColor = [UIColor whiteColor];

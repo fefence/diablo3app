@@ -15,5 +15,6 @@
 @synthesize AHPrice = _AHPrice;
 @synthesize craftingPrice = _craftingPrice;
 @synthesize amountNeeded = _amountNeeded;
+@synthesize amountToCraft = _amountToCraft;
 
 @end

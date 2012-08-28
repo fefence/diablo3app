@@ -60,7 +60,7 @@ KeyboardBar *bar;
         }
     }
     
-    [_gemTypes addObject:startingGem];
+    [[_gemTypes objectAtIndex:0] startingGem];
     bar = [KeyboardBar new];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -174,7 +174,7 @@ KeyboardBar *bar;
     int i, count = _gemTypes.count;
     NSMutableArray *beans = [[NSMutableArray alloc] initWithCapacity:count];
     [_gemTypes removeAllObjects];
-    for (i = 0; i < count; i ++) {
+    for (i = 0; i < count - 1; i ++) {
         NSIndexPath *path = [NSIndexPath indexPathForRow:i inSection:0];;
         UITableView *tableView = (UITableView*)[self.view viewWithTag:1000];
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:path];
