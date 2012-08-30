@@ -19,8 +19,7 @@
 
 @implementation GemCalcSettingsController
 
-@synthesize gemTypes = _gemTypes;
-
+NSMutableArray *gemTypes;
 NSString *startingGem;
 NSString *desiredGem;
 int amount;
@@ -46,21 +45,28 @@ KeyboardBar *bar;
 {
     [super viewDidLoad];
     GemCalcMainController *sharedInstance = GemCalcMainController.sharedInstance;
-    _gemTypes = sharedInstance.gemTypes;
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
     startingGem = sharedInstance.startingGem.text;
     desiredGem = sharedInstance.desiredGem.text;
-        
     int i;
-    for (i = [_gemTypes count] - 1; i >= 1; i --) {
-        if ([[_gemTypes objectAtIndex:i] caseInsensitiveCompare:desiredGem]) {
-            [_gemTypes removeObjectAtIndex:i];
+    for (i = 0; i < gemTypes.count; i ++) {
+        NSString * current = [gemTypes objectAtIndex:i];
+        if (![current caseInsensitiveCompare:startingGem] == NSOrderedSame) {
+            [gemTypes removeObjectAtIndex:0];
         } else {
-            [_gemTypes removeObjectAtIndex:i];
-            return;
+            break;
         }
     }
     
-    [[_gemTypes objectAtIndex:0] startingGem];
+    for (i = gemTypes.count - 1; i >= 0; i --) {
+        if (![[gemTypes objectAtIndex:i] caseInsensitiveCompare:desiredGem] == NSOrderedSame) {
+            [gemTypes removeObjectAtIndex:i];
+        } else {
+            break;
+        }
+    }
+    
     bar = [KeyboardBar new];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -93,7 +99,7 @@ KeyboardBar *bar;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_gemTypes count];
+    return [gemTypes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -114,7 +120,8 @@ KeyboardBar *bar;
     available.delegate = self;
     price.inputAccessoryView = bar;
     price.delegate = self;
-    myLabel.text = [_gemTypes objectAtIndex:indexPath.row];
+    NSString * tmp = [gemTypes objectAtIndex:indexPath.row];
+    myLabel.text = tmp;
     return cell;
 }
 
@@ -170,29 +177,25 @@ KeyboardBar *bar;
      */
 }
 
-- (IBAction)calculate:(id)sender {
-    int i, count = _gemTypes.count;
-    NSMutableArray *beans = [[NSMutableArray alloc] initWithCapacity:count];
-    [_gemTypes removeAllObjects];
-    for (i = 0; i < count - 1; i ++) {
-        NSIndexPath *path = [NSIndexPath indexPathForRow:i inSection:0];;
-        UITableView *tableView = (UITableView*)[self.view viewWithTag:1000];
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:path];
-        UITextField *available = (UITextField *)[cell viewWithTag:100];
-        UITextField *price = (UITextField *)[cell viewWithTag:200];
-        UILabel *gemType = (UILabel *)[cell viewWithTag:300];
-        GemBean *bean = [[GemBean alloc] init];
-        bean.AHPrice = [price.text integerValue];
-        bean.available = [available.text integerValue];
-        bean.type = gemType.text;
-        [beans addObject:bean];
-    }
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.beans = beans;
-
-}
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     bar.field = textField;
 }
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    UITableViewCell *cell = (UITableViewCell *)textField.superview;
+    UILabel *gemType = (UILabel *)[cell viewWithTag:300];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSDictionary *beans = appDelegate.beans;
+    GemBean *bean = [beans objectForKey:gemType.text];
+    if (!bean) {
+        bean = [[GemBean alloc] init];
+    }
+    if (textField.tag == 100) {
+        bean.available = [textField.text integerValue];
+    } else if (textField.tag == 200) {
+        bean.AHPrice = [textField.text integerValue];
+    }
+}
+
 @end

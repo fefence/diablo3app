@@ -12,8 +12,5 @@
 
 @property (nonatomic, strong) NSMutableArray *tableData;
 @property (nonatomic) int cellCount;
-@property NSMutableArray *gemTypes;
-
-- (IBAction)calculate:(id)sender;
 
 @end

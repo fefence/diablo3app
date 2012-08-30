@@ -10,7 +10,6 @@
 #import "GemCalcMainController.h"
 
 @implementation GemBean
-@synthesize type = _type;
 @synthesize available = _available;
 @synthesize AHPrice = _AHPrice;
 @synthesize craftingPrice = _craftingPrice;

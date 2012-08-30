@@ -46,10 +46,15 @@ static GemCalcMainController *sharedInstance;
       inComponent:(NSInteger)component {
         bar.field.text = [_gemTypes objectAtIndex:row];
     if (bar.field.tag == 0) {
-        int i;
-        for (i = 0; i <= row; i ++) {
-            [_gemTypes removeObjectAtIndex:0];
-        }
+        //int i;
+        //for (i = 0; i <= row; i ++) {
+         ///   [_gemTypes removeObjectAtIndex:0];
+       //  }
+    } else {
+      //  int i;
+      //  for (i = _gemTypes.count - 1; i > row; i --) {
+      //      [_gemTypes removeObjectAtIndex:i];
+      //  }
     }
 }
 
@@ -110,16 +115,28 @@ static GemCalcMainController *sharedInstance;
 
 - (IBAction)changeCurrentTextField:(UITextField *)sender {
     [self.view scrollToView:sender];
-    [_gemPicker selectRow:0 inComponent:0 animated:NO];
     [_gemPicker setHidden:YES];
     [bar setField:sender];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [_gemTypes removeAllObjects];
+    [_gemTypes addObjectsFromArray:appDelegate.gemTypes];
+    [_gemPicker selectRow:0 inComponent:0 animated:NO];
     if (sender.tag == 0) {
-        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        [_gemTypes removeAllObjects];
-        [_gemTypes addObjectsFromArray:appDelegate.gemTypes];
         _startingGem.text = [_gemTypes objectAtIndex:0];
         [_gemPicker setHidden:NO];
     } else if (sender.tag == 1) {
+        if (_startingGem.text.length > 0) {
+            int i;
+            for (i = 0; i < _gemTypes.count; i ++) {
+                NSString * current = [_gemTypes objectAtIndex:0];
+                if (![current caseInsensitiveCompare:_startingGem.text] == NSOrderedSame) {
+                    [_gemTypes removeObjectAtIndex:0];
+                } else {
+                    [_gemTypes removeObjectAtIndex:0];
+                    break;
+                }
+            }
+        }
         _desiredGem.text = [_gemTypes objectAtIndex:0];
         [_gemPicker setHidden:NO];
     }

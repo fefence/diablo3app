@@ -10,7 +10,6 @@
 
 @interface GemBean : NSObject
 
-@property NSString *type;
 @property long available;
 @property long AHPrice;
 @property long craftingPrice;
