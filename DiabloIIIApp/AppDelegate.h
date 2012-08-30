@@ -16,7 +16,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property NSMutableArray *gemTypes;
-@property NSDictionary *beans;
+@property NSMutableDictionary *beans;
+@property NSString *key;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

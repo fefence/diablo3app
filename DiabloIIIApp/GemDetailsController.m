@@ -7,6 +7,8 @@
 //
 
 #import "GemDetailsController.h"
+#import "AppDelegate.h"
+#import "GemBean.h"
 
 @interface GemDetailsController ()
 
@@ -14,6 +16,11 @@
 
 @implementation GemDetailsController
 @synthesize gemType = _gemType;
+@synthesize available = _available;
+@synthesize AHPrice = _AHPrice;
+@synthesize needed = _needed;
+@synthesize needToCraft = _needToCraft;
+@synthesize craftPrice = _craftPrice;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,12 +33,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSString *key = appDelegate.key;
+    GemBean *bean = [appDelegate.beans objectForKey:key];
+    _gemType.text = key;
+    _available.text = [NSString stringWithFormat:@"%ld", bean.available];
+    _AHPrice.text = [NSString stringWithFormat:@"%ld", bean.AHPrice];
+    _needed.text = [NSString stringWithFormat:@"%ld", bean.amountNeeded];
+    _needToCraft.text = [NSString stringWithFormat:@"%ld", bean.amountToCraft];
 }
 
 - (void)viewDidUnload
 {
     [self setGemType:nil];
+    [self setAvailable:nil];
+    [self setAHPrice:nil];
+    [self setNeeded:nil];
+    [self setNeedToCraft:nil];
+    [self setCraftPrice:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

@@ -21,10 +21,10 @@
 @synthesize gemTable = _gemTable;
 
 
-NSDictionary *beans;
-NSArray *keys;
+NSMutableDictionary *beans;
 NSString *startingGem;
 NSString *desiredGem;
+NSMutableArray *gemTypes;
 int pageOfJewelcraftingPrice;
 int pageOfJewelcraftingAvailable;
 int tomeOfJewelcraftingPrice;
@@ -57,14 +57,31 @@ int amount;
     desiredGem = sharedInstance.desiredGem.text;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     beans = appDelegate.beans;
-    keys = appDelegate.beans.allKeys;
+    gemTypes = appDelegate.gemTypes;
+    int i;
+    for (i = 0; i < gemTypes.count; i ++) {
+        NSString * current = [gemTypes objectAtIndex:i];
+        if (![current caseInsensitiveCompare:startingGem] == NSOrderedSame) {
+            [gemTypes removeObjectAtIndex:0];
+        } else {
+            break;
+        }
+    }
+    
+    for (i = gemTypes.count - 1; i >= 0; i --) {
+        if (![[gemTypes objectAtIndex:i] caseInsensitiveCompare:desiredGem] == NSOrderedSame) {
+            [gemTypes removeObjectAtIndex:i];
+        } else {
+            break;
+        }
+    }
     [self fillInBeans];
 }
 
 - (void) fillInBeans {
     long i, count = amount;
-    for (i = keys.count - 1; i >= 0; i --) {
-        NSString *type = [keys objectAtIndex:i];
+    for (i = gemTypes.count - 1; i >= 0; i --) {
+        NSString *type = [gemTypes objectAtIndex:i];
         if (([type caseInsensitiveCompare:@"Flawless Square"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Perfect Square"] == NSOrderedSame)|| ([type caseInsensitiveCompare:@"Radiant Square"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Star"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Flawless Star"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Perfect Star"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Radiant Star"] == NSOrderedSame)) {
             count = count * 3;
         } else {
@@ -80,7 +97,7 @@ int amount;
     long tillNow;
     
     for (i = 0; i < beans.count; i ++) {
-        NSString *type = [keys objectAtIndex:i];
+        NSString *type = [gemTypes objectAtIndex:i];
         GemBean *bean = [beans objectForKey:type];
         if ([type caseInsensitiveCompare:@"chipped"] == NSOrderedSame) {
             tillNow = bean.amountToCraft * bean.AHPrice;
@@ -139,12 +156,19 @@ int amount;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    NSString *key = [keys objectAtIndex:indexPath.row];
+    NSString *key = [gemTypes objectAtIndex:indexPath.row];
     GemBean *bean = [beans objectForKey:key];
     cell.textLabel.text = key;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Need to buy: %ld  To craft: %ld", bean.amountNeeded - bean.available, bean.craftingPrice];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *gemType = cell.textLabel.text;
+    appDelegate.key = gemType;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

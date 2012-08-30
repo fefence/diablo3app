@@ -20,8 +20,10 @@
 @implementation GemCalcSettingsController
 
 NSMutableArray *gemTypes;
+
 NSString *startingGem;
 NSString *desiredGem;
+NSMutableDictionary *beans;
 int amount;
 int pageOfJewelcraftingAvailable;
 int pageOfJewelcraftingPrice;
@@ -47,6 +49,7 @@ KeyboardBar *bar;
     GemCalcMainController *sharedInstance = GemCalcMainController.sharedInstance;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
+    beans = appDelegate.beans;
     startingGem = sharedInstance.startingGem.text;
     desiredGem = sharedInstance.desiredGem.text;
     int i;
@@ -108,20 +111,30 @@ KeyboardBar *bar;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        UINib *theNib = [UINib nibWithNibName:@"GemCalcRow" bundle:nil];
-        cell = [[theNib instantiateWithOwner:self options:nil] objectAtIndex:0];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"GemCalcRow" owner:self options:nil];
+        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+        cell = [topLevelObjects objectAtIndex:0];
     }
     UILabel *myLabel = (UILabel *)[cell viewWithTag:300];
     UITextField *available = (UITextField *) [cell viewWithTag:100];
     UITextField *price = (UITextField *) [cell viewWithTag:200];
-    [bar.fields addObject:available];
-    [bar.fields addObject:price];
     available.inputAccessoryView = bar;
     available.delegate = self;
     price.inputAccessoryView = bar;
     price.delegate = self;
     NSString * tmp = [gemTypes objectAtIndex:indexPath.row];
+    GemBean *bean = [beans objectForKey:tmp];
+    if (bean) {
+        price.text = [NSString stringWithFormat:@"%ld", bean.AHPrice];
+        available.text = [NSString stringWithFormat:@"%ld", bean.available];
+    } else {
+        price.text = @"";
+        available.text = @"";;
+    }
+    NSLog(tmp);
+    NSLog(@"%d", indexPath.row);
     myLabel.text = tmp;
+    
     return cell;
 }
 
@@ -185,8 +198,6 @@ KeyboardBar *bar;
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     UITableViewCell *cell = (UITableViewCell *)textField.superview;
     UILabel *gemType = (UILabel *)[cell viewWithTag:300];
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSDictionary *beans = appDelegate.beans;
     GemBean *bean = [beans objectForKey:gemType.text];
     if (!bean) {
         bean = [[GemBean alloc] init];
@@ -196,6 +207,8 @@ KeyboardBar *bar;
     } else if (textField.tag == 200) {
         bean.AHPrice = [textField.text integerValue];
     }
+    NSLog(gemType.text);
+    [beans setValue:bean forKey:gemType.text];
 }
 
 @end

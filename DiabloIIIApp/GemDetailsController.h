@@ -10,5 +10,10 @@
 
 @interface GemDetailsController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *gemType;
+@property (strong, nonatomic) IBOutlet UILabel *available;
+@property (strong, nonatomic) IBOutlet UILabel *AHPrice;
+@property (strong, nonatomic) IBOutlet UILabel *needed;
+@property (strong, nonatomic) IBOutlet UILabel *needToCraft;
+@property (strong, nonatomic) IBOutlet UILabel *craftPrice;
 
 @end
