@@ -21,6 +21,8 @@
 @synthesize needed = _needed;
 @synthesize needToCraft = _needToCraft;
 @synthesize craftPrice = _craftPrice;
+@synthesize type = _type;
+@synthesize bean = _bean;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,14 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSString *key = appDelegate.key;
-    GemBean *bean = [appDelegate.beans objectForKey:key];
-    _gemType.text = key;
-    _available.text = [NSString stringWithFormat:@"%ld", bean.available];
-    _AHPrice.text = [NSString stringWithFormat:@"%ld", bean.AHPrice];
-    _needed.text = [NSString stringWithFormat:@"%ld", bean.amountNeeded];
-    _needToCraft.text = [NSString stringWithFormat:@"%ld", bean.amountToCraft];
+    _gemType.text = _type;
+    _available.text = [NSString stringWithFormat:@"%ld", _bean.available];
+    _AHPrice.text = [NSString stringWithFormat:@"%ld", _bean.AHPrice];
+    _needed.text = [NSString stringWithFormat:@"%ld", _bean.amountNeeded];
+    _needToCraft.text = [NSString stringWithFormat:@"%ld", _bean.amountToCraft];
 }
 
 - (void)viewDidUnload

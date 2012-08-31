@@ -71,7 +71,7 @@ KeyboardBar *bar;
     }
     
     bar = [KeyboardBar new];
-    
+    bar.fields = [[NSMutableArray alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -116,25 +116,28 @@ KeyboardBar *bar;
         cell = [topLevelObjects objectAtIndex:0];
     }
     UILabel *myLabel = (UILabel *)[cell viewWithTag:300];
-    UITextField *available = (UITextField *) [cell viewWithTag:100];
-    UITextField *price = (UITextField *) [cell viewWithTag:200];
-    available.inputAccessoryView = bar;
-    available.delegate = self;
-    price.inputAccessoryView = bar;
-    price.delegate = self;
+    UITextField *availableInput = (UITextField *) [cell viewWithTag:100];
+    UITextField *priceInput = (UITextField *) [cell viewWithTag:200];
+    availableInput.inputAccessoryView = bar;
+    availableInput.delegate = self;
+    priceInput.inputAccessoryView = bar;
+    priceInput.delegate = self;
     NSString * tmp = [gemTypes objectAtIndex:indexPath.row];
     GemBean *bean = [beans objectForKey:tmp];
     if (bean) {
-        price.text = [NSString stringWithFormat:@"%ld", bean.AHPrice];
-        available.text = [NSString stringWithFormat:@"%ld", bean.available];
+        priceInput.text = [NSString stringWithFormat:@"%ld", bean.AHPrice];
+        availableInput.text = [NSString stringWithFormat:@"%ld", bean.available];
     } else {
-        price.text = @"";
-        available.text = @"";;
+        priceInput.text = @"";
+        availableInput.text = @"";;
     }
-    NSLog(tmp);
-    NSLog(@"%d", indexPath.row);
     myLabel.text = tmp;
-    
+    int count = bar.fields.count;
+    int index = indexPath.row*2;
+    if (count < index + 1){
+        [bar.fields insertObject:availableInput atIndex:indexPath.row * 2];
+        [bar.fields insertObject:priceInput atIndex:indexPath.row * 2 + 1];
+    }
     return cell;
 }
 
@@ -207,7 +210,6 @@ KeyboardBar *bar;
     } else if (textField.tag == 200) {
         bean.AHPrice = [textField.text integerValue];
     }
-    NSLog(gemType.text);
     [beans setValue:bean forKey:gemType.text];
 }
 

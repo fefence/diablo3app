@@ -599,7 +599,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="mQw-9d-xdw" kind="push" id="vTa-WQ-hqk"/>
+                                            <segue destination="mQw-9d-xdw" kind="push" identifier="showDetails" id="vTa-WQ-hqk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -810,6 +810,7 @@
             <relationships>
                 <relationship kind="outlet" name="AHPrice" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="available" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="craftPrice" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="gemType" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="needToCraft" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="needed" candidateClass="UILabel"/>

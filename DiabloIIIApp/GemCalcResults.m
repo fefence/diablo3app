@@ -90,8 +90,6 @@ int amount;
         GemBean *bean = [beans objectForKey:type];
         bean.amountNeeded = count;
         bean.amountToCraft = count - bean.available;
-        NSLog(type);
-        NSLog(@"%d", count);
     }
     
     long tillNow;
@@ -165,10 +163,19 @@ int amount;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSString *gemType = cell.textLabel.text;
-    appDelegate.key = gemType;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showDetails"])
+    {
+        NSIndexPath *indexPath = [self.gemTable indexPathForCell:sender];
+        NSString *type = [gemTypes objectAtIndex:indexPath.row];
+        GemBean *bean = [beans objectForKey:type];
+        GemDetailsController *viewController = segue.destinationViewController;
+        viewController.type = type;
+        viewController.bean = bean;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -18,10 +18,10 @@ UIBarButtonItem *done;
 
 -(void) setField:(UITextField *)selectedField {
     field = selectedField;
-    if (selectedField.tag == 0) {
+    if ([_fields indexOfObject:field] == 0) {
         [previous setEnabled:NO];
         [next setEnabled:YES];
-    } else if (selectedField.tag == [_fields count] - 1) {
+    } else if ([_fields indexOfObject:field] == [_fields count] - 1) {
         [next setEnabled:NO];
         [previous setEnabled:YES];
     } else {
@@ -42,10 +42,10 @@ UIBarButtonItem *done;
         done =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(didTapButtonBarItemDone:)];
         NSArray *array = [NSArray arrayWithObjects:previous, next, done, nil];
         [self setItems:array];
-        if (self.field.tag == 0) {
+        if ([_fields indexOfObject:field] == 0) {
             [previous setEnabled:NO];
             [next setEnabled:YES];
-        } else if (self.field.tag == [_fields count] - 1) {
+        } else if ([_fields indexOfObject:field] == [_fields count] - 1) {
             [next setEnabled:NO];
             [previous setEnabled:YES];
         } else {
@@ -58,7 +58,7 @@ UIBarButtonItem *done;
 }
 
 - (IBAction)didTapButtonBarItemPrevious:(UIButton *)sender{
-    long currentField = self.field.tag;
+    long currentField = [_fields indexOfObject:field];
     if (currentField > 0) {
         UIResponder* nextResponder = [_fields objectAtIndex: currentField - 1];
         [self.field resignFirstResponder];
@@ -70,7 +70,7 @@ UIBarButtonItem *done;
 }
 
 - (void)didTapButtonBarItemNext:(UIButton *)sender{
-    long currentField = self.field.tag;
+    long currentField = [_fields indexOfObject:field];
     if (currentField < [_fields count] - 1) {
         UIResponder* nextResponder = [_fields objectAtIndex: currentField + 1];
         [self.field resignFirstResponder];
