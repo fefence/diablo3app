@@ -28,6 +28,8 @@
 @synthesize gemTypes = _gemTypes;
 @synthesize gemPicker = _gemPicker;
 @synthesize useMineFirst = _useMineFirst;
+@synthesize fields = _fields;
+@synthesize button = _button;
 
 KeyboardBar * bar;
 static GemCalcMainController *sharedInstance;
@@ -45,17 +47,6 @@ static GemCalcMainController *sharedInstance;
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component {
         bar.field.text = [_gemTypes objectAtIndex:row];
-    if (bar.field.tag == 0) {
-        //int i;
-        //for (i = 0; i <= row; i ++) {
-         ///   [_gemTypes removeObjectAtIndex:0];
-       //  }
-    } else {
-      //  int i;
-      //  for (i = _gemTypes.count - 1; i > row; i --) {
-      //      [_gemTypes removeObjectAtIndex:i];
-      //  }
-    }
 }
 
 
@@ -83,11 +74,11 @@ static GemCalcMainController *sharedInstance;
 
 -(void) initKeyboardBar {
     bar = [KeyboardBar new];
-    NSMutableArray *fields = [[NSMutableArray alloc] initWithObjects:_startingGem, _desiredGem, _amount, _pageOfJewelcraftingAvailable, _pageOfJewelcraftingPrice, _tomeOfJewelcraftingAvailable, _tomeOfJewelcraftingPrice, _tomeOfSecretsAvailable, _tomeOfSecretsPrice, nil];
-    [bar setFields:fields];
+    _fields = [[NSMutableArray alloc] initWithObjects:_startingGem, _desiredGem, _amount, _pageOfJewelcraftingAvailable, _pageOfJewelcraftingPrice, _tomeOfJewelcraftingAvailable, _tomeOfJewelcraftingPrice, _tomeOfSecretsAvailable, _tomeOfSecretsPrice, nil];
+    [bar setFields:_fields];
     int i;
-    for (i = 0; i < [fields count]; i ++) {
-        [[fields objectAtIndex:i] setInputAccessoryView: bar];
+    for (i = 0; i < [_fields count]; i ++) {
+        [[_fields objectAtIndex:i] setInputAccessoryView: bar];
     }
 }
 
@@ -104,6 +95,7 @@ static GemCalcMainController *sharedInstance;
     [self setTomeOfSecretsPrice:nil];
     [self setGemPicker:nil];
     [self setUseMineFirst:nil];
+    [self setButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -114,8 +106,12 @@ static GemCalcMainController *sharedInstance;
 }
 
 - (IBAction)changeCurrentTextField:(UITextField *)sender {
+    if (_desiredGem.text.length > 0 && _startingGem.text.length >0) {
+        [_button setEnabled:YES];
+    }
     [self.view scrollToView:sender];
     [_gemPicker setHidden:YES];
+    [self initKeyboardBar];
     [bar setField:sender];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [_gemTypes removeAllObjects];

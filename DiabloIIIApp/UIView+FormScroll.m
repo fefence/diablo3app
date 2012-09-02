@@ -15,11 +15,11 @@
 -(void)scrollToY:(float)y
 {
     
-    [UIView beginAnimations:@"registerScroll" context:NULL];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:0.4];
+    //[UIView beginAnimations:@"registerScroll" context:NULL];
+    //[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    //[UIView setAnimationDuration:0.4];
     self.transform = CGAffineTransformMakeTranslation(0, y);
-    [UIView commitAnimations];
+   // [UIView commitAnimations];
     
 }
 
@@ -27,8 +27,12 @@
 {
     CGRect theFrame = view.frame;
     float y = theFrame.origin.y - 15;
-    y -= (y/2.2);
-    [self scrollToY:-y];
+    y -= 90;
+    if (theFrame.origin.y > 100) {
+        [self scrollToY:-y];
+    } else {
+        [self scrollToY:0];
+    }
 }
 
 

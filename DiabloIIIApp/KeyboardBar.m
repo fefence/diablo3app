@@ -7,6 +7,8 @@
 //
 
 #import "KeyboardBar.h"
+#import "UIView+FormScroll.h"
+
 
 @implementation KeyboardBar
 @synthesize field;

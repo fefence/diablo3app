@@ -339,6 +339,7 @@
 				GCC_PREFIX_HEADER = "DiabloIIIApp/DiabloIIIApp-Prefix.pch";
 				INFOPLIST_FILE = "DiabloIIIApp/DiabloIIIApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -350,6 +351,7 @@
 				GCC_PREFIX_HEADER = "DiabloIIIApp/DiabloIIIApp-Prefix.pch";
 				INFOPLIST_FILE = "DiabloIIIApp/DiabloIIIApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

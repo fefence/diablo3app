@@ -15,7 +15,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *needed;
 @property (strong, nonatomic) IBOutlet UILabel *needToCraft;
 @property (strong, nonatomic) IBOutlet UILabel *craftPrice;
+@property (strong, nonatomic) IBOutlet UILabel *craftPriceForOne;
 @property NSString *type;
+@property (strong, nonatomic) IBOutlet UILabel *cheaper;
+@property (strong, nonatomic) IBOutlet UILabel *enough;
 @property GemBean *bean;
 
 @end

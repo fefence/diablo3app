@@ -41,7 +41,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Z8R-sB-H01" kind="modal" id="cKO-nR-jU9"/>
+                                    <segue destination="Z8R-sB-H01" kind="push" id="y5M-7d-uSD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="liX-wc-1dK">
@@ -108,22 +108,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQ4-Wm-xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Z8R-sB-H01" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UBx-uc-lv1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" id="mdc-o7-iEJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Profile Import" id="b7m-cF-Ag0">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="kzu-MC-FTt"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nhD-0q-mOl"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Login" id="uZD-RL-QKF"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x7G-C9-QI7">
-                                <rect key="frame" x="137" y="44" width="46" height="92"/>
+                                <rect key="frame" x="137" y="39" width="46" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -136,7 +125,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HOc-U9-EGP">
-                                <rect key="frame" x="73" y="62" width="46" height="92"/>
+                                <rect key="frame" x="73" y="56" width="46" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -227,7 +216,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zi5-B6-hMa">
-                                <rect key="frame" x="199" y="67" width="46" height="46"/>
+                                <rect key="frame" x="199" y="60" width="46" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -240,7 +229,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lSd-GG-gjp">
-                                <rect key="frame" x="58" y="262" width="46" height="46"/>
+                                <rect key="frame" x="58" y="237" width="46" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -253,7 +242,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i9b-xM-50o">
-                                <rect key="frame" x="223" y="262" width="46" height="46"/>
+                                <rect key="frame" x="223" y="237" width="46" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -266,7 +255,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TTL-tU-IMV">
-                                <rect key="frame" x="58" y="162" width="46" height="92"/>
+                                <rect key="frame" x="58" y="146" width="46" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -279,7 +268,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RB9-lg-5sO">
-                                <rect key="frame" x="223" y="135" width="46" height="92"/>
+                                <rect key="frame" x="223" y="122" width="46" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -294,9 +283,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5Sr-8N-uo2"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="456" y="679"/>
+            <point key="canvasLocation" x="724" y="708"/>
         </scene>
         <!--Gem Calc Main Controller - Gem Calculator-->
         <scene sceneID="bLW-YP-4d3">
@@ -307,172 +297,180 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Starting gem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gAV-yE-gZS">
-                                <rect key="frame" x="23" y="35" width="112" height="29"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Flj-br-06E">
+                                <rect key="frame" x="-20" y="15" width="360" height="409"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Desired gem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ehX-cL-sYf">
-                                <rect key="frame" x="23" y="72" width="112" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="VbJ-4W-snr">
-                                <rect key="frame" x="23" y="109" width="112" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="yay-eD-xPg">
-                                <rect key="frame" x="143" y="35" width="154" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="glc-V3-428"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="z0Y-Dv-rui"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="eRj-t5-qMm">
-                                <rect key="frame" x="143" y="71" width="154" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="nzS-rb-0Nz"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="2vK-aK-nsK"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ajp-XV-QDy">
-                                <rect key="frame" x="143" y="109" width="154" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="TX8-2T-zac"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="nCk-jz-3R8"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ELI-Rg-lLP">
-                                <rect key="frame" x="160" y="367" width="154" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="start">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="kya-R0-guh" kind="push" id="YqP-3E-X9Y"/>
-                                </connections>
-                            </button>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="m9X-EV-Djd">
-                                <rect key="frame" x="143" y="160" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use mine First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pui-iV-K3e">
-                                <rect key="frame" x="23" y="160" width="110" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" id="1ys-bV-43J">
-                                <rect key="frame" x="0.0" y="160" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="A1a-VB-uL9" id="5AO-zl-VdS"/>
-                                    <outlet property="delegate" destination="A1a-VB-uL9" id="V9r-P4-GPn"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Page of jewelcrafting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="L8g-5p-ZQa">
-                                <rect key="frame" x="13" y="245" width="160" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="v8C-DE-jlc">
-                                <rect key="frame" x="105" y="240" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="r8r-lK-ZUo"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="7IW-6l-euz"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="L37-Sv-RL9">
-                                <rect key="frame" x="210" y="242" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="Ngb-ra-hHo"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="OKy-77-wFh"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tome of jewelcrafting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WSs-Xm-DVH">
-                                <rect key="frame" x="13" y="284" width="164" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ek3-8V-zic">
-                                <rect key="frame" x="106" y="282" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="S5g-Yg-5uJ"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="sGP-Tq-l3N"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="tkM-u7-dW8">
-                                <rect key="frame" x="210" y="281" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="m2p-1H-tEX"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="ZDU-w2-722"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tome of secrets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kUs-cd-zT7">
-                                <rect key="frame" x="13" y="323" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="gcq-tP-Hpn">
-                                <rect key="frame" x="105" y="321" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="OfJ-Ld-wLS"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="HX4-ix-x91"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="fUJ-lt-WQM">
-                                <rect key="frame" x="209" y="318" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="WIM-IJ-8h6"/>
-                                    <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="qVg-Il-aLt"/>
-                                </connections>
-                            </textField>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Starting gem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gAV-yE-gZS">
+                                        <rect key="frame" x="43" y="20" width="112" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Desired gem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ehX-cL-sYf">
+                                        <rect key="frame" x="43" y="57" width="112" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="VbJ-4W-snr">
+                                        <rect key="frame" x="43" y="94" width="112" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="yay-eD-xPg">
+                                        <rect key="frame" x="163" y="20" width="154" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="glc-V3-428"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="z0Y-Dv-rui"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="eRj-t5-qMm">
+                                        <rect key="frame" x="163" y="56" width="154" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="nzS-rb-0Nz"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="2vK-aK-nsK"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ajp-XV-QDy">
+                                        <rect key="frame" x="163" y="94" width="154" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="TX8-2T-zac"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="nCk-jz-3R8"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ELI-Rg-lLP">
+                                        <rect key="frame" x="230" y="355" width="92" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.49489667338709675" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="start">
+                                            <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="kya-R0-guh" kind="push" id="YqP-3E-X9Y"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="m9X-EV-Djd">
+                                        <rect key="frame" x="163" y="145" width="79" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use mine First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pui-iV-K3e">
+                                        <rect key="frame" x="43" y="145" width="110" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Page of jewelcrafting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="L8g-5p-ZQa">
+                                        <rect key="frame" x="33" y="230" width="160" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="v8C-DE-jlc">
+                                        <rect key="frame" x="125" y="225" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="r8r-lK-ZUo"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="7IW-6l-euz"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="L37-Sv-RL9">
+                                        <rect key="frame" x="230" y="227" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="Ngb-ra-hHo"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="OKy-77-wFh"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tome of jewelcrafting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WSs-Xm-DVH">
+                                        <rect key="frame" x="33" y="269" width="164" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ek3-8V-zic">
+                                        <rect key="frame" x="126" y="267" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="S5g-Yg-5uJ"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="sGP-Tq-l3N"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="tkM-u7-dW8">
+                                        <rect key="frame" x="230" y="266" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="m2p-1H-tEX"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="ZDU-w2-722"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tome of secrets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kUs-cd-zT7">
+                                        <rect key="frame" x="33" y="308" width="123" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="gcq-tP-Hpn">
+                                        <rect key="frame" x="125" y="306" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="OfJ-Ld-wLS"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="HX4-ix-x91"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="fUJ-lt-WQM">
+                                        <rect key="frame" x="229" y="303" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="WIM-IJ-8h6"/>
+                                            <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="qVg-Il-aLt"/>
+                                        </connections>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" id="1ys-bV-43J">
+                                        <rect key="frame" x="20" y="186" width="320" height="216"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="A1a-VB-uL9" id="5AO-zl-VdS"/>
+                                            <outlet property="delegate" destination="A1a-VB-uL9" id="V9r-P4-GPn"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -481,10 +479,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amount" destination="ajp-XV-QDy" id="LhF-rg-POq"/>
+                        <outlet property="button" destination="ELI-Rg-lLP" id="vfL-eI-ATH"/>
                         <outlet property="desiredGem" destination="eRj-t5-qMm" id="0mc-tr-ONS"/>
                         <outlet property="gemPicker" destination="1ys-bV-43J" id="1Ed-IM-W9i"/>
                         <outlet property="pageOfJewelcraftingAvailable" destination="v8C-DE-jlc" id="Gue-95-S0I"/>
                         <outlet property="pageOfJewelcraftingPrice" destination="L37-Sv-RL9" id="TSK-Bf-A5X"/>
+                        <outlet property="scrollView" destination="Flj-br-06E" id="wlv-zc-ZwC"/>
                         <outlet property="startingGem" destination="yay-eD-xPg" id="Y54-MV-sjC"/>
                         <outlet property="tomeOfJewelcraftingAvailable" destination="ek3-8V-zic" id="tB5-3h-omc"/>
                         <outlet property="tomeOfJewelcraftingPrice" destination="tkM-u7-dW8" id="0RC-pl-zbs"/>
@@ -547,7 +547,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DMg-lh-QTm" kind="push" id="wz7-pR-yWF"/>
+                                    <segue destination="DMg-lh-QTm" kind="push" identifier="go" id="wz7-pR-yWF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -666,14 +666,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Need to craft:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="AeG-xx-Zyb">
-                                <rect key="frame" x="40" y="217" width="105" height="21"/>
+                                <rect key="frame" x="40" y="257" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="bxs-h9-VVQ">
-                                <rect key="frame" x="40" y="252" width="44" height="21"/>
+                                <rect key="frame" x="40" y="292" width="44" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -701,28 +701,56 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="DyC-h5-KsN">
-                                <rect key="frame" x="200" y="188" width="42" height="21"/>
+                                <rect key="frame" x="198" y="215" width="102" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hh9-q7-0Z4">
-                                <rect key="frame" x="200" y="223" width="42" height="21"/>
+                                <rect key="frame" x="200" y="263" width="90" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Needed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UVS-PR-d4M">
-                                <rect key="frame" x="42" y="188" width="65" height="21"/>
+                                <rect key="frame" x="40" y="215" width="65" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kNR-z4-YQn">
-                                <rect key="frame" x="200" y="252" width="42" height="21"/>
+                                <rect key="frame" x="200" y="292" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pice for one" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="bgE-7A-9Jh">
+                                <rect key="frame" x="40" y="181" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7ef-6w-GFQ">
+                                <rect key="frame" x="198" y="181" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="poF-AK-xiZ">
+                                <rect key="frame" x="42" y="326" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mou-cl-2y5">
+                                <rect key="frame" x="42" y="368" width="264" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -735,7 +763,10 @@
                     <connections>
                         <outlet property="AHPrice" destination="Kw3-v4-lyj" id="A72-wA-RCN"/>
                         <outlet property="available" destination="fZs-sB-XQV" id="Eau-LN-EqS"/>
+                        <outlet property="cheaper" destination="poF-AK-xiZ" id="P2z-h1-aGa"/>
                         <outlet property="craftPrice" destination="kNR-z4-YQn" id="NBu-LR-EIb"/>
+                        <outlet property="craftPriceForOne" destination="7ef-6w-GFQ" id="tO8-E7-1T7"/>
+                        <outlet property="enough" destination="mou-cl-2y5" id="q4D-GX-Bpr"/>
                         <outlet property="gemType" destination="yio-ka-2Lv" id="BU8-gY-9RM"/>
                         <outlet property="needToCraft" destination="hh9-q7-0Z4" id="b52-IZ-ss5"/>
                         <outlet property="needed" destination="DyC-h5-KsN" id="MAq-Aj-Mlf"/>
@@ -784,10 +815,12 @@
                 <relationship kind="action" name="changeCurrentTextField:"/>
                 <relationship kind="action" name="scrollBack:"/>
                 <relationship kind="outlet" name="amount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="desiredGem" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="gemPicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="pageOfJewelcraftingAvailable" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="pageOfJewelcraftingPrice" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="startingGem" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="tomeOfJewelcraftingAvailable" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="tomeOfJewelcraftingPrice" candidateClass="UITextField"/>
@@ -810,7 +843,10 @@
             <relationships>
                 <relationship kind="outlet" name="AHPrice" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="available" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cheaper" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="craftPrice" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="craftPriceForOne" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="enough" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="gemType" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="needToCraft" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="needed" candidateClass="UILabel"/>

@@ -12,6 +12,7 @@
 
 @property long available;
 @property long AHPrice;
+@property long craftingPriceForOne;
 @property long craftingPrice;
 @property long amountNeeded;
 @property long amountToCraft;

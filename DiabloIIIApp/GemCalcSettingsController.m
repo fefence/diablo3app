@@ -12,6 +12,8 @@
 #import "KeyboardBar.h"
 #import "GemCalcResults.h"
 #import "AppDelegate.h"
+#import "UIView+FormScroll.h"
+
 
 @interface GemCalcSettingsController ()
 
@@ -138,6 +140,9 @@ KeyboardBar *bar;
         [bar.fields insertObject:availableInput atIndex:indexPath.row * 2];
         [bar.fields insertObject:priceInput atIndex:indexPath.row * 2 + 1];
     }
+    if (indexPath.row == gemTypes.count - 1) {
+        [availableInput setHidden:YES];
+    }
     return cell;
 }
 
@@ -196,6 +201,8 @@ KeyboardBar *bar;
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     bar.field = textField;
+    UITableViewCell *cell = (UITableViewCell*) [[textField superview] superview];
+    [(UITableView *)cell.superview scrollToRowAtIndexPath:[(UITableView *)cell.superview indexPathForCell:cell] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
@@ -211,6 +218,12 @@ KeyboardBar *bar;
         bean.AHPrice = [textField.text integerValue];
     }
     [beans setValue:bean forKey:gemType.text];
+    [self.view scrollToY:0];
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
 }
 
 @end

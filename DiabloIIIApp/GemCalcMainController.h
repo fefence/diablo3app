@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GemCalcMainController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *startingGem;
 @property (strong, nonatomic) IBOutlet UITextField *desiredGem;
 @property (strong, nonatomic) IBOutlet UITextField *amount;
@@ -21,6 +22,8 @@
 @property NSMutableArray *gemTypes;
 @property (strong, nonatomic) IBOutlet UIPickerView *gemPicker;
 @property (strong, nonatomic) IBOutlet UISwitch *useMineFirst;
+@property (strong, nonatomic) NSMutableArray  *fields;
+@property (strong, nonatomic) IBOutlet UIButton *button;
 +(GemCalcMainController *)sharedInstance;
 - (IBAction)changeCurrentTextField:(id)sender;
 - (IBAction)scrollBack:(id)sender;
