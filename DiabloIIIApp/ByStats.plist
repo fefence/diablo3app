@@ -2,34 +2,1200 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Some dummy stuff</key>
+	<key>Resources</key>
 	<dict>
-		<key>Stat 2</key>
+		<key>Spirit Regeneration per Second</key>
 		<dict>
-			<key>broom</key>
-			<string>212</string>
+			<key>Two-handed</key>
+			<string>2,5</string>
+			<key>Weapon</key>
+			<string>2,5</string>
+			<key>Monk - Spirit Stone</key>
+			<string>2,5</string>
 		</dict>
-		<key>Stat 1</key>
+		<key>Hatred Regeneration per Second</key>
 		<dict>
-			<key>spoon</key>
+			<key>Two-handed</key>
+			<string>1,33</string>
+			<key>Weapon</key>
+			<string>1,33</string>
+			<key>Off-hand</key>
+			<string>1,17</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>1,17</string>
+		</dict>
+		<key>Mana Regeneration per Second</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>14</string>
+			<key>Weapon</key>
+			<string>14</string>
+			<key>Off-hand</key>
+			<string>11</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>11</string>
+		</dict>
+		<key>Extra Max Arcane Power</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>15</string>
+			<key>Weapon</key>
+			<string>15</string>
+			<key>Off-hand</key>
+			<string>15</string>
+			<key>Wizard Hat</key>
+			<string>15</string>
+		</dict>
+		<key>Extra Max Discipline</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>10</string>
+			<key>Weapon</key>
+			<string>10</string>
+			<key>Off-hand</key>
+			<string>10</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>10</string>
+		</dict>
+		<key>Extra Max Mana</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>150</string>
+			<key>Weapon</key>
+			<string>150</string>
+			<key>Off-hand</key>
+			<string>119</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>119</string>
+		</dict>
+		<key>Extra Max Fury</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>15</string>
+			<key>Weapon</key>
+			<string>15</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>15</string>
+		</dict>
+		<key>Arcane Power on Crit</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>10</string>
+			<key>Weapon</key>
+			<string>10</string>
+			<key>Off-hand</key>
+			<string>10</string>
+			<key>Wizard Hat</key>
+			<string>10</string>
+		</dict>
+	</dict>
+	<key>Chance on Hit</key>
+	<dict>
+		<key>Chance to Stun on Hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Gloves</key>
+			<string>5,1</string>
+		</dict>
+		<key>Chance to Knockback on Hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Bracer</key>
+			<string>5,1</string>
+		</dict>
+		<key>Chance to Slow on Hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Pants</key>
+			<string>5,1</string>
+		</dict>
+		<key>Chance to Immobilize on Hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Boots</key>
+			<string>5,1</string>
+		</dict>
+		<key>Chance to Freeze on Hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Belt</key>
+			<string>5,1</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>5,1</string>
+		</dict>
+		<key>Chance to Fear on Hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Helm</key>
+			<string>5,1</string>
+			<key>Monk - Spirit Stone</key>
+			<string>5,1</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>5,1</string>
+		</dict>
+		<key>Chance to Chill on Hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Shoulders</key>
+			<string>5,1</string>
+			<key>Wizard Hat</key>
+			<string>5,1</string>
+		</dict>
+		<key>Chance to Blind on hit %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5,1</string>
+			<key>Weapon</key>
+			<string>2,6</string>
+			<key>Off-hand</key>
+			<string>2,6</string>
+			<key>Shield</key>
+			<string>2,6</string>
+			<key>Amulet</key>
+			<string>5,1</string>
+		</dict>
+	</dict>
+	<key>Resistances</key>
+	<dict>
+		<key>All Resistance</key>
+		<dict>
+			<key>Shield</key>
+			<string>80</string>
+			<key>Ring</key>
+			<string>70</string>
+			<key>Amulet</key>
+			<string>70</string>
+			<key>Shoulders</key>
+			<string>80</string>
+			<key>Helm</key>
+			<string>80</string>
+			<key>Pants</key>
+			<string>80</string>
+			<key>Gloves</key>
+			<string>80</string>
+			<key>Chest</key>
+			<string>80</string>
+			<key>Bracer</key>
+			<string>80</string>
+			<key>Boots</key>
+			<string>80</string>
+			<key>Belt</key>
+			<string>80</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>70</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>70</string>
+			<key>Monk - Spirit Stone</key>
+			<string>70</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>70</string>
+			<key>Wizard Hat</key>
+			<string>70</string>
+		</dict>
+		<key>Physical Resistance</key>
+		<dict>
+			<key>Shield</key>
+			<string>60</string>
+			<key>Ring</key>
+			<string>50</string>
+			<key>Amulet</key>
+			<string>50</string>
+			<key>Shoulders</key>
+			<string>60</string>
+			<key>Helm</key>
+			<string>60</string>
+			<key>Pants</key>
+			<string>60</string>
+			<key>Gloves</key>
+			<string>60</string>
+			<key>Chest</key>
+			<string>60</string>
+			<key>Bracer</key>
+			<string>60</string>
+			<key>Boots</key>
+			<string>60</string>
+			<key>Belt</key>
+			<string>60</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>50</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>50</string>
+			<key>Monk - Spirit Stone</key>
+			<string>50</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>50</string>
+			<key>Wizard Hat</key>
+			<string>50</string>
+		</dict>
+		<key>Cold Resistance</key>
+		<dict>
+			<key>Shield</key>
+			<string>60</string>
+			<key>Ring</key>
+			<string>50</string>
+			<key>Amulet</key>
+			<string>50</string>
+			<key>Shoulders</key>
+			<string>60</string>
+			<key>Helm</key>
+			<string>60</string>
+			<key>Pants</key>
+			<string>60</string>
+			<key>Gloves</key>
+			<string>60</string>
+			<key>Chest</key>
+			<string>60</string>
+			<key>Bracer</key>
+			<string>60</string>
+			<key>Boots</key>
+			<string>60</string>
+			<key>Belt</key>
+			<string>60</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>50</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>50</string>
+			<key>Monk - Spirit Stone</key>
+			<string>50</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>50</string>
+			<key>Wizard Hat</key>
+			<string>50</string>
+		</dict>
+		<key>Fire Resistance</key>
+		<dict>
+			<key>Shield</key>
+			<string>60</string>
+			<key>Ring</key>
+			<string>50</string>
+			<key>Amulet</key>
+			<string>50</string>
+			<key>Shoulders</key>
+			<string>60</string>
+			<key>Helm</key>
+			<string>60</string>
+			<key>Pants</key>
+			<string>60</string>
+			<key>Gloves</key>
+			<string>60</string>
+			<key>Chest</key>
+			<string>60</string>
+			<key>Bracer</key>
+			<string>60</string>
+			<key>Boots</key>
+			<string>60</string>
+			<key>Belt</key>
+			<string>60</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>50</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>50</string>
+			<key>Monk - Spirit Stone</key>
+			<string>50</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>50</string>
+			<key>Wizard Hat</key>
+			<string>50</string>
+		</dict>
+		<key>Lightning Resistance</key>
+		<dict>
+			<key>Shield</key>
+			<string>60</string>
+			<key>Ring</key>
+			<string>50</string>
+			<key>Amulet</key>
+			<string>50</string>
+			<key>Shoulders</key>
+			<string>60</string>
+			<key>Helm</key>
+			<string>60</string>
+			<key>Pants</key>
+			<string>60</string>
+			<key>Gloves</key>
+			<string>60</string>
+			<key>Chest</key>
+			<string>60</string>
+			<key>Bracer</key>
+			<string>60</string>
+			<key>Boots</key>
+			<string>60</string>
+			<key>Belt</key>
+			<string>60</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>50</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>50</string>
+			<key>Monk - Spirit Stone</key>
+			<string>50</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>50</string>
+			<key>Wizard Hat</key>
+			<string>50</string>
+		</dict>
+		<key>Poison Resistance</key>
+		<dict>
+			<key>Shield</key>
+			<string>60</string>
+			<key>Ring</key>
+			<string>50</string>
+			<key>Amulet</key>
+			<string>50</string>
+			<key>Shoulders</key>
+			<string>60</string>
+			<key>Helm</key>
+			<string>60</string>
+			<key>Pants</key>
+			<string>60</string>
+			<key>Gloves</key>
+			<string>60</string>
+			<key>Chest</key>
+			<string>60</string>
+			<key>Bracer</key>
+			<string>60</string>
+			<key>Boots</key>
+			<string>60</string>
+			<key>Belt</key>
+			<string>60</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>50</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>50</string>
+			<key>Monk - Spirit Stone</key>
+			<string>50</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>50</string>
+			<key>Wizard Hat</key>
+			<string>50</string>
+		</dict>
+		<key>Arcane/Holy Resistance</key>
+		<dict>
+			<key>Shield</key>
+			<string>60</string>
+			<key>Ring</key>
+			<string>50</string>
+			<key>Amulet</key>
+			<string>50</string>
+			<key>Shoulders</key>
+			<string>60</string>
+			<key>Helm</key>
+			<string>60</string>
+			<key>Pants</key>
+			<string>60</string>
+			<key>Gloves</key>
+			<string>60</string>
+			<key>Chest</key>
+			<string>60</string>
+			<key>Bracer</key>
+			<string>60</string>
+			<key>Boots</key>
+			<string>60</string>
+			<key>Belt</key>
+			<string>60</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>50</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>50</string>
+			<key>Monk - Spirit Stone</key>
+			<string>50</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>50</string>
+			<key>Wizard Hat</key>
+			<string>50</string>
+		</dict>
+	</dict>
+	<key>Defensive Stats</key>
+	<dict>
+		<key>Bonus Armor</key>
+		<dict>
+			<key>Shield</key>
+			<string>397</string>
+			<key>Ring</key>
+			<string>240</string>
+			<key>Amulet</key>
+			<string>360</string>
+			<key>Shoulders</key>
+			<string>265</string>
+			<key>Helm</key>
+			<string>397</string>
+			<key>Pants</key>
+			<string>397</string>
+			<key>Gloves</key>
+			<string>265</string>
+			<key>Chest</key>
+			<string>397</string>
+			<key>Bracer</key>
+			<string>265</string>
+			<key>Boots</key>
+			<string>265</string>
+			<key>Belt</key>
+			<string>265</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>397</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>265</string>
+			<key>Monk - Spirit Stone</key>
+			<string>397</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>397</string>
+			<key>Wizard Hat</key>
+			<string>397</string>
+		</dict>
+		<key>Block Chance</key>
+		<dict>
+			<key>Shield</key>
+			<string>9</string>
+		</dict>
+		<key>Reduced Damage from Melee Attacks %</key>
+		<dict>
+			<key>Shield</key>
+			<string>6</string>
+			<key>Amulet</key>
+			<string>4</string>
+			<key>Chest</key>
+			<string>6</string>
+			<key>Bracer</key>
+			<string>6</string>
+		</dict>
+		<key>Reduced Damage from Ranged Attacks %</key>
+		<dict>
+			<key>Shield</key>
+			<string>6</string>
+			<key>Amulet</key>
+			<string>4</string>
+			<key>Chest</key>
+			<string>6</string>
+			<key>Bracer</key>
+			<string>6</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>6</string>
+		</dict>
+		<key>Reduced Damage from Elite Monsters %</key>
+		<dict>
+			<key>Shield</key>
+			<string>7</string>
+			<key>Chest</key>
+			<string>7</string>
+		</dict>
+		<key>Thorns</key>
+		<dict>
+			<key>Off-hand</key>
+			<string>979</string>
+			<key>Shield</key>
+			<string>2544</string>
+			<key>Ring</key>
+			<string>979</string>
+			<key>Amulet</key>
+			<string>1712</string>
+			<key>Shoulders</key>
+			<string>2544</string>
+			<key>Helm</key>
+			<string>1454</string>
+			<key>Pants</key>
+			<string>1454</string>
+			<key>Gloves</key>
+			<string>1454</string>
+			<key>Chest</key>
+			<string>2544</string>
+			<key>Bracer</key>
+			<string>1454</string>
+			<key>Boots</key>
+			<string>1454</string>
+			<key>Belt</key>
+			<string>2544</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>2544</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>2544</string>
+			<key>Monk - Spirit Stone</key>
+			<string>1454</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>1454</string>
+			<key>Wizard Hat</key>
+			<string>1454</string>
+		</dict>
+		<key>Crowd Control Reduction %</key>
+		<dict>
+			<key>Shield</key>
+			<string>14</string>
+			<key>Ring</key>
+			<string>14</string>
+			<key>Amulet</key>
+			<string>14</string>
+			<key>Helm</key>
+			<string>14</string>
+			<key>Monk - Spirit Stone</key>
+			<string>14</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>14</string>
+			<key>Wizard Hat</key>
+			<string>14</string>
+		</dict>
+	</dict>
+	<key>Offensive Stats - Damage Modifiers</key>
+	<dict>
+		<key>Damage %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>50</string>
+			<key>Weapon</key>
+			<string>50</string>
+			<key>Off-hand</key>
+			<string>178</string>
+		</dict>
+		<key>Critical Hit Chance %</key>
+		<dict>
+			<key>Off-hand</key>
+			<string>8,5</string>
+			<key>Shield</key>
+			<string>10</string>
+			<key>Ring</key>
+			<string>4,5</string>
+			<key>Amulet</key>
+			<string>8,5</string>
+			<key>Helm</key>
+			<string>6</string>
+			<key>Gloves</key>
+			<string>10</string>
+			<key>Bracer</key>
+			<string>6</string>
+			<key>Monk - Spirit Stone</key>
+			<string>4,5</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>4,5</string>
+			<key>Wizard Hat</key>
+			<string>4,5</string>
+		</dict>
+		<key>Critical Hit Bonus Damage %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>200</string>
+			<key>Weapon</key>
+			<string>100</string>
+			<key>Ring</key>
+			<string>35</string>
+			<key>Amulet</key>
+			<string>65</string>
+			<key>Gloves</key>
+			<string>50</string>
+		</dict>
+		<key>Attack Speed %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>11</string>
+			<key>Weapon</key>
+			<string>11</string>
+			<key>Off-hand</key>
+			<string>15</string>
+			<key>Ring</key>
+			<string>9</string>
+			<key>Amulet</key>
+			<string>9</string>
+			<key>Gloves</key>
+			<string>9</string>
+		</dict>
+		<key>Bonus Minimum Damage</key>
+		<dict>
+			<key>Ring</key>
+			<string>27</string>
+			<key>Amulet</key>
+			<string>27</string>
+		</dict>
+		<key>Bonus Maximum Damage</key>
+		<dict>
+			<key>Ring</key>
+			<string>27</string>
+			<key>Amulet</key>
+			<string>27</string>
+		</dict>
+		<key>Bonus Elemental Damage</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>1017</string>
+			<key>Weapon</key>
+			<string>667</string>
+		</dict>
+		<key>Bonus Cold Damage</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>642</string>
+			<key>Weapon</key>
+			<string>399</string>
+		</dict>
+	</dict>
+	<key>Adventure Stats</key>
+	<dict>
+		<key>Magic Find %</key>
+		<dict>
+			<key>Off-hand</key>
+			<string>18</string>
+			<key>Shield</key>
+			<string>20</string>
+			<key>Ring</key>
+			<string>18</string>
+			<key>Amulet</key>
+			<string>40</string>
+			<key>Shoulders</key>
+			<string>20</string>
+			<key>Helm</key>
+			<string>20</string>
+			<key>Pants</key>
+			<string>20</string>
+			<key>Gloves</key>
+			<string>20</string>
+			<key>Chest</key>
+			<string>20</string>
+			<key>Bracer</key>
+			<string>20</string>
+			<key>Boots</key>
+			<string>20</string>
+			<key>Belt</key>
+			<string>20</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>18</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>18</string>
+			<key>Monk - Spirit Stone</key>
+			<string>18</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>18</string>
+			<key>Wizard Hat</key>
+			<string>18</string>
+		</dict>
+		<key>Gold Find %</key>
+		<dict>
+			<key>Off-hand</key>
+			<string>20</string>
+			<key>Shield</key>
+			<string>25</string>
+			<key>Ring</key>
+			<string>20</string>
+			<key>Amulet</key>
+			<string>40</string>
+			<key>Shoulders</key>
+			<string>25</string>
+			<key>Helm</key>
+			<string>25</string>
+			<key>Pants</key>
+			<string>25</string>
+			<key>Gloves</key>
+			<string>25</string>
+			<key>Chest</key>
+			<string>25</string>
+			<key>Bracer</key>
+			<string>25</string>
+			<key>Boots</key>
+			<string>25</string>
+			<key>Belt</key>
+			<string>25</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>20</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>20</string>
+			<key>Monk - Spirit Stone</key>
+			<string>20</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>20</string>
+			<key>Wizard Hat</key>
+			<string>20</string>
+		</dict>
+		<key>Bonus Experience</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>24</string>
+			<key>Weapon</key>
+			<string>24</string>
+			<key>Off-hand</key>
+			<string>24</string>
+			<key>Shield</key>
+			<string>24</string>
+			<key>Ring</key>
+			<string>24</string>
+			<key>Amulet</key>
+			<string>24</string>
+			<key>Shoulders</key>
+			<string>24</string>
+			<key>Helm</key>
+			<string>24</string>
+			<key>Pants</key>
+			<string>24</string>
+			<key>Gloves</key>
+			<string>24</string>
+			<key>Chest</key>
+			<string>24</string>
+			<key>Bracer</key>
+			<string>24</string>
+			<key>Boots</key>
+			<string>24</string>
+			<key>Belt</key>
+			<string>24</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>24</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>24</string>
+			<key>Monk - Spirit Stone</key>
+			<string>24</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>24</string>
+			<key>Wizard Hat</key>
+			<string>24</string>
+		</dict>
+		<key>Movement Speed %</key>
+		<dict>
+			<key>Boots</key>
+			<string>12</string>
+		</dict>
+		<key>Gold/Globe Pick up Radius</key>
+		<dict>
+			<key>Shoulders</key>
+			<string>7</string>
+			<key>Helm</key>
+			<string>7</string>
+			<key>Pants</key>
+			<string>7</string>
+			<key>Gloves</key>
+			<string>7</string>
+			<key>Chest</key>
+			<string>7</string>
+			<key>Bracer</key>
+			<string>7</string>
+			<key>Boots</key>
+			<string>7</string>
+			<key>Belt</key>
+			<string>7</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>7</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>7</string>
+			<key>Monk - Spirit Stone</key>
+			<string>7</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>7</string>
+			<key>Wizard Hat</key>
+			<string>7</string>
+		</dict>
+		<key>Reduced Level Requirement</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>18</string>
+			<key>Weapon</key>
+			<string>18</string>
+			<key>Shoulders</key>
+			<string>18</string>
+			<key>Helm</key>
+			<string>18</string>
+			<key>Pants</key>
+			<string>18</string>
+			<key>Gloves</key>
+			<string>18</string>
+			<key>Chest</key>
+			<string>18</string>
+			<key>Bracer</key>
+			<string>18</string>
+			<key>Boots</key>
+			<string>18</string>
+			<key>Belt</key>
+			<string>18</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>16</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>16</string>
+			<key>Monk - Spirit Stone</key>
+			<string>16</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>16</string>
+			<key>Wizard Hat</key>
+			<string>16</string>
+		</dict>
+		<key>Extra Sockets</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>1</string>
+			<key>Weapon</key>
+			<string>1</string>
+			<key>Off-hand</key>
+			<string>1</string>
+			<key>Shield</key>
+			<string>1</string>
+			<key>Ring</key>
+			<string>1</string>
+			<key>Amulet</key>
+			<string>1</string>
+			<key>Helm</key>
+			<string>1</string>
+			<key>Pants</key>
 			<string>2</string>
-			<key>fork</key>
+			<key>Chest</key>
+			<string>3</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>3</string>
+			<key>Monk - Spirit Stone</key>
+			<string>1</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>1</string>
+			<key>Wizard Hat</key>
 			<string>1</string>
 		</dict>
 	</dict>
-	<key>Resists</key>
+	<key>Primary Stats</key>
 	<dict>
-		<key>Fire resist</key>
+		<key>Vitality</key>
 		<dict>
-			<key>One-hand</key>
-			<string>20</string>
-		</dict>
-		<key>All resist</key>
-		<dict>
+			<key>Two-handed</key>
+			<string>595</string>
+			<key>Weapon</key>
+			<string>350</string>
+			<key>Off-hand</key>
+			<string>178</string>
+			<key>Shield</key>
+			<string>350</string>
+			<key>Ring</key>
+			<string>178</string>
+			<key>Amulet</key>
+			<string>302</string>
+			<key>Shoulders</key>
+			<string>200</string>
 			<key>Helm</key>
 			<string>200</string>
+			<key>Pants</key>
+			<string>300</string>
 			<key>Gloves</key>
-			<string>100</string>
+			<string>200</string>
+			<key>Chest</key>
+			<string>300</string>
+			<key>Bracer</key>
+			<string>200</string>
+			<key>Boots</key>
+			<string>200</string>
+			<key>Belt</key>
+			<string>200</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>258</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>178</string>
+			<key>Monk - Spirit Stone</key>
+			<string>178</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>178</string>
+			<key>Wizard Hat</key>
+			<string>178</string>
+		</dict>
+		<key>Strength</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>595</string>
+			<key>Weapon</key>
+			<string>350</string>
+			<key>Off-hand</key>
+			<string>178</string>
+			<key>Shield</key>
+			<string>350</string>
+			<key>Ring</key>
+			<string>178</string>
+			<key>Amulet</key>
+			<string>302</string>
+			<key>Shoulders</key>
+			<string>300</string>
+			<key>Helm</key>
+			<string>200</string>
+			<key>Pants</key>
+			<string>200</string>
+			<key>Gloves</key>
+			<string>200</string>
+			<key>Chest</key>
+			<string>200</string>
+			<key>Bracer</key>
+			<string>200</string>
+			<key>Boots</key>
+			<string>200</string>
+			<key>Belt</key>
+			<string>300</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>178</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>258</string>
+			<key>Monk - Spirit Stone</key>
+			<string>178</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>178</string>
+			<key>Wizard Hat</key>
+			<string>178</string>
+		</dict>
+		<key>Dexterity</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>595</string>
+			<key>Weapon</key>
+			<string>350</string>
+			<key>Off-hand</key>
+			<string>178</string>
+			<key>Shield</key>
+			<string>350</string>
+			<key>Ring</key>
+			<string>178</string>
+			<key>Amulet</key>
+			<string>302</string>
+			<key>Shoulders</key>
+			<string>200</string>
+			<key>Helm</key>
+			<string>200</string>
+			<key>Pants</key>
+			<string>200</string>
+			<key>Gloves</key>
+			<string>300</string>
+			<key>Chest</key>
+			<string>200</string>
+			<key>Bracer</key>
+			<string>200</string>
+			<key>Boots</key>
+			<string>300</string>
+			<key>Belt</key>
+			<string>200</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>178</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>178</string>
+			<key>Monk - Spirit Stone</key>
+			<string>178</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>178</string>
+			<key>Wizard Hat</key>
+			<string>178</string>
+		</dict>
+		<key>Intelligence</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>595</string>
+			<key>Weapon</key>
+			<string>350</string>
+			<key>Off-hand</key>
+			<string>178</string>
+			<key>Shield</key>
+			<string>350</string>
+			<key>Ring</key>
+			<string>178</string>
+			<key>Amulet</key>
+			<string>302</string>
+			<key>Shoulders</key>
+			<string>200</string>
+			<key>Helm</key>
+			<string>300</string>
+			<key>Pants</key>
+			<string>200</string>
+			<key>Gloves</key>
+			<string>300</string>
+			<key>Chest</key>
+			<string>200</string>
+			<key>Bracer</key>
+			<string>200</string>
+			<key>Boots</key>
+			<string>200</string>
+			<key>Belt</key>
+			<string>200</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>178</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>178</string>
+			<key>Monk - Spirit Stone</key>
+			<string>258</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>258</string>
+			<key>Wizard Hat</key>
+			<string>258</string>
+		</dict>
+	</dict>
+	<key>Life Stats</key>
+	<dict>
+		<key>Life %</key>
+		<dict>
+			<key>Off-hand</key>
+			<string>9</string>
+			<key>Shield</key>
+			<string>16</string>
+			<key>Ring</key>
+			<string>9</string>
+			<key>Amulet</key>
+			<string>14</string>
+			<key>Shoulders</key>
+			<string>12</string>
+			<key>Helm</key>
+			<string>12</string>
+			<key>Chest</key>
+			<string>12</string>
+			<key>Belt</key>
+			<string>12</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>9</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>9</string>
+			<key>Monk - Spirit Stone</key>
+			<string>9</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>9</string>
+			<key>Wizard Hat</key>
+			<string>9</string>
+		</dict>
+		<key>Life Steal %</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>6</string>
+			<key>Weapon</key>
+			<string>3</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>3</string>
+		</dict>
+		<key>Life per Spirit Spent</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>64</string>
+			<key>Weapon</key>
+			<string>64</string>
+			<key>Monk - Spirit Stone</key>
+			<string>30</string>
+		</dict>
+		<key>Life on Hit</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>1918</string>
+			<key>Weapon</key>
+			<string>959</string>
+			<key>Ring</key>
+			<string>328</string>
+			<key>Amulet</key>
+			<string>657</string>
+		</dict>
+		<key>Life after kill</key>
+		<dict>
+			<key>Two-handed</key>
+			<string>5756</string>
+			<key>Weapon</key>
+			<string>2878</string>
+			<key>Ring</key>
+			<string>985</string>
+			<key>Amulet</key>
+			<string>1971</string>
+		</dict>
+		<key>Extra Globe Health from globes</key>
+		<dict>
+			<key>Off-hand</key>
+			<string>5977</string>
+			<key>Shield</key>
+			<string>12794</string>
+			<key>Ring</key>
+			<string>5977</string>
+			<key>Amulet</key>
+			<string>5977</string>
+			<key>Shoulders</key>
+			<string>12794</string>
+			<key>Helm</key>
+			<string>12794</string>
+			<key>Pants</key>
+			<string>12794</string>
+			<key>Gloves</key>
+			<string>12794</string>
+			<key>Chest</key>
+			<string>12794</string>
+			<key>Bracer</key>
+			<string>12794</string>
+			<key>Boots</key>
+			<string>12794</string>
+			<key>Belt</key>
+			<string>12794</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>5977</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>5977</string>
+			<key>Monk - Spirit Stone</key>
+			<string>5977</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>5977</string>
+			<key>Wizard Hat</key>
+			<string>5977</string>
+		</dict>
+		<key>Life Regeneration per second</key>
+		<dict>
+			<key>Off-hand</key>
+			<string>234</string>
+			<key>Shield</key>
+			<string>342</string>
+			<key>Ring</key>
+			<string>234</string>
+			<key>Amulet</key>
+			<string>410</string>
+			<key>Shoulders</key>
+			<string>342</string>
+			<key>Helm</key>
+			<string>342</string>
+			<key>Pants</key>
+			<string>342</string>
+			<key>Gloves</key>
+			<string>342</string>
+			<key>Chest</key>
+			<string>599</string>
+			<key>Bracer</key>
+			<string>342</string>
+			<key>Boots</key>
+			<string>342</string>
+			<key>Belt</key>
+			<string>342</string>
+			<key>Demon Hunter - Cloak</key>
+			<string>410</string>
+			<key>Barbarian - Mighty Belt</key>
+			<string>234</string>
+			<key>Monk - Spirit Stone</key>
+			<string>234</string>
+			<key>Witch Doctor - Voodoo Mask</key>
+			<string>234</string>
+			<key>Wizard Hat</key>
+			<string>234</string>
 		</dict>
 	</dict>
 </dict>

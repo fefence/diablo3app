@@ -289,7 +289,7 @@
                     <navigationItem key="navigationItem" title="Profile info" id="5Sr-8N-uo2"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="990" y="1589"/>
+            <point key="canvasLocation" x="990" y="1820"/>
         </scene>
         <!--View Controller - Max Stats-->
         <scene sceneID="c3N-qb-glb">
@@ -454,7 +454,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="z2J-5O-vNV">
-                                <rect key="frame" x="0.0" y="46" width="320" height="370"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="370"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
