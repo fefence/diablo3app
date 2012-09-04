@@ -19,6 +19,7 @@
 @property NSMutableDictionary *beans;
 @property NSString *key;
 @property NSDictionary *maxValuesByItemData;
+@property NSDictionary *maxValuesByStatData;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

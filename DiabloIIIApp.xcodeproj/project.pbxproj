@@ -31,6 +31,9 @@
 		F226A0D415E2285E00AFF97D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D315E2285E00AFF97D /* MainViewController.m */; };
 		F226A0D715E2289B00AFF97D /* GemCalcMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D615E2289B00AFF97D /* GemCalcMainController.m */; };
 		F22B79A515F617F600EC6DC5 /* StatRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22B79A415F617F600EC6DC5 /* StatRow.xib */; };
+		F22B79AC15F61E7900EC6DC5 /* MaxValueByStats.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B79AB15F61E7900EC6DC5 /* MaxValueByStats.m */; };
+		F22B79AF15F61E9800EC6DC5 /* MaxValueByStatsStatList.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B79AE15F61E9800EC6DC5 /* MaxValueByStatsStatList.m */; };
+		F22B79B215F61EB700EC6DC5 /* MaxValueByStatsItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B79B115F61EB700EC6DC5 /* MaxValueByStatsItems.m */; };
 		F231675F15F608D700DA15CC /* MaxValueByItemStatsValues.m in Sources */ = {isa = PBXBuildFile; fileRef = F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */; };
 		F249ED8015E7720300E79E6B /* GemCalcSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */; };
 		F292ABC315E6617300865B52 /* UIView+FormScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = F292ABC215E6617300865B52 /* UIView+FormScroll.m */; };
@@ -39,6 +42,7 @@
 		F2B5399415F374A5007887FB /* MaxValuesByItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5399315F374A5007887FB /* MaxValuesByItem.m */; };
 		F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B5399515F374EE007887FB /* ItemStatsList.plist */; };
 		F2B5399915F37EB3007887FB /* MaxValueByItemStatGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5399815F37EB3007887FB /* MaxValueByItemStatGroup.m */; };
+		F2C06D2D15F6291C000337AA /* ByStats.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2C06D2C15F6291C000337AA /* ByStats.plist */; };
 		F2E2AA5D15E3B28E003F749C /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */; };
 		F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */; };
 		F2EB16C115ECCF27004742DD /* GemDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EB16C015ECCF27004742DD /* GemDetailsController.m */; };
@@ -77,6 +81,12 @@
 		F226A0D515E2289B00AFF97D /* GemCalcMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcMainController.h; sourceTree = "<group>"; };
 		F226A0D615E2289B00AFF97D /* GemCalcMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcMainController.m; sourceTree = "<group>"; };
 		F22B79A415F617F600EC6DC5 /* StatRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatRow.xib; sourceTree = "<group>"; };
+		F22B79AA15F61E7900EC6DC5 /* MaxValueByStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByStats.h; sourceTree = "<group>"; };
+		F22B79AB15F61E7900EC6DC5 /* MaxValueByStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByStats.m; sourceTree = "<group>"; };
+		F22B79AD15F61E9800EC6DC5 /* MaxValueByStatsStatList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByStatsStatList.h; sourceTree = "<group>"; };
+		F22B79AE15F61E9800EC6DC5 /* MaxValueByStatsStatList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByStatsStatList.m; sourceTree = "<group>"; };
+		F22B79B015F61EB700EC6DC5 /* MaxValueByStatsItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByStatsItems.h; sourceTree = "<group>"; };
+		F22B79B115F61EB700EC6DC5 /* MaxValueByStatsItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByStatsItems.m; sourceTree = "<group>"; };
 		F231675D15F608D700DA15CC /* MaxValueByItemStatsValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByItemStatsValues.h; sourceTree = "<group>"; };
 		F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByItemStatsValues.m; sourceTree = "<group>"; };
 		F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcSettingsController.h; sourceTree = "<group>"; };
@@ -90,6 +100,7 @@
 		F2B5399515F374EE007887FB /* ItemStatsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ItemStatsList.plist; sourceTree = "<group>"; };
 		F2B5399715F37EB3007887FB /* MaxValueByItemStatGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByItemStatGroup.h; sourceTree = "<group>"; };
 		F2B5399815F37EB3007887FB /* MaxValueByItemStatGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByItemStatGroup.m; sourceTree = "<group>"; };
+		F2C06D2C15F6291C000337AA /* ByStats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ByStats.plist; sourceTree = "<group>"; };
 		F2E2AA5B15E3B28E003F749C /* KeyboardBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardBar.h; sourceTree = "<group>"; };
 		F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardBar.m; sourceTree = "<group>"; };
 		F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcResults.h; sourceTree = "<group>"; };
@@ -182,6 +193,7 @@
 				F226A0BF15E2238300AFF97D /* main.m */,
 				F226A0C115E2238300AFF97D /* DiabloIIIApp-Prefix.pch */,
 				F2B5399515F374EE007887FB /* ItemStatsList.plist */,
+				F2C06D2C15F6291C000337AA /* ByStats.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -226,6 +238,12 @@
 				F231675D15F608D700DA15CC /* MaxValueByItemStatsValues.h */,
 				F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */,
 				F22B79A415F617F600EC6DC5 /* StatRow.xib */,
+				F22B79AA15F61E7900EC6DC5 /* MaxValueByStats.h */,
+				F22B79AB15F61E7900EC6DC5 /* MaxValueByStats.m */,
+				F22B79AD15F61E9800EC6DC5 /* MaxValueByStatsStatList.h */,
+				F22B79AE15F61E9800EC6DC5 /* MaxValueByStatsStatList.m */,
+				F22B79B015F61EB700EC6DC5 /* MaxValueByStatsItems.h */,
+				F22B79B115F61EB700EC6DC5 /* MaxValueByStatsItems.m */,
 			);
 			name = MaxValues;
 			sourceTree = "<group>";
@@ -300,6 +318,7 @@
 				F2B5399115F3740B007887FB /* ItemRow.xib in Resources */,
 				F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */,
 				F22B79A515F617F600EC6DC5 /* StatRow.xib in Resources */,
+				F2C06D2D15F6291C000337AA /* ByStats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +343,9 @@
 				F2B5399415F374A5007887FB /* MaxValuesByItem.m in Sources */,
 				F2B5399915F37EB3007887FB /* MaxValueByItemStatGroup.m in Sources */,
 				F231675F15F608D700DA15CC /* MaxValueByItemStatsValues.m in Sources */,
+				F22B79AC15F61E7900EC6DC5 /* MaxValueByStats.m in Sources */,
+				F22B79AF15F61E9800EC6DC5 /* MaxValueByStatsStatList.m in Sources */,
+				F22B79B215F61EB700EC6DC5 /* MaxValueByStatsItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

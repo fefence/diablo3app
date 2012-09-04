@@ -338,20 +338,111 @@
             </objects>
             <point key="canvasLocation" x="990" y="939"/>
         </scene>
-        <!--View Controller-->
+        <!--Max Value By Stats - Stats groups-->
         <scene sceneID="UlU-PN-cMR">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csf-az-I1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="rrY-hQ-Vtm" sceneMemberID="viewController">
+                <viewController id="rrY-hQ-Vtm" customClass="MaxValueByStats" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pJm-EX-HdM">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UXe-3h-KCM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StatGroup" id="itJ-i4-9r4">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="TUJ-Ej-Yna" kind="push" id="B8t-PO-5G2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rrY-hQ-Vtm" id="pqS-dA-TG3"/>
+                                    <outlet property="delegate" destination="rrY-hQ-Vtm" id="HtA-lG-Xtb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FU2-8n-yxR"/>
+                    <navigationItem key="navigationItem" title="Stats groups" id="FU2-8n-yxR"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1463" y="1204"/>
+        </scene>
+        <!--Max Value By Stats Stat List - Stat-->
+        <scene sceneID="jed-sX-9sF">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qc-DW-PbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="TUJ-Ej-Yna" customClass="MaxValueByStatsStatList" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kci-iO-nQf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tWW-Xn-ukb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Stat" id="H0h-tz-aN3">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="poh-VE-aeG" kind="push" id="hKI-aj-iIN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TUJ-Ej-Yna" id="Y6a-nl-nN3"/>
+                                    <outlet property="delegate" destination="TUJ-Ej-Yna" id="Px0-S9-0Wi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stat" id="CnZ-31-1l1"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1907" y="1204"/>
+        </scene>
+        <!--Max Value By Stats Items - Items-->
+        <scene sceneID="D8M-sv-g0D">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muy-rk-LLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="poh-VE-aeG" customClass="MaxValueByStatsItems" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xom-ca-gkq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iS3-vz-GX2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="poh-VE-aeG" id="al4-tH-seT"/>
+                                    <outlet property="delegate" destination="poh-VE-aeG" id="iMt-Kb-DAM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Items" id="oZX-qY-4Bj"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2345" y="1197"/>
         </scene>
         <!--Max Values By Item - Items-->
         <scene sceneID="OZf-mn-neo">
@@ -1056,6 +1147,15 @@
         </class>
         <class className="MaxValueByItemStatsValues" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValueByItemStatsValues.h"/>
+        </class>
+        <class className="MaxValueByStats" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValueByStats.h"/>
+        </class>
+        <class className="MaxValueByStatsItems" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValueByStatsItems.h"/>
+        </class>
+        <class className="MaxValueByStatsStatList" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValueByStatsStatList.h"/>
         </class>
         <class className="MaxValuesByItem" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValuesByItem.h"/>

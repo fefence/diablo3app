@@ -1,23 +1,23 @@
 //
-//  MaxValuesByItem.m
+//  MaxValueByStatsStatList.m
 //  DiabloIIIApp
 //
-//  Created by Vesela Popova on 02.09.12.
+//  Created by Vesela Popova on 04.09.12.
 //  Copyright (c) 2012 г. Vesela Popova. All rights reserved.
 //
 
-#import "MaxValuesByItem.h"
+#import "MaxValueByStatsStatList.h"
 #import "AppDelegate.h"
-#import "MaxValueByItemStatGroup.h"
-
-@interface MaxValuesByItem ()
+#import "MaxValueByStatsItems.h"
+@interface MaxValueByStatsStatList ()
 
 @end
 
-@implementation MaxValuesByItem
-@synthesize table = _table;
+@implementation MaxValueByStatsStatList
+@synthesize statsGroup = _statsGroup;
 
-NSArray *tableData;
+NSArray *stats;
+NSDictionary *tmp;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,21 +32,21 @@ NSArray *tableData;
 {
     [super viewDidLoad];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    tableData = [[NSArray alloc] initWithArray:appDelegate.maxValuesByItemData.allKeys];
-	// Do any additional setup after loading the view.
+    tmp = [appDelegate.maxValuesByStatData objectForKey:_statsGroup];
+    stats = [tmp allKeys];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"ItemRow";
+    static NSString *CellIdentifier = @"Stat";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"amulet14_barbarian_male.png"];
+    
+    cell.textLabel.text = [stats objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -60,19 +60,19 @@ NSArray *tableData;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [tableData count];
+    return stats.count;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    MaxValueByStatsItems *next = [segue destinationViewController];
+    next.stat = sender.textLabel.text;
+    next.items = [tmp objectForKey:next.stat];
 }
 
 - (void)viewDidUnload
 {
-    [self setTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
-    MaxValueByItemStatGroup *next = [segue destinationViewController];
-    next.item = sender.textLabel.text;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

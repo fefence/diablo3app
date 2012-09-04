@@ -1,23 +1,22 @@
 //
-//  MaxValuesByItem.m
+//  MaxValueByStats.m
 //  DiabloIIIApp
 //
-//  Created by Vesela Popova on 02.09.12.
+//  Created by Vesela Popova on 04.09.12.
 //  Copyright (c) 2012 г. Vesela Popova. All rights reserved.
 //
 
-#import "MaxValuesByItem.h"
+#import "MaxValueByStats.h"
 #import "AppDelegate.h"
-#import "MaxValueByItemStatGroup.h"
+#import "MaxValueByStatsStatList.h"
 
-@interface MaxValuesByItem ()
+@interface MaxValueByStats ()
 
 @end
 
-@implementation MaxValuesByItem
-@synthesize table = _table;
-
+@implementation MaxValueByStats
 NSArray *tableData;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,21 +31,19 @@ NSArray *tableData;
 {
     [super viewDidLoad];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    tableData = [[NSArray alloc] initWithArray:appDelegate.maxValuesByItemData.allKeys];
-	// Do any additional setup after loading the view.
+    tableData = [[NSArray alloc] initWithArray:appDelegate.maxValuesByStatData.allKeys];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"ItemRow";
+    static NSString *CellIdentifier = @"StatGroup";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-
+    
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"amulet14_barbarian_male.png"];
     
     return cell;
 }
@@ -60,19 +57,18 @@ NSArray *tableData;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [tableData count];
+    return tableData.count;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    MaxValueByStatsStatList *next = [segue destinationViewController];
+    next.statsGroup = sender.textLabel.text;
 }
 
 - (void)viewDidUnload
 {
-    [self setTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
-    MaxValueByItemStatGroup *next = [segue destinationViewController];
-    next.item = sender.textLabel.text;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

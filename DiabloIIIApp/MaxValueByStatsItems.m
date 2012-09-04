@@ -1,23 +1,21 @@
 //
-//  MaxValuesByItem.m
+//  MaxValueByStatsItems.m
 //  DiabloIIIApp
 //
-//  Created by Vesela Popova on 02.09.12.
+//  Created by Vesela Popova on 04.09.12.
 //  Copyright (c) 2012 г. Vesela Popova. All rights reserved.
 //
 
-#import "MaxValuesByItem.h"
-#import "AppDelegate.h"
-#import "MaxValueByItemStatGroup.h"
+#import "MaxValueByStatsItems.h"
 
-@interface MaxValuesByItem ()
+@interface MaxValueByStatsItems ()
 
 @end
 
-@implementation MaxValuesByItem
-@synthesize table = _table;
-
-NSArray *tableData;
+@implementation MaxValueByStatsItems
+@synthesize stat = _stat;
+@synthesize items = _items;
+NSArray *keys;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,22 +29,24 @@ NSArray *tableData;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    tableData = [[NSArray alloc] initWithArray:appDelegate.maxValuesByItemData.allKeys];
-	// Do any additional setup after loading the view.
+    keys = [_items allKeys];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"ItemRow";
+    static NSString *CellIdentifier = @"StatRow";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"StatRow" owner:self options:nil];
+        cell = [topLevelObjects objectAtIndex:0];
     }
-
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"amulet14_barbarian_male.png"];
+    
+    UILabel *stat = (UILabel *)[cell viewWithTag:100];
+    stat.text = [keys objectAtIndex:indexPath.row];
+    UILabel *val = (UILabel *)[cell viewWithTag:200];
+    val.text = [_items objectForKey:stat.text];
     
     return cell;
 }
@@ -60,19 +60,13 @@ NSArray *tableData;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [tableData count];
+    return _items.count;
 }
 
 - (void)viewDidUnload
 {
-    [self setTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
-    MaxValueByItemStatGroup *next = [segue destinationViewController];
-    next.item = sender.textLabel.text;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

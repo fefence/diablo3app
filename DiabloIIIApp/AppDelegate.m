@@ -17,6 +17,7 @@
 @synthesize beans = _beans;
 @synthesize key = _key;
 @synthesize maxValuesByItemData = _maxValuesByItemData;
+@synthesize maxValuesByStatData = _maxValuesByStatData;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -25,8 +26,10 @@
     NSString *Path = [[NSBundle mainBundle] bundlePath];
     NSString *DataPath = [Path stringByAppendingPathComponent:@"ItemStatsList.plist"];
     
-    NSDictionary *tempDict = [[NSDictionary alloc] initWithContentsOfFile:DataPath];
-    _maxValuesByItemData = tempDict;
+    _maxValuesByItemData = [[NSDictionary alloc] initWithContentsOfFile:DataPath];
+    NSString *DataPath2 = [Path stringByAppendingPathComponent:@"ByStats.plist"];
+    
+    _maxValuesByStatData = [[NSDictionary alloc] initWithContentsOfFile:DataPath2];
     //  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    // // Override point for customization after application launch.
    // self.window.backgroundColor = [UIColor whiteColor];
