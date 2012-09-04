@@ -16,11 +16,17 @@
 @synthesize gemTypes = _gemTypes;
 @synthesize beans = _beans;
 @synthesize key = _key;
+@synthesize maxValuesByItemData = _maxValuesByItemData;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     _gemTypes = [[NSMutableArray alloc] initWithObjects:@"Chipped", @"Flawed", @"Normal", @"Flawless", @"Perfect", @"Radiant", @"Square", @"Flawless Square", @"Perfect Square", @"Radiant Square", @"Star", @"Flawless Star", @"Perfect Star", @"Radiant Star", nil];
     _beans = [[NSMutableDictionary alloc] init];
+    NSString *Path = [[NSBundle mainBundle] bundlePath];
+    NSString *DataPath = [Path stringByAppendingPathComponent:@"ItemStatsList.plist"];
+    
+    NSDictionary *tempDict = [[NSDictionary alloc] initWithContentsOfFile:DataPath];
+    _maxValuesByItemData = tempDict;
     //  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    // // Override point for customization after application launch.
    // self.window.backgroundColor = [UIColor whiteColor];

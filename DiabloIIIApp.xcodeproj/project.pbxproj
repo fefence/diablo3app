@@ -30,8 +30,15 @@
 		F226A0CE15E223A700AFF97D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F226A0CD15E223A700AFF97D /* Storyboard.storyboard */; };
 		F226A0D415E2285E00AFF97D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D315E2285E00AFF97D /* MainViewController.m */; };
 		F226A0D715E2289B00AFF97D /* GemCalcMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F226A0D615E2289B00AFF97D /* GemCalcMainController.m */; };
+		F22B79A515F617F600EC6DC5 /* StatRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22B79A415F617F600EC6DC5 /* StatRow.xib */; };
+		F231675F15F608D700DA15CC /* MaxValueByItemStatsValues.m in Sources */ = {isa = PBXBuildFile; fileRef = F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */; };
 		F249ED8015E7720300E79E6B /* GemCalcSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */; };
 		F292ABC315E6617300865B52 /* UIView+FormScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = F292ABC215E6617300865B52 /* UIView+FormScroll.m */; };
+		F2B5398815F3703F007887FB /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5398715F3703F007887FB /* View.xib */; };
+		F2B5399115F3740B007887FB /* ItemRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5399015F3740B007887FB /* ItemRow.xib */; };
+		F2B5399415F374A5007887FB /* MaxValuesByItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5399315F374A5007887FB /* MaxValuesByItem.m */; };
+		F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B5399515F374EE007887FB /* ItemStatsList.plist */; };
+		F2B5399915F37EB3007887FB /* MaxValueByItemStatGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5399815F37EB3007887FB /* MaxValueByItemStatGroup.m */; };
 		F2E2AA5D15E3B28E003F749C /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */; };
 		F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */; };
 		F2EB16C115ECCF27004742DD /* GemDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EB16C015ECCF27004742DD /* GemDetailsController.m */; };
@@ -69,10 +76,20 @@
 		F226A0D315E2285E00AFF97D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F226A0D515E2289B00AFF97D /* GemCalcMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcMainController.h; sourceTree = "<group>"; };
 		F226A0D615E2289B00AFF97D /* GemCalcMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcMainController.m; sourceTree = "<group>"; };
+		F22B79A415F617F600EC6DC5 /* StatRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatRow.xib; sourceTree = "<group>"; };
+		F231675D15F608D700DA15CC /* MaxValueByItemStatsValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByItemStatsValues.h; sourceTree = "<group>"; };
+		F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByItemStatsValues.m; sourceTree = "<group>"; };
 		F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcSettingsController.h; sourceTree = "<group>"; };
 		F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcSettingsController.m; sourceTree = "<group>"; };
 		F292ABC115E6617300865B52 /* UIView+FormScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FormScroll.h"; sourceTree = "<group>"; };
 		F292ABC215E6617300865B52 /* UIView+FormScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FormScroll.m"; sourceTree = "<group>"; };
+		F2B5398715F3703F007887FB /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = ../View.xib; sourceTree = "<group>"; };
+		F2B5399015F3740B007887FB /* ItemRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemRow.xib; sourceTree = "<group>"; };
+		F2B5399215F374A5007887FB /* MaxValuesByItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValuesByItem.h; sourceTree = "<group>"; };
+		F2B5399315F374A5007887FB /* MaxValuesByItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValuesByItem.m; sourceTree = "<group>"; };
+		F2B5399515F374EE007887FB /* ItemStatsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ItemStatsList.plist; sourceTree = "<group>"; };
+		F2B5399715F37EB3007887FB /* MaxValueByItemStatGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByItemStatGroup.h; sourceTree = "<group>"; };
+		F2B5399815F37EB3007887FB /* MaxValueByItemStatGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByItemStatGroup.m; sourceTree = "<group>"; };
 		F2E2AA5B15E3B28E003F749C /* KeyboardBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardBar.h; sourceTree = "<group>"; };
 		F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardBar.m; sourceTree = "<group>"; };
 		F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcResults.h; sourceTree = "<group>"; };
@@ -130,28 +147,17 @@
 		F226A0B915E2238300AFF97D /* DiabloIIIApp */ = {
 			isa = PBXGroup;
 			children = (
-				F2E2AA5B15E3B28E003F749C /* KeyboardBar.h */,
-				F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */,
+				F2B5398715F3703F007887FB /* View.xib */,
 				F226A0C215E2238300AFF97D /* AppDelegate.h */,
 				F226A0C315E2238300AFF97D /* AppDelegate.m */,
 				F226A0C515E2238300AFF97D /* DiabloIIIApp.xcdatamodeld */,
-				F226A0BA15E2238300AFF97D /* Supporting Files */,
 				F226A0CD15E223A700AFF97D /* Storyboard.storyboard */,
 				F226A0D215E2285E00AFF97D /* MainViewController.h */,
 				F226A0D315E2285E00AFF97D /* MainViewController.m */,
-				F226A0D515E2289B00AFF97D /* GemCalcMainController.h */,
-				F226A0D615E2289B00AFF97D /* GemCalcMainController.m */,
-				F292ABC115E6617300865B52 /* UIView+FormScroll.h */,
-				F292ABC215E6617300865B52 /* UIView+FormScroll.m */,
-				F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */,
-				F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */,
-				F2ED09F815E8D47000982454 /* GemCalcRow.xib */,
-				F2ED09FE15E8FAEA00982454 /* GemBean.h */,
-				F2ED09FF15E8FAEA00982454 /* GemBean.m */,
-				F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */,
-				F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */,
-				F2EB16BF15ECCF27004742DD /* GemDetailsController.h */,
-				F2EB16C015ECCF27004742DD /* GemDetailsController.m */,
+				F2B5398C15F371ED007887FB /* MaxValues */,
+				F2B5398A15F37094007887FB /* GemCalculator */,
+				F2B5398B15F370B1007887FB /* Common */,
+				F226A0BA15E2238300AFF97D /* Supporting Files */,
 			);
 			path = DiabloIIIApp;
 			sourceTree = "<group>";
@@ -175,8 +181,53 @@
 				F226A0BC15E2238300AFF97D /* InfoPlist.strings */,
 				F226A0BF15E2238300AFF97D /* main.m */,
 				F226A0C115E2238300AFF97D /* DiabloIIIApp-Prefix.pch */,
+				F2B5399515F374EE007887FB /* ItemStatsList.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2B5398A15F37094007887FB /* GemCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				F2ED09F815E8D47000982454 /* GemCalcRow.xib */,
+				F226A0D515E2289B00AFF97D /* GemCalcMainController.h */,
+				F226A0D615E2289B00AFF97D /* GemCalcMainController.m */,
+				F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */,
+				F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */,
+				F2ED09FE15E8FAEA00982454 /* GemBean.h */,
+				F2ED09FF15E8FAEA00982454 /* GemBean.m */,
+				F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */,
+				F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */,
+				F2EB16BF15ECCF27004742DD /* GemDetailsController.h */,
+				F2EB16C015ECCF27004742DD /* GemDetailsController.m */,
+			);
+			name = GemCalculator;
+			sourceTree = "<group>";
+		};
+		F2B5398B15F370B1007887FB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2AA5B15E3B28E003F749C /* KeyboardBar.h */,
+				F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */,
+				F292ABC115E6617300865B52 /* UIView+FormScroll.h */,
+				F292ABC215E6617300865B52 /* UIView+FormScroll.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		F2B5398C15F371ED007887FB /* MaxValues */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5399015F3740B007887FB /* ItemRow.xib */,
+				F2B5399215F374A5007887FB /* MaxValuesByItem.h */,
+				F2B5399315F374A5007887FB /* MaxValuesByItem.m */,
+				F2B5399715F37EB3007887FB /* MaxValueByItemStatGroup.h */,
+				F2B5399815F37EB3007887FB /* MaxValueByItemStatGroup.m */,
+				F231675D15F608D700DA15CC /* MaxValueByItemStatsValues.h */,
+				F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */,
+				F22B79A415F617F600EC6DC5 /* StatRow.xib */,
+			);
+			name = MaxValues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +296,10 @@
 				D92E97B315E24BD60043BDAB /* shoulders_206_barbarian_male.png in Resources */,
 				D92E97B415E24BD60043BDAB /* sword_1h_208_barbarian_male.png in Resources */,
 				F2ED09F915E8D47000982454 /* GemCalcRow.xib in Resources */,
+				F2B5398815F3703F007887FB /* View.xib in Resources */,
+				F2B5399115F3740B007887FB /* ItemRow.xib in Resources */,
+				F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */,
+				F22B79A515F617F600EC6DC5 /* StatRow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +321,9 @@
 				F2ED0A0015E8FAEA00982454 /* GemBean.m in Sources */,
 				F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */,
 				F2EB16C115ECCF27004742DD /* GemDetailsController.m in Sources */,
+				F2B5399415F374A5007887FB /* MaxValuesByItem.m in Sources */,
+				F2B5399915F37EB3007887FB /* MaxValueByItemStatGroup.m in Sources */,
+				F231675F15F608D700DA15CC /* MaxValueByItemStatsValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Head</key>
+	<dict>
+		<key>Resist</key>
+		<dict>
+			<key>All resist</key>
+			<string>31</string>
+		</dict>
+	</dict>
+	<key>Chest</key>
+	<dict>
+		<key>Other stuff</key>
+		<dict>
+			<key>Dexterity</key>
+			<string>200</string>
+		</dict>
+	</dict>
+	<key>One-hand</key>
+	<dict>
+		<key>Other stuff</key>
+		<dict>
+			<key>Strength</key>
+			<string>100</string>
+			<key>Dexterity</key>
+			<string>200</string>
+		</dict>
+		<key>Resist</key>
+		<dict>
+			<key>Fire resist</key>
+			<string>12</string>
+			<key>Resist all</key>
+			<string>13</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -106,9 +106,7 @@ static GemCalcMainController *sharedInstance;
 }
 
 - (IBAction)changeCurrentTextField:(UITextField *)sender {
-    if (_desiredGem.text.length > 0 && _startingGem.text.length >0) {
-        [_button setEnabled:YES];
-    }
+    
     [self.view scrollToView:sender];
     [_gemPicker setHidden:YES];
     [self initKeyboardBar];
@@ -140,6 +138,9 @@ static GemCalcMainController *sharedInstance;
 }
 
 - (IBAction)scrollBack:(id)sender {
+    if (_desiredGem.text.length > 0 && _startingGem.text.length >0) {
+        [_button setEnabled:YES];
+    }
     [self.view scrollToY:0];
 }
 

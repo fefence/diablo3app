@@ -18,6 +18,7 @@
 @property NSMutableArray *gemTypes;
 @property NSMutableDictionary *beans;
 @property NSString *key;
+@property NSDictionary *maxValuesByItemData;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

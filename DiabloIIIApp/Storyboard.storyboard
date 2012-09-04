@@ -60,13 +60,16 @@
                                 <rect key="frame" x="15" y="169" width="90" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="AH Profit Calculator">
+                                <state key="normal" title="Max Stats Values">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cmb-L7-4je" kind="push" id="bnK-Fe-Dc0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V8d-6R-tze">
                                 <rect key="frame" x="115" y="169" width="90" height="70"/>
@@ -102,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="557" y="73"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Profile info-->
         <scene sceneID="Lss-eM-obL">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQ4-Wm-xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,10 +286,203 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5Sr-8N-uo2"/>
+                    <navigationItem key="navigationItem" title="Profile info" id="5Sr-8N-uo2"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="724" y="708"/>
+            <point key="canvasLocation" x="990" y="1589"/>
+        </scene>
+        <!--View Controller - Max Stats-->
+        <scene sceneID="c3N-qb-glb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXn-sQ-tFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="cmb-L7-4je" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fp0-5T-jQx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6oU-VR-zkZ">
+                                <rect key="frame" x="79" y="101" width="162" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Item type">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2x9-pi-msA" kind="push" id="Xmt-fi-wFA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JIx-eF-6aF">
+                                <rect key="frame" x="79" y="206" width="162" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stats">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rrY-hQ-Vtm" kind="push" id="IUl-6g-fDG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Max Stats" id="WgA-iF-dsL"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="990" y="939"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UlU-PN-cMR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Csf-az-I1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="rrY-hQ-Vtm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pJm-EX-HdM">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FU2-8n-yxR"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1463" y="1204"/>
+        </scene>
+        <!--Max Values By Item - Items-->
+        <scene sceneID="OZf-mn-neo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xB-gT-4lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="2x9-pi-msA" customClass="MaxValuesByItem" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZV-Rp-FMj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="z2J-5O-vNV">
+                                <rect key="frame" x="0.0" y="46" width="320" height="370"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ItemRow" textLabel="s3p-zi-2z5" imageView="U1X-7O-vnB" style="IBUITableViewCellStyleDefault" id="bOT-aZ-ehp">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s3p-zi-2z5">
+                                                    <rect key="frame" x="53" y="0.0" width="237" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="amulet14_barbarian_male.png" id="U1X-7O-vnB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="a8h-rW-DV0" kind="push" id="iQ0-cN-J6Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2x9-pi-msA" id="MxV-Zb-gMW"/>
+                                    <outlet property="delegate" destination="2x9-pi-msA" id="Plq-IH-E1L"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Items" id="zEs-1A-qFk"/>
+                    <connections>
+                        <outlet property="table" destination="z2J-5O-vNV" id="eSL-cB-ucn"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1461" y="633"/>
+        </scene>
+        <!--Max Value By Item Stat Group - Stats groups-->
+        <scene sceneID="hpj-Pn-dJW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDG-my-u7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="a8h-rW-DV0" customClass="MaxValueByItemStatGroup" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ny-Qo-9iO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5QF-Ms-T9k">
+                                <rect key="frame" x="0.0" y="41" width="320" height="375"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StatsGroup" textLabel="6nx-RZ-vtp" style="IBUITableViewCellStyleDefault" id="ce4-mJ-yJM">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6nx-RZ-vtp">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="NGZ-qa-lFL" kind="push" identifier="next" id="BbL-kD-q0k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="a8h-rW-DV0" id="dNU-7H-S0Z"/>
+                                    <outlet property="delegate" destination="a8h-rW-DV0" id="NnX-SV-TIR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stats groups" id="u63-ra-Aul"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1907" y="633"/>
+        </scene>
+        <!--Max Value By Item Stats Values - Stats-->
+        <scene sceneID="JNs-FQ-JJN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSb-qW-ZZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="NGZ-qa-lFL" customClass="MaxValueByItemStatsValues" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IjK-jg-W3k">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PdD-7d-saK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NGZ-qa-lFL" id="ebV-L5-dtX"/>
+                                    <outlet property="delegate" destination="NGZ-qa-lFL" id="Jev-mH-nrg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stats" id="WQF-ub-z6i"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2348" y="633"/>
         </scene>
         <!--Gem Calc Main Controller - Gem Calculator-->
         <scene sceneID="bLW-YP-4d3">
@@ -773,7 +969,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2437" y="64"/>
+            <point key="canvasLocation" x="2348" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b79-IR-VIp">
@@ -854,6 +1050,18 @@
         </class>
         <class className="MainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+        </class>
+        <class className="MaxValueByItemStatGroup" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValueByItemStatGroup.h"/>
+        </class>
+        <class className="MaxValueByItemStatsValues" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValueByItemStatsValues.h"/>
+        </class>
+        <class className="MaxValuesByItem" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MaxValuesByItem.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
