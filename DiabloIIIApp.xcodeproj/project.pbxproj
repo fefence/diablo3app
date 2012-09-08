@@ -35,6 +35,8 @@
 		F22B79AF15F61E9800EC6DC5 /* MaxValueByStatsStatList.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B79AE15F61E9800EC6DC5 /* MaxValueByStatsStatList.m */; };
 		F22B79B215F61EB700EC6DC5 /* MaxValueByStatsItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B79B115F61EB700EC6DC5 /* MaxValueByStatsItems.m */; };
 		F231675F15F608D700DA15CC /* MaxValueByItemStatsValues.m in Sources */ = {isa = PBXBuildFile; fileRef = F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */; };
+		F234FC0F15F8C9C400D9A1D7 /* UseMineSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC0E15F8C9C400D9A1D7 /* UseMineSettings.m */; };
+		F234FC1315F8C9DA00D9A1D7 /* UseMineResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */; };
 		F249ED8015E7720300E79E6B /* GemCalcSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */; };
 		F292ABC315E6617300865B52 /* UIView+FormScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = F292ABC215E6617300865B52 /* UIView+FormScroll.m */; };
 		F2B5398815F3703F007887FB /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5398715F3703F007887FB /* View.xib */; };
@@ -89,6 +91,10 @@
 		F22B79B115F61EB700EC6DC5 /* MaxValueByStatsItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByStatsItems.m; sourceTree = "<group>"; };
 		F231675D15F608D700DA15CC /* MaxValueByItemStatsValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValueByItemStatsValues.h; sourceTree = "<group>"; };
 		F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValueByItemStatsValues.m; sourceTree = "<group>"; };
+		F234FC0D15F8C9C400D9A1D7 /* UseMineSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseMineSettings.h; sourceTree = "<group>"; };
+		F234FC0E15F8C9C400D9A1D7 /* UseMineSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseMineSettings.m; sourceTree = "<group>"; };
+		F234FC1115F8C9DA00D9A1D7 /* UseMineResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseMineResults.h; sourceTree = "<group>"; };
+		F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseMineResults.m; sourceTree = "<group>"; };
 		F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcSettingsController.h; sourceTree = "<group>"; };
 		F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcSettingsController.m; sourceTree = "<group>"; };
 		F292ABC115E6617300865B52 /* UIView+FormScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FormScroll.h"; sourceTree = "<group>"; };
@@ -212,6 +218,10 @@
 				F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */,
 				F2EB16BF15ECCF27004742DD /* GemDetailsController.h */,
 				F2EB16C015ECCF27004742DD /* GemDetailsController.m */,
+				F234FC0D15F8C9C400D9A1D7 /* UseMineSettings.h */,
+				F234FC0E15F8C9C400D9A1D7 /* UseMineSettings.m */,
+				F234FC1115F8C9DA00D9A1D7 /* UseMineResults.h */,
+				F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */,
 			);
 			name = GemCalculator;
 			sourceTree = "<group>";
@@ -346,6 +356,8 @@
 				F22B79AC15F61E7900EC6DC5 /* MaxValueByStats.m in Sources */,
 				F22B79AF15F61E9800EC6DC5 /* MaxValueByStatsStatList.m in Sources */,
 				F22B79B215F61EB700EC6DC5 /* MaxValueByStatsItems.m in Sources */,
+				F234FC0F15F8C9C400D9A1D7 /* UseMineSettings.m in Sources */,
+				F234FC1315F8C9DA00D9A1D7 /* UseMineResults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

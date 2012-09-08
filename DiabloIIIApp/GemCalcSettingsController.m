@@ -20,20 +20,21 @@
 @end
 
 @implementation GemCalcSettingsController
+@synthesize startingGem = _startingGem;
+@synthesize desiredGem = _desiredGem;
+@synthesize amount = _amount;
+@synthesize pageOfJewelcraftingPrice = _pageOfJewelcraftingPrice;
+@synthesize pageOfJewelcraftingAvailable = _pageOfJewelcraftingAvailable;
+@synthesize tomeOfSecretsPrice = _tomeOfSecretsPrice;
+@synthesize tomeOfSecretsAvailable = _tomeOfSecretsAvailable;
+@synthesize tomeOfJewelcraftingPrice = _tomeOfJewelcraftingPrice;
+@synthesize tomeOfJewelcraftingAvailable = _tomeOfJewelcraftingAvailable;
+
 
 NSMutableArray *gemTypes;
 
-NSString *startingGem;
-NSString *desiredGem;
 NSMutableDictionary *beans;
-int amount;
-int pageOfJewelcraftingAvailable;
-int pageOfJewelcraftingPrice;
-int tomeOfJewelcraftingAvailable;
-int tomeOfJewelcraftingPrice;
-int tomeOfSecretsAvailable;
-int tomeOfSecretsPrice;
-bool useMineFirst;
+
 KeyboardBar *bar;
 
 
@@ -48,16 +49,13 @@ KeyboardBar *bar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    GemCalcMainController *sharedInstance = GemCalcMainController.sharedInstance;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
     beans = appDelegate.beans;
-    startingGem = sharedInstance.startingGem.text;
-    desiredGem = sharedInstance.desiredGem.text;
     int i;
     for (i = 0; i < gemTypes.count; i ++) {
-        NSString * current = [gemTypes objectAtIndex:i];
-        if (![current caseInsensitiveCompare:startingGem] == NSOrderedSame) {
+        NSString * current = [gemTypes objectAtIndex:0];
+        if (![current caseInsensitiveCompare:_startingGem] == NSOrderedSame) {
             [gemTypes removeObjectAtIndex:0];
         } else {
             break;
@@ -65,45 +63,39 @@ KeyboardBar *bar;
     }
     
     for (i = gemTypes.count - 1; i >= 0; i --) {
-        if (![[gemTypes objectAtIndex:i] caseInsensitiveCompare:desiredGem] == NSOrderedSame) {
+        if (![[gemTypes objectAtIndex:i] caseInsensitiveCompare:_desiredGem] == NSOrderedSame) {
             [gemTypes removeObjectAtIndex:i];
         } else {
             break;
         }
     }
     
+    NSString *key;
+    for (i = 0; i < gemTypes.count; i ++) {
+        key = [gemTypes objectAtIndex:i];
+        if ([beans objectForKey:key] == nil) {
+            GemBean *tmp = [[GemBean alloc] init];
+            tmp.AHPrice = 0;
+            tmp.available = 0;
+            [beans setValue:tmp forKey:key];
+        }
+    }
+    
     bar = [KeyboardBar new];
     bar.fields = [[NSMutableArray alloc] init];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidUnload
-{
-    [self setView:nil];
-    [super viewDidUnload];
-    
-}
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [gemTypes count];
 }
 
@@ -127,77 +119,34 @@ KeyboardBar *bar;
     NSString * tmp = [gemTypes objectAtIndex:indexPath.row];
     GemBean *bean = [beans objectForKey:tmp];
     if (bean) {
-        priceInput.text = [NSString stringWithFormat:@"%ld", bean.AHPrice];
-        availableInput.text = [NSString stringWithFormat:@"%ld", bean.available];
+        if (bean.AHPrice > 0) {
+            priceInput.text = [NSString stringWithFormat:@"%ld", bean.AHPrice];
+        } else {
+            priceInput.text = @"";
+        }
+        if (bean.available > 0) {
+            availableInput.text = [NSString stringWithFormat:@"%ld", bean.available];
+        } else {
+            availableInput.text = @"";
+        }
     } else {
         priceInput.text = @"";
-        availableInput.text = @"";;
+        availableInput.text = @"";
     }
     myLabel.text = tmp;
-    int count = bar.fields.count;
-    int index = indexPath.row*2;
-    if (count < index + 1){
-        [bar.fields insertObject:availableInput atIndex:indexPath.row * 2];
-        [bar.fields insertObject:priceInput atIndex:indexPath.row * 2 + 1];
-    }
     if (indexPath.row == gemTypes.count - 1) {
         [availableInput setHidden:YES];
+        if (bar.fields.count < indexPath.row * 2 + 1){
+            [bar.fields insertObject:priceInput atIndex:indexPath.row * 2];
+        }
+    } else {
+        if (bar.fields.count < indexPath.row * 2 + 1){
+            [bar.fields insertObject:availableInput atIndex:indexPath.row * 2];
+            [bar.fields insertObject:priceInput atIndex:indexPath.row * 2 + 1];
+        }
     }
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
-
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     bar.field = textField;
@@ -222,6 +171,30 @@ KeyboardBar *bar;
 
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    GemCalcResults *next = [segue destinationViewController];
+    next.startingGem = _startingGem;
+    next.desiredGem = _desiredGem;
+    next.amount = _amount;
+    next.pageOfJewelcraftingAvailable = _pageOfJewelcraftingAvailable;
+    next.pageOfJewelcraftingPrice = _pageOfJewelcraftingPrice;
+    next.tomeOfJewelcraftingAvailable = _tomeOfJewelcraftingAvailable;
+    next.tomeOfJewelcraftingPrice = _tomeOfJewelcraftingPrice;
+    next.tomeOfSecretsAvailable = _tomeOfSecretsAvailable;
+    next.tomeOfSecretsPrice = _tomeOfSecretsPrice;
+    next.gemTypes = gemTypes;
+}
 
+- (void)viewDidUnload
+{
+    [self setView:nil];
+    [super viewDidUnload];
+    
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
 
 @end

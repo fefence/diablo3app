@@ -24,8 +24,10 @@
 @property (strong, nonatomic) IBOutlet UISwitch *useMineFirst;
 @property (strong, nonatomic) NSMutableArray  *fields;
 @property (strong, nonatomic) IBOutlet UIButton *button;
-+(GemCalcMainController *)sharedInstance;
 - (IBAction)changeCurrentTextField:(id)sender;
 - (IBAction)scrollBack:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *mineButton;
+- (IBAction)useMineSwitch:(id)sender;
+- (IBAction)changeDropDown:(id)sender;
 
 @end

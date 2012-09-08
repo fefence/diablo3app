@@ -12,5 +12,13 @@
 
 @property (nonatomic, strong) NSMutableArray *tableData;
 @property (nonatomic) int cellCount;
-
+@property NSString *startingGem;
+@property NSString *desiredGem;
+@property int pageOfJewelcraftingPrice;
+@property int pageOfJewelcraftingAvailable;
+@property int tomeOfJewelcraftingPrice;
+@property int tomeOfJewelcraftingAvailable;
+@property int tomeOfSecretsPrice;
+@property int tomeOfSecretsAvailable;
+@property int amount;
 @end

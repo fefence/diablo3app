@@ -10,12 +10,15 @@
 #import "AppDelegate.h"
 #import "KeyboardBar.h"
 #import "UIView+FormScroll.h"
+#import "GemCalcSettingsController.h"
+#import "UseMineSettings.h"
 
 @interface GemCalcMainController ()
 
 @end
 
 @implementation GemCalcMainController
+@synthesize mineButton = _mineButton;
 @synthesize startingGem = _startingGem;
 @synthesize desiredGem = _desiredGem;
 @synthesize amount = _amount;
@@ -32,7 +35,6 @@
 @synthesize button = _button;
 
 KeyboardBar * bar;
-static GemCalcMainController *sharedInstance;
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
@@ -69,12 +71,17 @@ static GemCalcMainController *sharedInstance;
     [_startingGem setInputView:_gemPicker];
     [_desiredGem setInputView:_gemPicker];
     [self initKeyboardBar];
-    sharedInstance = self;
+    _amount.enabled = NO;
+    _button.hidden = YES;
 }
 
 -(void) initKeyboardBar {
     bar = [KeyboardBar new];
-    _fields = [[NSMutableArray alloc] initWithObjects:_startingGem, _desiredGem, _amount, _pageOfJewelcraftingAvailable, _pageOfJewelcraftingPrice, _tomeOfJewelcraftingAvailable, _tomeOfJewelcraftingPrice, _tomeOfSecretsAvailable, _tomeOfSecretsPrice, nil];
+    if (_amount.enabled) {
+        _fields = [[NSMutableArray alloc] initWithObjects:_startingGem, _desiredGem, _amount, _pageOfJewelcraftingAvailable, _pageOfJewelcraftingPrice, _tomeOfJewelcraftingAvailable, _tomeOfJewelcraftingPrice, _tomeOfSecretsAvailable, _tomeOfSecretsPrice, nil];
+    } else {
+       _fields = [[NSMutableArray alloc] initWithObjects:_startingGem, _desiredGem, _pageOfJewelcraftingAvailable, _pageOfJewelcraftingPrice, _tomeOfJewelcraftingAvailable, _tomeOfJewelcraftingPrice, _tomeOfSecretsAvailable, _tomeOfSecretsPrice, nil]; 
+    }
     [bar setFields:_fields];
     int i;
     for (i = 0; i < [_fields count]; i ++) {
@@ -96,6 +103,7 @@ static GemCalcMainController *sharedInstance;
     [self setGemPicker:nil];
     [self setUseMineFirst:nil];
     [self setButton:nil];
+    [self setMineButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -108,12 +116,71 @@ static GemCalcMainController *sharedInstance;
 - (IBAction)changeCurrentTextField:(UITextField *)sender {
     
     [self.view scrollToView:sender];
+    [self initKeyboardBar];
     [_gemPicker setHidden:YES];
+    [bar setField:sender];
+    }
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    if ([[segue identifier] isEqualToString:@"useMine"]) {
+        UseMineSettings *next = [segue destinationViewController];
+        next.startingGem = _startingGem.text;
+        next.desiredGem = _desiredGem.text;
+        next.pageOfJewelcraftingAvailable = [_pageOfJewelcraftingAvailable.text integerValue];
+        next.pageOfJewelcraftingPrice = [_pageOfJewelcraftingPrice.text integerValue];
+        next.tomeOfJewelcraftingAvailable = [_tomeOfJewelcraftingAvailable.text integerValue];
+        next.tomeOfJewelcraftingPrice = [_tomeOfJewelcraftingPrice.text integerValue];
+        next.tomeOfSecretsAvailable = [_tomeOfSecretsAvailable.text integerValue];
+        next.tomeOfSecretsPrice = [_tomeOfSecretsPrice.text integerValue];
+    } else {
+        GemCalcSettingsController *next = [segue destinationViewController];
+        next.startingGem = _startingGem.text;
+        next.desiredGem = _desiredGem.text;
+        next.amount = [_amount.text integerValue];
+        next.pageOfJewelcraftingAvailable = [_pageOfJewelcraftingAvailable.text integerValue];
+        next.pageOfJewelcraftingPrice = [_pageOfJewelcraftingPrice.text integerValue];
+        next.tomeOfJewelcraftingAvailable = [_tomeOfJewelcraftingAvailable.text integerValue];
+        next.tomeOfJewelcraftingPrice = [_tomeOfJewelcraftingPrice.text integerValue];
+        next.tomeOfSecretsAvailable = [_tomeOfSecretsAvailable.text integerValue];
+        next.tomeOfSecretsPrice = [_tomeOfSecretsPrice.text integerValue];
+    }
+    
+}
+
+- (IBAction)scrollBack:(id)sender {
+    if (_desiredGem.text.length > 0 && _startingGem.text.length >0) {
+        [_button setEnabled:YES];
+    }
+    [self.view scrollToY:0];
+}
+
+- (IBAction)useMineSwitch:(UISwitch *)sender {
+    if (sender.on) {
+        _mineButton.hidden = NO;
+        _mineButton.enabled = YES;
+        _button.hidden = YES;
+        _button.enabled = NO;
+        _amount.enabled = NO;
+        [self initKeyboardBar];
+    } else {
+        _mineButton.hidden = YES;
+        _mineButton.enabled = NO;
+        _button.hidden = NO;
+        _button.enabled = YES;
+        _amount.enabled = YES;
+        [self initKeyboardBar];
+    }
+}
+
+- (IBAction)changeDropDown:(UITextField *)sender {
     [self initKeyboardBar];
     [bar setField:sender];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [_gemTypes removeAllObjects];
     [_gemTypes addObjectsFromArray:appDelegate.gemTypes];
+    [_gemPicker reloadAllComponents];
     [_gemPicker selectRow:0 inComponent:0 animated:NO];
     if (sender.tag == 0) {
         _startingGem.text = [_gemTypes objectAtIndex:0];
@@ -135,21 +202,6 @@ static GemCalcMainController *sharedInstance;
         [_gemPicker setHidden:NO];
     }
     [_gemPicker reloadAllComponents];
-}
-
-- (IBAction)scrollBack:(id)sender {
-    if (_desiredGem.text.length > 0 && _startingGem.text.length >0) {
-        [_button setEnabled:YES];
-    }
-    [self.view scrollToY:0];
-}
-
-
-
-+ (GemCalcMainController *)sharedInstance
-{
-    if (!sharedInstance)
-        sharedInstance = [[self alloc] init]; // will be retained inside the init method
-    return sharedInstance;
+    [appDelegate.beans removeAllObjects];
 }
 @end

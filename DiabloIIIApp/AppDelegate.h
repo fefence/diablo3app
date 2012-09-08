@@ -20,6 +20,7 @@
 @property NSString *key;
 @property NSDictionary *maxValuesByItemData;
 @property NSDictionary *maxValuesByStatData;
+@property NSMutableDictionary *myGemsAvailable;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

@@ -16,5 +16,8 @@
 @synthesize craftingPriceForOne = _craftingPriceForOne;
 @synthesize amountNeeded = _amountNeeded;
 @synthesize amountToCraft = _amountToCraft;
+@synthesize pagesNeeded = _pagesNeeded;
+@synthesize tjNeeded = _tjNeeded;
+@synthesize tsNeeded = _tsNeeded;
 
 @end

@@ -18,6 +18,7 @@
 @synthesize key = _key;
 @synthesize maxValuesByItemData = _maxValuesByItemData;
 @synthesize maxValuesByStatData = _maxValuesByStatData;
+@synthesize myGemsAvailable = _myGemsAvailable;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -30,6 +31,8 @@
     NSString *DataPath2 = [Path stringByAppendingPathComponent:@"ByStats.plist"];
     
     _maxValuesByStatData = [[NSDictionary alloc] initWithContentsOfFile:DataPath2];
+    
+    _myGemsAvailable = [[NSMutableDictionary alloc] init];
     //  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    // // Override point for customization after application launch.
    // self.window.backgroundColor = [UIColor whiteColor];

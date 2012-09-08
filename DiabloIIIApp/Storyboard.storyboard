@@ -585,7 +585,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Flj-br-06E">
-                                <rect key="frame" x="-20" y="15" width="360" height="409"/>
+                                <rect key="frame" x="-20" y="0.0" width="360" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Starting gem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gAV-yE-gZS">
@@ -615,7 +615,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="glc-V3-428"/>
+                                            <action selector="changeDropDown:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="3cS-nv-8Em"/>
                                             <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="z0Y-Dv-rui"/>
                                         </connections>
                                     </textField>
@@ -625,7 +625,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="changeCurrentTextField:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="nzS-rb-0Nz"/>
+                                            <action selector="changeDropDown:" destination="A1a-VB-uL9" eventType="editingDidBegin" id="jjs-xf-9Eu"/>
                                             <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="2vK-aK-nsK"/>
                                         </connections>
                                     </textField>
@@ -640,7 +640,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ELI-Rg-lLP">
-                                        <rect key="frame" x="230" y="355" width="92" height="29"/>
+                                        <rect key="frame" x="235" y="353" width="92" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.49489667338709675" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
@@ -653,12 +653,15 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="kya-R0-guh" kind="push" id="YqP-3E-X9Y"/>
+                                            <segue destination="kya-R0-guh" kind="push" identifier="default" id="YqP-3E-X9Y"/>
                                         </connections>
                                     </button>
                                     <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="m9X-EV-Djd">
                                         <rect key="frame" x="163" y="145" width="79" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="useMineSwitch:" destination="A1a-VB-uL9" eventType="valueChanged" id="sLk-Lv-j5f"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use mine First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pui-iV-K3e">
                                         <rect key="frame" x="43" y="145" width="110" height="27"/>
@@ -748,8 +751,23 @@
                                             <action selector="scrollBack:" destination="A1a-VB-uL9" eventType="editingDidEnd" id="qVg-Il-aLt"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bVv-m0-RBs">
+                                        <rect key="frame" x="245" y="349" width="72" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Mine">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="YQ6-mi-Ah2" kind="push" identifier="useMine" id="wfJ-iS-S3X"/>
+                                        </connections>
+                                    </button>
                                     <pickerView contentMode="scaleToFill" id="1ys-bV-43J">
-                                        <rect key="frame" x="20" y="186" width="320" height="216"/>
+                                        <rect key="frame" x="20" y="200" width="320" height="216"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <outlet property="dataSource" destination="A1a-VB-uL9" id="5AO-zl-VdS"/>
@@ -769,6 +787,7 @@
                         <outlet property="button" destination="ELI-Rg-lLP" id="vfL-eI-ATH"/>
                         <outlet property="desiredGem" destination="eRj-t5-qMm" id="0mc-tr-ONS"/>
                         <outlet property="gemPicker" destination="1ys-bV-43J" id="1Ed-IM-W9i"/>
+                        <outlet property="mineButton" destination="bVv-m0-RBs" id="0rJ-l3-PzV"/>
                         <outlet property="pageOfJewelcraftingAvailable" destination="v8C-DE-jlc" id="Gue-95-S0I"/>
                         <outlet property="pageOfJewelcraftingPrice" destination="L37-Sv-RL9" id="TSK-Bf-A5X"/>
                         <outlet property="scrollView" destination="Flj-br-06E" id="wlv-zc-ZwC"/>
@@ -782,6 +801,90 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="982" y="74"/>
+        </scene>
+        <!--Use Mine Settings - settings-->
+        <scene sceneID="7MQ-dy-zkI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1g-nr-ddc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="YQ6-mi-Ah2" customClass="UseMineSettings" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01R-vG-BFK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" tag="1000" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sqv-Le-XJ9">
+                                <rect key="frame" x="0.0" y="46" width="320" height="313"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="GemSettingsRow" id="fEg-iX-TJy">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1j7-wB-m5B">
+                                                    <rect key="frame" x="203" y="6" width="97" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="YQ6-mi-Ah2" id="cvH-Yb-d1W"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hFe-Pi-QDr">
+                                                    <rect key="frame" x="20" y="9" width="131" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YQ6-mi-Ah2" id="6QA-MG-b9t"/>
+                                    <outlet property="delegate" destination="YQ6-mi-Ah2" id="fEC-iK-p6M"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gem type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Wub-Dz-PTi">
+                                <rect key="frame" x="16" y="12" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yYT-YB-9W2">
+                                <rect key="frame" x="219" y="12" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aHJ-rF-u3R">
+                                <rect key="frame" x="216" y="367" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rwM-fs-SUp" kind="push" id="c7B-34-VCD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="settings" id="qbX-0H-dEa"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1461" y="-497"/>
         </scene>
         <!--Gem Calc Settings Controller - Gem stuff-->
         <scene sceneID="lTJ-WJ-uqq">
@@ -802,7 +905,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gem types" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WKI-YK-fka">
-                                <rect key="frame" x="11" y="15" width="83" height="21"/>
+                                <rect key="frame" x="16" y="15" width="83" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -907,6 +1010,33 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1907" y="64"/>
+        </scene>
+        <!--Use Mine Results - Summary-->
+        <scene sceneID="Hgs-Hd-Hfy">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="His-YF-smh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="rwM-fs-SUp" customClass="UseMineResults" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CEj-dM-5fp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Y40-gK-InV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Summary" id="QGa-Wv-tuw"/>
+                    <connections>
+                        <outlet property="summary" destination="Y40-gK-InV" id="RIZ-Ws-SMI"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1907" y="-497"/>
         </scene>
         <!--Gem Details Controller - GemDetailsController-->
         <scene sceneID="Uzt-FK-vCn">
@@ -1100,11 +1230,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GemCalcMainController.h"/>
             <relationships>
                 <relationship kind="action" name="changeCurrentTextField:"/>
+                <relationship kind="action" name="changeDropDown:"/>
                 <relationship kind="action" name="scrollBack:"/>
+                <relationship kind="action" name="useMineSwitch:"/>
                 <relationship kind="outlet" name="amount" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="desiredGem" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="gemPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="mineButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="pageOfJewelcraftingAvailable" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="pageOfJewelcraftingPrice" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
@@ -1162,6 +1295,15 @@
             <relationships>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
+        </class>
+        <class className="UseMineResults" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UseMineResults.h"/>
+            <relationships>
+                <relationship kind="outlet" name="summary" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="UseMineSettings" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UseMineSettings.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

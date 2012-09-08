@@ -16,5 +16,8 @@
 @property long craftingPrice;
 @property long amountNeeded;
 @property long amountToCraft;
+@property long pagesNeeded;
+@property long tjNeeded;
+@property long tsNeeded;
 
 @end
