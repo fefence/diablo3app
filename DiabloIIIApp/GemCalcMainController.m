@@ -12,12 +12,15 @@
 #import "UIView+FormScroll.h"
 #import "GemCalcSettingsController.h"
 #import "UseMineSettings.h"
+#import "QuartzCore/QuartzCore.h"
 
 @interface GemCalcMainController ()
 
 @end
 
 @implementation GemCalcMainController
+@synthesize tomeOfSecretsLabel = _tomeOfSecretsLabel;
+@synthesize tomeOfJewelcraftingLabel = _tomeOfJewelcraftingLabel;
 @synthesize mineButton = _mineButton;
 @synthesize startingGem = _startingGem;
 @synthesize desiredGem = _desiredGem;
@@ -33,6 +36,7 @@
 @synthesize useMineFirst = _useMineFirst;
 @synthesize fields = _fields;
 @synthesize button = _button;
+@synthesize pageOfJewelcraftingLabel = _pageOfJewelcraftingLabel;
 
 KeyboardBar * bar;
 
@@ -71,6 +75,12 @@ KeyboardBar * bar;
     [_startingGem setInputView:_gemPicker];
     [_desiredGem setInputView:_gemPicker];
     [self initKeyboardBar];
+    [_pageOfJewelcraftingLabel.layer setBorderColor: [[UIColor colorWithRed: 195/255 green: 195/255 blue: 195/255 alpha:0.7] CGColor]];
+    [_pageOfJewelcraftingLabel.layer setBorderWidth: 1.0];
+    [_tomeOfSecretsLabel.layer setBorderColor: [[UIColor colorWithRed: 195/255 green: 195/255 blue: 195/255 alpha:0.7] CGColor]];
+    [_tomeOfSecretsLabel.layer setBorderWidth: 1.0];
+    [_tomeOfJewelcraftingLabel.layer setBorderColor: [[UIColor colorWithRed: 195/255 green: 195/255 blue: 195/255 alpha:0.7] CGColor]];
+    [_tomeOfJewelcraftingLabel.layer setBorderWidth: 1.0];
     _amount.enabled = NO;
     _button.hidden = YES;
 }
@@ -104,6 +114,9 @@ KeyboardBar * bar;
     [self setUseMineFirst:nil];
     [self setButton:nil];
     [self setMineButton:nil];
+    [self setPageOfJewelcraftingLabel:nil];
+    [self setTomeOfSecretsLabel:nil];
+    [self setTomeOfJewelcraftingLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

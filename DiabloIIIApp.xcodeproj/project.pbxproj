@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91834E915FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D91834E615FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png */; };
+		D91834EA15FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D91834E715FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png */; };
+		D91834EB15FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D91834E815FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */; };
 		D92E97A915E24BD60043BDAB /* amulet14_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E979D15E24BD60043BDAB /* amulet14_barbarian_male.png */; };
 		D92E97AA15E24BD60043BDAB /* belt_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E979E15E24BD60043BDAB /* belt_206_barbarian_male.png */; };
 		D92E97AB15E24BD60043BDAB /* boots_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E979F15E24BD60043BDAB /* boots_206_barbarian_male.png */; };
@@ -53,6 +56,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D91834E615FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crafting_training_tome_inferno_demonhunter_male.png; path = Resources/crafting_training_tome_inferno_demonhunter_male.png; sourceTree = SOURCE_ROOT; };
+		D91834E715FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crafting_training_page_jeweler_demonhunter_male.png; path = Resources/crafting_training_page_jeweler_demonhunter_male.png; sourceTree = SOURCE_ROOT; };
+		D91834E815FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crafting_training_tome_jeweler_hell_demonhunter_male.png; path = Resources/crafting_training_tome_jeweler_hell_demonhunter_male.png; sourceTree = SOURCE_ROOT; };
 		D92E979D15E24BD60043BDAB /* amulet14_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amulet14_barbarian_male.png; path = Resources/amulet14_barbarian_male.png; sourceTree = SOURCE_ROOT; };
 		D92E979E15E24BD60043BDAB /* belt_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = belt_206_barbarian_male.png; path = Resources/belt_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
 		D92E979F15E24BD60043BDAB /* boots_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boots_206_barbarian_male.png; path = Resources/boots_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
@@ -182,6 +188,9 @@
 		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D91834E615FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png */,
+				D91834E715FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png */,
+				D91834E815FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */,
 				D92E979D15E24BD60043BDAB /* amulet14_barbarian_male.png */,
 				D92E979E15E24BD60043BDAB /* belt_206_barbarian_male.png */,
 				D92E979F15E24BD60043BDAB /* boots_206_barbarian_male.png */,
@@ -329,6 +338,9 @@
 				F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */,
 				F22B79A515F617F600EC6DC5 /* StatRow.xib in Resources */,
 				F2C06D2D15F6291C000337AA /* ByStats.plist in Resources */,
+				D91834E915FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png in Resources */,
+				D91834EA15FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png in Resources */,
+				D91834EB15FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

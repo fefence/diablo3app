@@ -4,10 +4,16 @@
 <dict>
 	<key>Head</key>
 	<dict>
-		<key>Resist</key>
+		<key>Primary Stats</key>
 		<dict>
-			<key>All resist</key>
-			<string>31</string>
+			<key>Strenght</key>
+			<string>200</string>
+			<key>Dexterity</key>
+			<string>200</string>
+			<key>Intelligence</key>
+			<string>300</string>
+			<key>Vitality</key>
+			<string>200</string>
 		</dict>
 	</dict>
 	<key>Chest</key>

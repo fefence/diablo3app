@@ -24,10 +24,13 @@
 @property (strong, nonatomic) IBOutlet UISwitch *useMineFirst;
 @property (strong, nonatomic) NSMutableArray  *fields;
 @property (strong, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UIImageView *pageOfJewelcraftingLabel;
 - (IBAction)changeCurrentTextField:(id)sender;
 - (IBAction)scrollBack:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *mineButton;
 - (IBAction)useMineSwitch:(id)sender;
 - (IBAction)changeDropDown:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *tomeOfSecretsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *tomeOfJewelcraftingLabel;
 
 @end
