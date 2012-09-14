@@ -42,7 +42,8 @@ UIBarButtonItem *done;
         previous =[[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStyleBordered target:self action:@selector(didTapButtonBarItemPrevious:)];
         next =[[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleBordered target:self action:@selector(didTapButtonBarItemNext:)];
         done =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(didTapButtonBarItemDone:)];
-        NSArray *array = [NSArray arrayWithObjects:previous, next, done, nil];
+        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        NSArray *array = [NSArray arrayWithObjects:previous, next, flexibleSpace, done, nil];
         [self setItems:array];
         if ([_fields indexOfObject:field] == 0) {
             [previous setEnabled:NO];

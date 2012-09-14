@@ -9,7 +9,6 @@
 #import "GemCalcMainController.h"
 #import "AppDelegate.h"
 #import "KeyboardBar.h"
-#import "UIView+FormScroll.h"
 #import "GemCalcSettingsController.h"
 #import "UseMineSettings.h"
 #import "QuartzCore/QuartzCore.h"
@@ -39,6 +38,7 @@
 @synthesize pageOfJewelcraftingLabel = _pageOfJewelcraftingLabel;
 
 KeyboardBar * bar;
+int animatedDis;
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
@@ -68,6 +68,7 @@ KeyboardBar * bar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    animatedDis = 0;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     _gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
     [_gemPicker setHidden:YES];
@@ -127,8 +128,7 @@ KeyboardBar * bar;
 }
 
 - (IBAction)changeCurrentTextField:(UITextField *)sender {
-    
-    [self.view scrollToView:sender];
+    [self animateTextField:sender up:YES];
     [self initKeyboardBar];
     [_gemPicker setHidden:YES];
     [bar setField:sender];
@@ -166,7 +166,7 @@ KeyboardBar * bar;
     if (_desiredGem.text.length > 0 && _startingGem.text.length >0) {
         [_button setEnabled:YES];
     }
-    [self.view scrollToY:0];
+    [self animateTextField:sender up:NO];
 }
 
 - (IBAction)useMineSwitch:(UISwitch *)sender {
@@ -176,6 +176,7 @@ KeyboardBar * bar;
         _button.hidden = YES;
         _button.enabled = NO;
         _amount.enabled = NO;
+        _amount.alpha = 0.4;
         [self initKeyboardBar];
     } else {
         _mineButton.hidden = YES;
@@ -183,12 +184,14 @@ KeyboardBar * bar;
         _button.hidden = NO;
         _button.enabled = YES;
         _amount.enabled = YES;
+        _amount.alpha = 1.0;
         [self initKeyboardBar];
     }
 }
 
 - (IBAction)changeDropDown:(UITextField *)sender {
     [self initKeyboardBar];
+    [self animateTextField:sender up:YES];
     [bar setField:sender];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [_gemTypes removeAllObjects];
@@ -217,4 +220,64 @@ KeyboardBar * bar;
     [_gemPicker reloadAllComponents];
     [appDelegate.beans removeAllObjects];
 }
+
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    CGPoint temp = [self.view convertPoint:textField.frame.origin toView:nil];
+    UIInterfaceOrientation orientation =
+    [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIInterfaceOrientationPortrait){
+        
+        if(up) {
+            int moveUpValue = temp.y+textField.frame.size.height;
+            animatedDis = 264-(480-moveUpValue-5);
+        }
+    }
+    else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        if(up) {
+            int moveUpValue = 1004-temp.y+textField.frame.size.height;
+            animatedDis = 264-(1004-moveUpValue-5);
+        }
+    }
+    else if(orientation == UIInterfaceOrientationLandscapeLeft) {
+        if(up) {
+            int moveUpValue = temp.x+textField.frame.size.height;
+            animatedDis = 352-(768-moveUpValue-5);
+        }
+    }
+    else
+    {
+        if(up) {
+            int moveUpValue = 768-temp.x+textField.frame.size.height;
+            animatedDis = 352-(768-moveUpValue-5);
+        }
+        
+    }
+    if(animatedDis>0) {
+        const int movementDistance = animatedDis;
+        const float movementDuration = 0.3f;
+        int movement = (up ? -movementDistance : movementDistance);
+        [UIView beginAnimations: nil context: nil];
+        [UIView setAnimationBeginsFromCurrentState: YES];
+        [UIView setAnimationDuration: movementDuration];
+        if (orientation == UIInterfaceOrientationPortrait){
+            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        }
+        else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
+            
+            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        }
+        else if(orientation == UIInterfaceOrientationLandscapeLeft) {
+            
+            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        }
+        else {
+            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        }
+        
+        [UIView commitAnimations];
+    }
+}
+
 @end
