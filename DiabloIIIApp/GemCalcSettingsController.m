@@ -23,6 +23,7 @@
 @synthesize startingGem = _startingGem;
 @synthesize desiredGem = _desiredGem;
 @synthesize amount = _amount;
+@synthesize tableView = _tableView;
 @synthesize pageOfJewelcraftingPrice = _pageOfJewelcraftingPrice;
 @synthesize pageOfJewelcraftingAvailable = _pageOfJewelcraftingAvailable;
 @synthesize tomeOfSecretsPrice = _tomeOfSecretsPrice;
@@ -30,8 +31,9 @@
 @synthesize tomeOfJewelcraftingPrice = _tomeOfJewelcraftingPrice;
 @synthesize tomeOfJewelcraftingAvailable = _tomeOfJewelcraftingAvailable;
 
-
+int animatedDis;
 NSMutableArray *gemTypes;
+CGPoint svos;
 
 NSMutableDictionary *beans;
 
@@ -49,6 +51,7 @@ KeyboardBar *bar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    svos = _tableView.contentOffset;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
     beans = appDelegate.beans;
@@ -83,6 +86,12 @@ KeyboardBar *bar;
     
     bar = [KeyboardBar new];
     bar.fields = [[NSMutableArray alloc] init];
+    for (i = 0; i < gemTypes.count - 1; i ++) {
+        [bar.fields addObject:[[UITextField alloc] init]];
+        [bar.fields addObject:[[UITextField alloc] init]];
+    }
+    bar.field = nil;
+    bar.index = -1;
 }
 
 
@@ -96,7 +105,7 @@ KeyboardBar *bar;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [gemTypes count];
+    return [gemTypes count] - 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -105,9 +114,6 @@ KeyboardBar *bar;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"GemCalcRow" owner:self options:nil];
-        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
-        cell = [topLevelObjects objectAtIndex:0];
     }
     UILabel *myLabel = (UILabel *)[cell viewWithTag:300];
     UITextField *availableInput = (UITextField *) [cell viewWithTag:100];
@@ -134,24 +140,34 @@ KeyboardBar *bar;
         availableInput.text = @"";
     }
     myLabel.text = tmp;
-    if (indexPath.row == gemTypes.count - 1) {
-        [availableInput setHidden:YES];
-        if (bar.fields.count < indexPath.row * 2 + 1){
-            [bar.fields insertObject:priceInput atIndex:indexPath.row * 2];
-        }
-    } else {
-        if (bar.fields.count < indexPath.row * 2 + 1){
-            [bar.fields insertObject:availableInput atIndex:indexPath.row * 2];
-            [bar.fields insertObject:priceInput atIndex:indexPath.row * 2 + 1];
-        }
-    }
+    NSLog(@"row for %@ %d", tmp, indexPath.row);
+    [bar.fields removeObjectAtIndex:indexPath.row * 2 + 1];
+    [bar.fields insertObject:priceInput atIndex:indexPath.row * 2 + 1];
+    [bar.fields removeObjectAtIndex:indexPath.row * 2];
+    [bar.fields insertObject:availableInput atIndex:indexPath.row * 2];
+    
     return cell;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    bar.field = textField;
-    UITableViewCell *cell = (UITableViewCell*) [[textField superview] superview];
-    [(UITableView *)cell.superview scrollToRowAtIndexPath:[(UITableView *)cell.superview indexPathForCell:cell] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    UITableViewCell *cell = (UITableViewCell *)textField.superview.superview;
+    NSIndexPath *path = [_tableView indexPathForCell:cell];
+    if (textField.tag == 100) {
+        bar.index = path.row * 2;
+    } else {
+        bar.index = path.row * 2 + 1;
+    }
+    [bar setField:textField];
+    
+    //[_tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    
+    CGPoint pt;
+    CGRect rc = [textField bounds];
+    rc = [textField convertRect:rc toView:_tableView];
+    pt = rc.origin;
+    pt.x = 0;
+    pt.y -= 60;
+    [_tableView setContentOffset:pt animated:YES];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
@@ -167,7 +183,9 @@ KeyboardBar *bar;
         bean.AHPrice = [textField.text integerValue];
     }
     [beans setValue:bean forKey:gemType.text];
-    [self.view scrollToY:0];
+    if (bar.field == nil && bar.index == -1) {
+        [_tableView setContentOffset:svos animated:YES];
+    }
 
 }
 
@@ -188,6 +206,7 @@ KeyboardBar *bar;
 - (void)viewDidUnload
 {
     [self setView:nil];
+    [self setTableView:nil];
     [super viewDidUnload];
     
 }
@@ -196,5 +215,7 @@ KeyboardBar *bar;
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
 
 @end

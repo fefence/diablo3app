@@ -17,4 +17,5 @@
 @property int tomeOfJewelcraftingAvailable;
 @property int tomeOfSecretsPrice;
 @property int tomeOfSecretsAvailable;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end

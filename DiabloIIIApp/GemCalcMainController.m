@@ -94,6 +94,7 @@ int animatedDis;
        _fields = [[NSMutableArray alloc] initWithObjects:_startingGem, _desiredGem, _pageOfJewelcraftingAvailable, _pageOfJewelcraftingPrice, _tomeOfJewelcraftingAvailable, _tomeOfJewelcraftingPrice, _tomeOfSecretsAvailable, _tomeOfSecretsPrice, nil]; 
     }
     [bar setFields:_fields];
+    bar.index = -1;
     int i;
     for (i = 0; i < [_fields count]; i ++) {
         [[_fields objectAtIndex:i] setInputAccessoryView: bar];

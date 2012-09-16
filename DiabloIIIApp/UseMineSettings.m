@@ -23,12 +23,15 @@
 @synthesize pageOfJewelcraftingAvailable = _pageOfJewelcraftingAvailable;
 @synthesize tomeOfSecretsPrice = _tomeOfSecretsPrice;
 @synthesize tomeOfSecretsAvailable = _tomeOfSecretsAvailable;
+@synthesize tableView = _tableView;
 @synthesize tomeOfJewelcraftingPrice = _tomeOfJewelcraftingPrice;
 @synthesize tomeOfJewelcraftingAvailable = _tomeOfJewelcraftingAvailable;
 
 NSMutableArray *gemTypes;
 NSMutableDictionary *gems;
 KeyboardBar *bar;
+CGPoint svos;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +44,7 @@ KeyboardBar *bar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    svos = _tableView.contentOffset;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
     gems = appDelegate.myGemsAvailable;
@@ -72,6 +76,11 @@ KeyboardBar *bar;
     
     bar = [KeyboardBar new];
     bar.fields = [[NSMutableArray alloc] init];
+    for (i = 0; i < gemTypes.count - 1; i++) {
+        [bar.fields addObject:[[UITextField alloc] init]];
+    }
+    bar.index = -1;
+    bar.field = nil;
 }
 
 
@@ -94,9 +103,8 @@ KeyboardBar *bar;
         available.text = [NSString stringWithFormat:@"%d", val.integerValue];
     }
     available.inputAccessoryView = bar;
-    if (bar.fields.count <= indexPath.row) {
-        [bar.fields insertObject:available atIndex:indexPath.row];
-    }
+    [bar.fields removeObjectAtIndex:indexPath.row];
+    [bar.fields insertObject:available atIndex:indexPath.row];
     return cell;
 }
 
@@ -118,10 +126,23 @@ KeyboardBar *bar;
     NSNumber *tmp = [NSNumber numberWithInt:[textField.text integerValue]];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.myGemsAvailable setObject:tmp forKey:gemType.text];
+    if (bar.field == nil && bar.index == -1) {
+        [_tableView setContentOffset:svos animated:YES];
+    }
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    bar.field = textField;
+    UITableViewCell *cell = (UITableViewCell *)textField.superview.superview;
+    NSIndexPath *path = [_tableView indexPathForCell:cell];
+    bar.index = path.row;
+    [bar setField:textField];
+    CGPoint pt;
+    CGRect rc = [textField bounds];
+    rc = [textField convertRect:rc toView:_tableView];
+    pt = rc.origin;
+    pt.x = 0;
+    pt.y -= 60;
+    [_tableView setContentOffset:pt animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
@@ -137,6 +158,7 @@ KeyboardBar *bar;
 
 - (void)viewDidUnload
 {
+    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

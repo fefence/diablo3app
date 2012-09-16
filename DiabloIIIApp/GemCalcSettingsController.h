@@ -21,4 +21,6 @@
 @property int tomeOfSecretsPrice;
 @property int tomeOfSecretsAvailable;
 @property int amount;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end

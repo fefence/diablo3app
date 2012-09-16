@@ -53,7 +53,6 @@
 		F2E2AA5D15E3B28E003F749C /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */; };
 		F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */; };
 		F2EB16C115ECCF27004742DD /* GemDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EB16C015ECCF27004742DD /* GemDetailsController.m */; };
-		F2ED09F915E8D47000982454 /* GemCalcRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2ED09F815E8D47000982454 /* GemCalcRow.xib */; };
 		F2ED0A0015E8FAEA00982454 /* GemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ED09FF15E8FAEA00982454 /* GemBean.m */; };
 /* End PBXBuildFile section */
 
@@ -125,7 +124,6 @@
 		F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcResults.m; sourceTree = "<group>"; };
 		F2EB16BF15ECCF27004742DD /* GemDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemDetailsController.h; sourceTree = "<group>"; };
 		F2EB16C015ECCF27004742DD /* GemDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemDetailsController.m; sourceTree = "<group>"; };
-		F2ED09F815E8D47000982454 /* GemCalcRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GemCalcRow.xib; sourceTree = "<group>"; };
 		F2ED09FE15E8FAEA00982454 /* GemBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemBean.h; sourceTree = "<group>"; };
 		F2ED09FF15E8FAEA00982454 /* GemBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemBean.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,7 +222,6 @@
 		F2B5398A15F37094007887FB /* GemCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				F2ED09F815E8D47000982454 /* GemCalcRow.xib */,
 				F226A0D515E2289B00AFF97D /* GemCalcMainController.h */,
 				F226A0D615E2289B00AFF97D /* GemCalcMainController.m */,
 				F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */,
@@ -342,7 +339,6 @@
 				D92E97B215E24BD60043BDAB /* shield_207_barbarian_male.png in Resources */,
 				D92E97B315E24BD60043BDAB /* shoulders_206_barbarian_male.png in Resources */,
 				D92E97B415E24BD60043BDAB /* sword_1h_208_barbarian_male.png in Resources */,
-				F2ED09F915E8D47000982454 /* GemCalcRow.xib in Resources */,
 				F2B5398815F3703F007887FB /* View.xib in Resources */,
 				F2B5399115F3740B007887FB /* ItemRow.xib in Resources */,
 				F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */,
