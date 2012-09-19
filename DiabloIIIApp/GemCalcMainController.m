@@ -220,6 +220,10 @@ int animatedDis;
     }
     [_gemPicker reloadAllComponents];
     [appDelegate.beans removeAllObjects];
+    if (_startingGem.text.length > 0 && _desiredGem.text.length > 0) {
+        _button.enabled = YES;
+        _mineButton.enabled = YES;
+    }
 }
 
 

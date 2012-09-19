@@ -10,7 +10,7 @@
 #import "GemCalcMainController.h"
 #import "AppDelegate.h"
 #import "GemBean.h"
-#import "GemDetailsController.h"
+#import "GemDetails.h"
 
 
 @interface GemCalcResults ()
@@ -55,9 +55,9 @@ long pages, tomesJ, tomesS;
 }
 
 - (void) fillInBeans {
-    long i, count = _amount;
-    ((GemBean *) [beans objectForKey:[_gemTypes objectAtIndex:_gemTypes.count - 1]]).amountNeeded = _amount;
-    ((GemBean *) [beans objectForKey:[_gemTypes objectAtIndex:_gemTypes.count - 1]]).amountToCraft = _amount;
+    GemBean *first = [beans objectForKey:[_gemTypes objectAtIndex:0]];
+    first.previousGemType = @"Previous gem";
+    int i, count = _amount;
     for (i = _gemTypes.count - 2; i >= 0; i --) {
         NSString *type = [_gemTypes objectAtIndex:i];
         if (([type caseInsensitiveCompare:@"Flawless Square"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Perfect Square"] == NSOrderedSame)|| ([type caseInsensitiveCompare:@"Radiant Square"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Star"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Flawless Star"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Perfect Star"] == NSOrderedSame) || ([type caseInsensitiveCompare:@"Radiant Star"] == NSOrderedSame)) {
@@ -69,14 +69,9 @@ long pages, tomesJ, tomesS;
         bean.amountNeeded = count;
         bean.amountToCraft = count - bean.available;
     }
-    NSString *type = [_gemTypes objectAtIndex:0];
-    GemBean *bean = [beans objectForKey:type];
-    bean.craftingPriceForOne = bean.AHPrice;
-    if (bean.amountToCraft < 0) {
-        bean.amountToCraft = 0;
-    }
-    bean.craftingPrice = bean.AHPrice * bean.amountToCraft;
-    long previosSinglePrice = bean.AHPrice;
+    first.craftingPrice = first.AHPrice * first.amountToCraft;
+
+    long previosSinglePrice = first.AHPrice;
     for (i = 1; i < beans.count; i ++) {
         NSString *type = [_gemTypes objectAtIndex:i];
         GemBean *bean = [beans objectForKey:type];
@@ -84,57 +79,102 @@ long pages, tomesJ, tomesS;
             bean.amountToCraft = 0;
         }
         if ([type caseInsensitiveCompare:@"flawed"] == NSOrderedSame) {
+            bean.previousGemType = @"Chipped";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 0;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 2 + 10;
         } else if ([type caseInsensitiveCompare:@"normal"] == NSOrderedSame) {
+            bean.previousGemType = @"Flawed";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 0;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 2 + 25;
         } else if ([type caseInsensitiveCompare:@"flawless"] == NSOrderedSame) {
+            bean.previousGemType = @"Normal";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 0;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 2 + 40;
         } else if ([type caseInsensitiveCompare:@"perfect"] == NSOrderedSame) {
-            bean.pagesNeeded = bean.amountToCraft;
+            bean.previousGemType = @"Flawless";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 1;
+            bean.tsNeededForOne = 0;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 2 + 55 + _pageOfJewelcraftingPrice;
         } else if ([type caseInsensitiveCompare:@"radiant"] == NSOrderedSame) {
-            bean.pagesNeeded = bean.amountToCraft * 2;
+            bean.previousGemType = @"Perfect";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 2;
+            bean.tsNeededForOne = 0;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 2 + 70 + _pageOfJewelcraftingPrice * 2;
         } else if ([type caseInsensitiveCompare:@"square"] == NSOrderedSame) {
-            bean.tjNeeded = bean.amountToCraft;
+            bean.previousGemType = @"Radiant";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 0;
+            bean.tjNeededForOne = 1;
             bean.craftingPriceForOne = previosSinglePrice * 2 + 85 + _tomeOfJewelcraftingPrice;
         } else if ([type caseInsensitiveCompare:@"flawless square"] == NSOrderedSame) {
-            bean.tjNeeded = bean.amountToCraft * 2;
+            bean.previousGemType = @"Square";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 0;
+            bean.tjNeededForOne = 2;
             bean.craftingPriceForOne = previosSinglePrice * 2 + 100 + _tomeOfJewelcraftingPrice * 2;
         } else if ([type caseInsensitiveCompare:@"perfect square"] == NSOrderedSame) {
-            bean.tsNeeded = bean.amountToCraft * 3;
+            bean.previousGemType = @"Flawless square";
+            bean.previousGemAmountNeededForOne = 2;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 3;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 3 + 30000 + _tomeOfSecretsPrice * 3;
         } else if ([type caseInsensitiveCompare:@"radiant square"] == NSOrderedSame) {
-            bean.tsNeeded = bean.amountToCraft * 6;
+            bean.previousGemType = @"Perfect square";
+            bean.previousGemAmountNeededForOne = 3;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 6;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 3 + 50000 + _tomeOfSecretsPrice * 6;
         } else if ([type caseInsensitiveCompare:@"star"] == NSOrderedSame) {
-            bean.tsNeeded = bean.amountToCraft * 9;
+            bean.previousGemType = @"Radiant square";
+            bean.previousGemAmountNeededForOne = 3;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 9;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 3 + 80000 + _tomeOfSecretsPrice + 9;
         } else if ([type caseInsensitiveCompare:@"flawless star"] == NSOrderedSame) {
-            bean.tsNeeded = bean.amountToCraft * 12;
+            bean.previousGemType = @"Star";
+            bean.previousGemAmountNeededForOne = 3;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 12;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 3 + 100000 + _tomeOfSecretsPrice * 12;
         } else if ([type caseInsensitiveCompare:@"perfect star"] == NSOrderedSame) {
-            bean.tsNeeded = bean.amountToCraft * 15;
+            bean.previousGemType = @"Flawless star";
+            bean.previousGemAmountNeededForOne = 3;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 15;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 3 + 200000 + _tomeOfSecretsPrice * 15;
         } else if ([type caseInsensitiveCompare:@"radiant star"] == NSOrderedSame) {
-            bean.tsNeeded = bean.amountToCraft * 20;
+            bean.previousGemType = @"Perfect star";
+            bean.previousGemAmountNeededForOne = 3;
+            bean.pagesNeededForOne = 0;
+            bean.tsNeededForOne = 20;
+            bean.tjNeededForOne = 0;
             bean.craftingPriceForOne = previosSinglePrice * 3 + 400000 + _tomeOfSecretsPrice * 20;
         }
-        
-        if (bean.craftingPriceForOne > bean.AHPrice) {
-            previosSinglePrice = bean.AHPrice;
-            bean.craftingPrice = bean.amountToCraft * bean.AHPrice;
-        } else {
-            previosSinglePrice = bean.craftingPriceForOne;
-            bean.craftingPrice = bean.amountToCraft * bean.craftingPriceForOne;
-        }
-        
+        bean.previousGemPricePerUnit = previosSinglePrice;
+        bean.craftingPrice = bean.amountToCraft * bean.craftingPrice;
+        previosSinglePrice = bean.craftingPrice;
     }
     
- //   GemBean *desired = [[GemBean alloc] init];
- //   desired.type = desiredGem;
- //   desired.amountNeeded = amount;
- //   [beans addObject:desired];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -154,17 +194,14 @@ long pages, tomesJ, tomesS;
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showDetails"])
-    {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
         NSIndexPath *indexPath = [self.gemTable indexPathForCell:sender];
-        NSString *type = [_gemTypes objectAtIndex:indexPath.row];
-        GemBean *bean = [beans objectForKey:type];
-        GemDetailsController *viewController = segue.destinationViewController;
-        viewController.type = type;
+        GemBean *bean = [beans objectForKey:[_gemTypes objectAtIndex:indexPath.row]];
+        GemDetails *viewController = segue.destinationViewController;
+        viewController.gemType = [_gemTypes objectAtIndex:indexPath.row];
         viewController.bean = bean;
-    }
+        //viewController.previousGemType.text = [_gemTypes objectAtIndex:indexPath.row - 1];
+        //viewController.previosPricePerUnit.text = [NSString stringWithFormat:@"%ld", prev.craftingPriceForOne];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

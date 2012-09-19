@@ -16,8 +16,10 @@
 @synthesize craftingPriceForOne = _craftingPriceForOne;
 @synthesize amountNeeded = _amountNeeded;
 @synthesize amountToCraft = _amountToCraft;
-@synthesize pagesNeeded = _pagesNeeded;
-@synthesize tjNeeded = _tjNeeded;
-@synthesize tsNeeded = _tsNeeded;
+@synthesize pagesNeededForOne = _pagesNeededForOne;
+@synthesize tjNeededForOne = _tjNeededForOne;
+@synthesize tsNeededForOne = _tsNeededForOne;
+@synthesize previousGemType = _previousGemType;
+@synthesize previousGemAmountNeededForOne = _previousGemAmountNeededForOne;
 
 @end

@@ -16,8 +16,11 @@
 @property long craftingPrice;
 @property long amountNeeded;
 @property long amountToCraft;
-@property long pagesNeeded;
-@property long tjNeeded;
-@property long tsNeeded;
+@property long pagesNeededForOne;
+@property long tjNeededForOne;
+@property long tsNeededForOne;
+@property NSString *previousGemType;
+@property long previousGemAmountNeededForOne;
+@property long previousGemPricePerUnit;
 
 @end

@@ -107,7 +107,7 @@
                                        nil];
     self.cornerRadius = 7.0f;
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
 }
 
 #pragma mark -
