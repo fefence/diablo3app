@@ -42,6 +42,7 @@
 		F231675F15F608D700DA15CC /* MaxValueByItemStatsValues.m in Sources */ = {isa = PBXBuildFile; fileRef = F231675E15F608D700DA15CC /* MaxValueByItemStatsValues.m */; };
 		F234FC0F15F8C9C400D9A1D7 /* UseMineSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC0E15F8C9C400D9A1D7 /* UseMineSettings.m */; };
 		F234FC1315F8C9DA00D9A1D7 /* UseMineResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */; };
+		F23DC122160C677800A38479 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = F23DC121160C677800A38479 /* Button.m */; };
 		F249ED8015E7720300E79E6B /* GemCalcSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */; };
 		F292ABC315E6617300865B52 /* UIView+FormScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = F292ABC215E6617300865B52 /* UIView+FormScroll.m */; };
 		F2ADB4CC1607952E00C97205 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ADB4CB1607952E00C97205 /* TextField.m */; };
@@ -55,6 +56,8 @@
 		F2C06D2D15F6291C000337AA /* ByStats.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2C06D2C15F6291C000337AA /* ByStats.plist */; };
 		F2E2AA5D15E3B28E003F749C /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */; };
 		F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */; };
+		F2EB0822160CBA64005A7E2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2EB0821160CBA64005A7E2A /* Default-568h@2x.png */; };
+		F2EB1F61160C5EE300A565BB /* cartographer.png in Resources */ = {isa = PBXBuildFile; fileRef = F2EB1F60160C5EE300A565BB /* cartographer.png */; };
 		F2ED0A0015E8FAEA00982454 /* GemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ED09FF15E8FAEA00982454 /* GemBean.m */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +111,8 @@
 		F234FC0E15F8C9C400D9A1D7 /* UseMineSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseMineSettings.m; sourceTree = "<group>"; };
 		F234FC1115F8C9DA00D9A1D7 /* UseMineResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseMineResults.h; sourceTree = "<group>"; };
 		F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseMineResults.m; sourceTree = "<group>"; };
+		F23DC120160C677800A38479 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		F23DC121160C677800A38479 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
 		F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcSettingsController.h; sourceTree = "<group>"; };
 		F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcSettingsController.m; sourceTree = "<group>"; };
 		F292ABC115E6617300865B52 /* UIView+FormScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FormScroll.h"; sourceTree = "<group>"; };
@@ -131,6 +136,8 @@
 		F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardBar.m; sourceTree = "<group>"; };
 		F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcResults.h; sourceTree = "<group>"; };
 		F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcResults.m; sourceTree = "<group>"; };
+		F2EB0821160CBA64005A7E2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		F2EB1F60160C5EE300A565BB /* cartographer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cartographer.png; path = ../cartographer.png; sourceTree = "<group>"; };
 		F2ED09FE15E8FAEA00982454 /* GemBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemBean.h; sourceTree = "<group>"; };
 		F2ED09FF15E8FAEA00982454 /* GemBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemBean.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +208,8 @@
 		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F2EB0821160CBA64005A7E2A /* Default-568h@2x.png */,
+				F2EB1F60160C5EE300A565BB /* cartographer.png */,
 				D91834E615FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png */,
 				D91834E715FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png */,
 				D91834E815FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */,
@@ -269,6 +278,8 @@
 				F2ADB4CB1607952E00C97205 /* TextField.m */,
 				F2ADB4CE16079CE800C97205 /* Label.h */,
 				F2ADB4CF16079CE800C97205 /* Label.m */,
+				F23DC120160C677800A38479 /* Button.h */,
+				F23DC121160C677800A38479 /* Button.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -366,6 +377,8 @@
 				D91834E915FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png in Resources */,
 				D91834EA15FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png in Resources */,
 				D91834EB15FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png in Resources */,
+				F2EB1F61160C5EE300A565BB /* cartographer.png in Resources */,
+				F2EB0822160CBA64005A7E2A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +413,7 @@
 				F2ADB4D016079CE800C97205 /* Label.m in Sources */,
 				F2B1C45A1608A60900AAC345 /* GemDetails.m in Sources */,
 				F2B1C45E160A360F00AAC345 /* RMtoGold.m in Sources */,
+				F23DC122160C677800A38479 /* Button.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

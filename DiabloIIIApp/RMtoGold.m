@@ -67,23 +67,23 @@ KeyboardBar *bar;
 
 - (IBAction)calculate:(UIButton *)sender {
     float gold = _priceInGold.text.integerValue * 0.85;
-    _inGold.text = [NSString stringWithFormat:@"%f", gold * _goldPrice.text.floatValue / 1000000];
+    _inGold.text = [NSString stringWithFormat:@"%.02f", gold * _goldPrice.text.floatValue / 1000000 * 0.85];
     if (_itemsOrCommodities.selectedSegmentIndex == 0) {
-        _inMoney.text = [NSString stringWithFormat:@"%f", _priceInRMAH.text.floatValue - 1];
+        _inMoney.text = [NSString stringWithFormat:@"%.02f", round(_priceInRMAH.text.floatValue - 1) / 2.0f];
     } else {
-        _inMoney.text = [NSString stringWithFormat:@"%f", _priceInRMAH.text.floatValue * 0.85];
+        _inMoney.text = [NSString stringWithFormat:@"%.02f", _priceInRMAH.text.floatValue * 0.85];
     }
     if (_inMoney.text.floatValue > _inGold.text.floatValue) {
         _inMoney.textColor = [UIColor redColor];
         _result.text = @"It is better to sell in RMAH";
-        _inPaypal.text = [NSString stringWithFormat:@"%f", _inMoney.text.floatValue * 0.85];
+        _inPaypal.text = [NSString stringWithFormat:@"%.02f", _inMoney.text.floatValue * 0.85];
     } else if (_inMoney.text.floatValue < _inGold.text.floatValue) {
         _inGold.textColor = [UIColor redColor];
         _result.text = @"It is better to sell in GAH";
-        _inPaypal.text = [NSString stringWithFormat:@"%f", _inGold.text.floatValue * 0.85];
+        _inPaypal.text = [NSString stringWithFormat:@"%.02f", _inGold.text.floatValue * 0.85];
     } else {
         _result.text = @"It is the same";
-        _inPaypal.text = [NSString stringWithFormat:@"%f", _inGold.text.floatValue * 0.85];
+        _inPaypal.text = [NSString stringWithFormat:@"%.02f", _inGold.text.floatValue * 0.85];
     }
 }
 
