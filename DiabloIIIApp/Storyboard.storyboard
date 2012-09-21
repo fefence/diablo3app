@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="mDz-86-cZU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="mDz-86-cZU">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Main View Controller - d3app-->
         <scene sceneID="o6z-oX-5zN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sO5-lr-G20" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cvQ-On-RXW" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B8o-hZ-nV8">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -105,13 +103,13 @@
                         <barButtonItem key="backBarButtonItem" title="app" id="MLO-DE-VzS"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sO5-lr-G20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="557" y="73"/>
         </scene>
         <!--View Controller - Profile info-->
         <scene sceneID="Lss-eM-obL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OQ4-Wm-xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Z8R-sB-H01" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UBx-uc-lv1">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -291,13 +289,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile info" id="5Sr-8N-uo2"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQ4-Wm-xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="990" y="1820"/>
         </scene>
         <!--View Controller - Max Stats-->
         <scene sceneID="c3N-qb-glb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tXn-sQ-tFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cmb-L7-4je" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fp0-5T-jQx">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -338,13 +336,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Max Stats" id="WgA-iF-dsL"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXn-sQ-tFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="990" y="939"/>
         </scene>
         <!--Max Value By Stats - Stats groups-->
         <scene sceneID="UlU-PN-cMR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Csf-az-I1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rrY-hQ-Vtm" customClass="MaxValueByStats" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pJm-EX-HdM">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -378,13 +376,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Stats groups" id="FU2-8n-yxR"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Csf-az-I1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1463" y="1204"/>
         </scene>
         <!--Max Value By Stats Stat List - Stat-->
         <scene sceneID="jed-sX-9sF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6qc-DW-PbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="TUJ-Ej-Yna" customClass="MaxValueByStatsStatList" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kci-iO-nQf">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -418,13 +416,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Stat" id="CnZ-31-1l1"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qc-DW-PbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1907" y="1204"/>
         </scene>
         <!--Max Value By Stats Items - Items-->
         <scene sceneID="D8M-sv-g0D">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="muy-rk-LLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="poh-VE-aeG" customClass="MaxValueByStatsItems" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xom-ca-gkq">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -444,13 +442,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Items" id="oZX-qY-4Bj"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muy-rk-LLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2345" y="1197"/>
         </scene>
         <!--Max Values By Item - Items-->
         <scene sceneID="OZf-mn-neo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2xB-gT-4lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="2x9-pi-msA" customClass="MaxValuesByItem" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XZV-Rp-FMj">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -500,13 +498,13 @@
                         <outlet property="table" destination="z2J-5O-vNV" id="eSL-cB-ucn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xB-gT-4lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1461" y="633"/>
         </scene>
         <!--Max Value By Item Stat Group - Stats groups-->
         <scene sceneID="hpj-Pn-dJW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bDG-my-u7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="a8h-rW-DV0" customClass="MaxValueByItemStatGroup" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ny-Qo-9iO">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -549,13 +547,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Stats groups" id="u63-ra-Aul"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDG-my-u7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1907" y="633"/>
         </scene>
         <!--Max Value By Item Stats Values - Stats-->
         <scene sceneID="JNs-FQ-JJN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xSb-qW-ZZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="NGZ-qa-lFL" customClass="MaxValueByItemStatsValues" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IjK-jg-W3k">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -575,71 +573,71 @@
                     </view>
                     <navigationItem key="navigationItem" title="Stats" id="WQF-ub-z6i"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSb-qW-ZZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="633"/>
         </scene>
         <!--Mto Gold - RMAH or GAH-->
         <scene sceneID="8PJ-R9-rWM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D4k-EB-Jkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="V4A-Iy-FMr" customClass="RMtoGold" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUB-qR-vsF">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gold price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zko-Ug-4Kl">
-                                <rect key="frame" x="30" y="20" width="80" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gold price per mil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zko-Ug-4Kl">
+                                <rect key="frame" x="30" y="20" width="134" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ZQH-GW-yhX">
-                                <rect key="frame" x="166" y="15" width="97" height="31"/>
+                                <rect key="frame" x="203" y="14" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="editingDidBegin:" destination="V4A-Iy-FMr" eventType="editingDidBegin" id="M7A-Ap-9gi"/>
                                     <action selector="editingDidEnd:" destination="V4A-Iy-FMr" eventType="editingDidEnd" id="RpC-ja-9k7"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price in gold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Rsg-ku-7Ni">
-                                <rect key="frame" x="30" y="68" width="95" height="21"/>
+                                <rect key="frame" x="30" y="99" width="95" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Wuu-t1-peN">
-                                <rect key="frame" x="166" y="68" width="97" height="31"/>
+                                <rect key="frame" x="203" y="98" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="editingDidBegin:" destination="V4A-Iy-FMr" eventType="editingDidBegin" id="uER-F3-Lfz"/>
                                     <action selector="editingDidEnd:" destination="V4A-Iy-FMr" eventType="editingDidEnd" id="7pw-yS-roY"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price in money" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mCs-UJ-4ja">
-                                <rect key="frame" x="30" y="121" width="113" height="21"/>
+                                <rect key="frame" x="30" y="61" width="113" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="hIT-FN-dS8">
-                                <rect key="frame" x="166" y="116" width="97" height="31"/>
+                                <rect key="frame" x="203" y="55" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="editingDidBegin:" destination="V4A-Iy-FMr" eventType="editingDidBegin" id="iQj-RP-Clk"/>
                                     <action selector="editingDidEnd:" destination="V4A-Iy-FMr" eventType="editingDidEnd" id="Z1B-hQ-9b7"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nAu-by-CzF">
-                                <rect key="frame" x="168" y="155" width="92" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nAu-by-CzF">
+                                <rect key="frame" x="189" y="222" width="92" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Calculate">
@@ -654,7 +652,60 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yvc-rN-eu6">
-                                <rect key="frame" x="30" y="229" width="49" height="21"/>
+                                <rect key="frame" x="30" y="229" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="hUo-e7-SDb">
+                                <rect key="frame" x="31" y="163" width="259" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Equipment"/>
+                                    <segment title="Commodities"/>
+                                </segments>
+                                <connections>
+                                    <action selector="calculate:" destination="V4A-Iy-FMr" eventType="valueChanged" id="FiK-3b-MvW"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In gold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dX4-hy-Foi">
+                                <rect key="frame" x="30" y="277" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Real money" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0SL-HK-p8Z">
+                                <rect key="frame" x="31" y="317" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Real mony in paypal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="TBc-e2-Orc">
+                                <rect key="frame" x="30" y="354" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="PAv-8A-bId">
+                                <rect key="frame" x="210" y="277" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Mz0-Ep-WJz">
+                                <rect key="frame" x="210" y="317" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hEe-oM-EBy">
+                                <rect key="frame" x="210" y="354" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -665,19 +716,24 @@
                     </view>
                     <navigationItem key="navigationItem" title="RMAH or GAH" id="865-Gu-JeL"/>
                     <connections>
-                        <outlet property="goldPrice" destination="ZQH-GW-yhX" id="Un4-KH-7V3"/>
-                        <outlet property="priceInGold" destination="hIT-FN-dS8" id="kVX-hH-ilx"/>
-                        <outlet property="priceInRMAH" destination="Wuu-t1-peN" id="5Sv-zW-CVd"/>
+                        <outlet property="button" destination="nAu-by-CzF" id="hZr-qz-LFA"/>
+                        <outlet property="goldPrice" destination="ZQH-GW-yhX" id="sQC-qa-BbU"/>
+                        <outlet property="inGold" destination="PAv-8A-bId" id="Cuc-7G-EQf"/>
+                        <outlet property="inMoney" destination="Mz0-Ep-WJz" id="xjA-bS-ugf"/>
+                        <outlet property="inPaypal" destination="hEe-oM-EBy" id="uW3-lU-Bcy"/>
+                        <outlet property="itemsOrCommodities" destination="hUo-e7-SDb" id="Aa5-iK-SkX"/>
+                        <outlet property="priceInGold" destination="Wuu-t1-peN" id="RNO-Kl-QYe"/>
+                        <outlet property="priceInRMAH" destination="hIT-FN-dS8" id="FLC-03-Nif"/>
                         <outlet property="result" destination="yvc-rN-eu6" id="L2K-xZ-NET"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4k-EB-Jkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="-488"/>
+            <point key="canvasLocation" x="982" y="-497"/>
         </scene>
         <!--Gem Calc Main Controller - Gem Calculator-->
         <scene sceneID="bLW-YP-4d3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lxT-XZ-dAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="A1a-VB-uL9" customClass="GemCalcMainController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mvd-DD-xLS">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -932,13 +988,13 @@
                         <outlet property="useMineFirst" destination="m9X-EV-Djd" id="zol-ez-TBl"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxT-XZ-dAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="982" y="74"/>
         </scene>
         <!--Use Mine Settings - settings-->
         <scene sceneID="7MQ-dy-zkI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X1g-nr-ddc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="YQ6-mi-Ah2" customClass="UseMineSettings" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="01R-vG-BFK">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1019,13 +1075,13 @@
                         <outlet property="tableView" destination="sqv-Le-XJ9" id="Hxv-V0-Qg6"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1g-nr-ddc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1461" y="-497"/>
         </scene>
         <!--Gem Calc Settings Controller - Gem stuff-->
         <scene sceneID="lTJ-WJ-uqq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8IK-hi-Tb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kya-R0-guh" customClass="GemCalcSettingsController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Dw-sI-9dA">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1118,13 +1174,13 @@
                         <outlet property="tableView" destination="emn-IM-ICj" id="jtm-bM-Smu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8IK-hi-Tb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1461" y="74"/>
         </scene>
         <!--Gem Calc Results - Gem List-->
         <scene sceneID="bAT-M9-uXD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5aB-OJ-Xxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DMg-lh-QTm" customClass="GemCalcResults" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IaT-gv-SuD">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1179,13 +1235,13 @@
                         <outlet property="gemTable" destination="4L7-8U-QXf" id="5B4-uV-xOE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5aB-OJ-Xxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1907" y="64"/>
         </scene>
         <!--Use Mine Results - Summary-->
         <scene sceneID="Hgs-Hd-Hfy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="His-YF-smh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rwM-fs-SUp" customClass="UseMineResults" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CEj-dM-5fp">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1206,13 +1262,13 @@
                         <outlet property="summary" destination="Y40-gK-InV" id="RIZ-Ws-SMI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="His-YF-smh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1907" y="-497"/>
         </scene>
         <!--Gem Details-->
         <scene sceneID="rkI-es-31D">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XOJ-7U-syE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EYj-GV-x1h" customClass="GemDetails" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rzj-WP-2AF">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1385,13 +1441,13 @@
                         <outlet property="tomeType" destination="Ox2-RR-Mwb" id="B7X-kI-e24"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOJ-7U-syE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b79-IR-VIp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dJi-x7-SkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="mDz-86-cZU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mhw-4g-Ejt">
@@ -1403,6 +1459,7 @@
                         <segue destination="cvQ-On-RXW" kind="relationship" relationship="rootViewController" id="ebG-dg-pKy"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJi-x7-SkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31" y="73"/>
         </scene>
@@ -1514,10 +1571,15 @@
         <class className="RMtoGold" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RMtoGold.h"/>
             <relationships>
-                <relationship kind="action" name="calculate:" candidateClass="UIButton"/>
+                <relationship kind="action" name="calculate:"/>
                 <relationship kind="action" name="editingDidBegin:"/>
                 <relationship kind="action" name="editingDidEnd:"/>
+                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="goldPrice" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inGold" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="inMoney" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="inPaypal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="itemsOrCommodities" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="priceInGold" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="priceInRMAH" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="result" candidateClass="UILabel"/>

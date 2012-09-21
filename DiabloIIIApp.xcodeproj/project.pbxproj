@@ -48,7 +48,6 @@
 		F2ADB4D016079CE800C97205 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ADB4CF16079CE800C97205 /* Label.m */; };
 		F2B1C45A1608A60900AAC345 /* GemDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1C4591608A60900AAC345 /* GemDetails.m */; };
 		F2B1C45E160A360F00AAC345 /* RMtoGold.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1C45D160A360F00AAC345 /* RMtoGold.m */; };
-		F2B5398815F3703F007887FB /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5398715F3703F007887FB /* View.xib */; };
 		F2B5399115F3740B007887FB /* ItemRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5399015F3740B007887FB /* ItemRow.xib */; };
 		F2B5399415F374A5007887FB /* MaxValuesByItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5399315F374A5007887FB /* MaxValuesByItem.m */; };
 		F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B5399515F374EE007887FB /* ItemStatsList.plist */; };
@@ -121,7 +120,6 @@
 		F2B1C4591608A60900AAC345 /* GemDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemDetails.m; sourceTree = "<group>"; };
 		F2B1C45C160A360F00AAC345 /* RMtoGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMtoGold.h; sourceTree = "<group>"; };
 		F2B1C45D160A360F00AAC345 /* RMtoGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMtoGold.m; sourceTree = "<group>"; };
-		F2B5398715F3703F007887FB /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = ../View.xib; sourceTree = "<group>"; };
 		F2B5399015F3740B007887FB /* ItemRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemRow.xib; sourceTree = "<group>"; };
 		F2B5399215F374A5007887FB /* MaxValuesByItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxValuesByItem.h; sourceTree = "<group>"; };
 		F2B5399315F374A5007887FB /* MaxValuesByItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxValuesByItem.m; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		F226A0B915E2238300AFF97D /* DiabloIIIApp */ = {
 			isa = PBXGroup;
 			children = (
-				F2B5398715F3703F007887FB /* View.xib */,
 				F226A0C215E2238300AFF97D /* AppDelegate.h */,
 				F226A0C315E2238300AFF97D /* AppDelegate.m */,
 				F226A0C515E2238300AFF97D /* DiabloIIIApp.xcdatamodeld */,
@@ -362,7 +359,6 @@
 				D92E97B215E24BD60043BDAB /* shield_207_barbarian_male.png in Resources */,
 				D92E97B315E24BD60043BDAB /* shoulders_206_barbarian_male.png in Resources */,
 				D92E97B415E24BD60043BDAB /* sword_1h_208_barbarian_male.png in Resources */,
-				F2B5398815F3703F007887FB /* View.xib in Resources */,
 				F2B5399115F3740B007887FB /* ItemRow.xib in Resources */,
 				F2B5399615F374EE007887FB /* ItemStatsList.plist in Resources */,
 				F22B79A515F617F600EC6DC5 /* StatRow.xib in Resources */,

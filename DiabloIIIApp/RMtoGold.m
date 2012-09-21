@@ -14,10 +14,15 @@
 @end
 
 @implementation RMtoGold
+@synthesize button = _button;
 @synthesize goldPrice = _goldPrice;
 @synthesize priceInRMAH = _priceInRMAH;
 @synthesize priceInGold = _priceInGold;
+@synthesize itemsOrCommodities = _itemsOrCommodities;
 @synthesize result = _result;
+@synthesize inGold = _inGold;
+@synthesize inMoney = _inMoney;
+@synthesize inPaypal = _inPaypal;
 
 KeyboardBar *bar;
 
@@ -53,12 +58,33 @@ KeyboardBar *bar;
 }
 
 - (IBAction)editingDidEnd:(id)sender {
-
+    if (_priceInRMAH.text.length > 0 && _priceInGold.text.length > 0 && _goldPrice.text.length > 0) {
+        _button.enabled = YES;
+    } else {
+        _button.enabled = NO;
+    }
 }
 
 - (IBAction)calculate:(UIButton *)sender {
-    float goldToMoney = [_priceInGold.text integerValue]/1000000000 * [_goldPrice.text integerValue];
-    
+    float gold = _priceInGold.text.integerValue * 0.85;
+    _inGold.text = [NSString stringWithFormat:@"%f", gold * _goldPrice.text.floatValue / 1000000];
+    if (_itemsOrCommodities.selectedSegmentIndex == 0) {
+        _inMoney.text = [NSString stringWithFormat:@"%f", _priceInRMAH.text.floatValue - 1];
+    } else {
+        _inMoney.text = [NSString stringWithFormat:@"%f", _priceInRMAH.text.floatValue * 0.85];
+    }
+    if (_inMoney.text.floatValue > _inGold.text.floatValue) {
+        _inMoney.textColor = [UIColor redColor];
+        _result.text = @"It is better to sell in RMAH";
+        _inPaypal.text = [NSString stringWithFormat:@"%f", _inMoney.text.floatValue * 0.85];
+    } else if (_inMoney.text.floatValue < _inGold.text.floatValue) {
+        _inGold.textColor = [UIColor redColor];
+        _result.text = @"It is better to sell in GAH";
+        _inPaypal.text = [NSString stringWithFormat:@"%f", _inGold.text.floatValue * 0.85];
+    } else {
+        _result.text = @"It is the same";
+        _inPaypal.text = [NSString stringWithFormat:@"%f", _inGold.text.floatValue * 0.85];
+    }
 }
 
 
@@ -68,6 +94,11 @@ KeyboardBar *bar;
     [self setPriceInRMAH:nil];
     [self setPriceInGold:nil];
     [self setResult:nil];
+    [self setItemsOrCommodities:nil];
+    [self setInGold:nil];
+    [self setInMoney:nil];
+    [self setInPaypal:nil];
+    [self setButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
