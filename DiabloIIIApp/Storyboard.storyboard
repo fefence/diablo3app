@@ -577,11 +577,11 @@
             </objects>
             <point key="canvasLocation" x="2348" y="633"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Rmah Or Gold - Profit Calculator-->
         <scene sceneID="JCh-3X-fdt">
             <objects>
-                <tableViewController id="MqC-g9-1tF" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xlQ-kD-LK1">
+                <tableViewController id="MqC-g9-1tF" customClass="rmahOrGold" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xlQ-kD-LK1">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -599,15 +599,20 @@
                                                     <rect key="frame" x="9" y="14" width="70" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <action selector="calculateGoldPricesPerMil:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="uED-sj-rkx"/>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="bIg-Xe-FvZ"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="TUD-Pj-5EO"/>
+                                                    </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="kZ7-TR-jq1">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="kZ7-TR-jq1">
                                                     <rect key="frame" x="147" y="15" width="50" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="rHl-EP-46a">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="rHl-EP-46a">
                                                     <rect key="frame" x="265" y="14" width="50" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -644,6 +649,10 @@
                                                         <segment title="Comodities"/>
                                                         <segment title="Gold"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="clearResults:" destination="MqC-g9-1tF" eventType="valueChanged" id="yJm-Bs-7pt"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="valueChanged" id="9Ne-Sq-emp"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -656,11 +665,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="H7D-Sj-J0L">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" minimumFontSize="17" id="H7D-Sj-J0L">
                                                     <rect key="frame" x="214" y="7" width="97" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="bfm-8r-K0p"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="26Q-l0-rfz"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3aP-Tt-q2m">
                                                     <rect key="frame" x="20" y="11" width="45" height="21"/>
@@ -673,8 +686,36 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bPb-IM-xit">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dhZ-LX-QFB">
                                         <rect key="frame" x="0.0" y="201" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="GRL-HV-mlF">
+                                                    <rect key="frame" x="214" y="7" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="C1t-Kd-IdJ"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="gFF-yy-mKx"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Max Possible Sale Price (€)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LrX-VS-pws">
+                                                    <rect key="frame" x="20" y="11" width="180" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bPb-IM-xit">
+                                        <rect key="frame" x="0.0" y="245" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -684,10 +725,14 @@
                                                     <rect key="frame" x="214" y="7" width="97" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="ZNz-2Z-gFb"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="HIn-Ju-Y75"/>
+                                                    </connections>
                                                 </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total Sale Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bus-wB-Jl2">
-                                                    <rect key="frame" x="20" y="11" width="92" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Max Possible Sale Price (gold)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bus-wB-Jl2">
+                                                    <rect key="frame" x="20" y="11" width="178" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -698,17 +743,21 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4yr-vV-8FI">
-                                        <rect key="frame" x="0.0" y="245" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="289" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="kuk-VB-TmM">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="kuk-VB-TmM">
                                                     <rect key="frame" x="215" y="7" width="97" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="Q2g-TE-YZu"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="2s0-fK-i1Z"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Bnet Balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3QN-Vh-Gil">
                                                     <rect key="frame" x="20" y="11" width="149" height="21"/>
@@ -722,17 +771,21 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yZk-Lm-2gy">
-                                        <rect key="frame" x="0.0" y="289" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="333" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="LVm-34-FhD">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="LVm-34-FhD">
                                                     <rect key="frame" x="214" y="7" width="97" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="l9R-xW-icQ"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="BRW-z2-Tgz"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Paypal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lt7-ss-fXi">
                                                     <rect key="frame" x="20" y="11" width="112" height="21"/>
@@ -749,7 +802,18 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6pU-dj-jdS"/>
+                    <navigationItem key="navigationItem" title="Profit Calculator" id="6pU-dj-jdS"/>
+                    <connections>
+                        <outlet property="amount" destination="H7D-Sj-J0L" id="epA-wx-4q4"/>
+                        <outlet property="goldPrice" destination="e1M-da-OkN" id="Qal-YX-Xfr"/>
+                        <outlet property="goldPriceInBnet" destination="kZ7-TR-jq1" id="PrW-jB-UCp"/>
+                        <outlet property="goldPriceInPaypal" destination="rHl-EP-46a" id="UnH-SY-0sh"/>
+                        <outlet property="inMoney" destination="kuk-VB-TmM" id="58Q-NC-ICg"/>
+                        <outlet property="inPaypal" destination="LVm-34-FhD" id="feF-Iz-oMi"/>
+                        <outlet property="itemsOrCommodities" destination="y3K-8n-YTH" id="nVr-C6-rcc"/>
+                        <outlet property="priceInGold" destination="aZ2-Ji-hib" id="uB9-5W-DNZ"/>
+                        <outlet property="priceInRMAH" destination="GRL-HV-mlF" id="ocA-Sx-mwX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7H-dR-MLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1778,6 +1842,25 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UseMineSettings.h"/>
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="rmahOrGold" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/rmahOrGold.h"/>
+            <relationships>
+                <relationship kind="action" name="calculateGoldPricesPerMil:"/>
+                <relationship kind="action" name="clearResults:"/>
+                <relationship kind="action" name="editingDidBegin:"/>
+                <relationship kind="action" name="editingDidEnd:"/>
+                <relationship kind="outlet" name="amount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="goldPrice" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="goldPriceInBnet" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="goldPriceInPaypal" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inMoney" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inPaypal" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="itemsOrCommodities" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="priceInGold" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="priceInRMAH" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>

@@ -7,12 +7,23 @@
 //
 
 #import "rmahOrGold.h"
-
+#import "KeyboardBar.h"
 @interface rmahOrGold ()
 
 @end
 
 @implementation rmahOrGold
+
+@synthesize button = _button;
+@synthesize goldPrice = _goldPrice;
+@synthesize priceInRMAH = _priceInRMAH;
+@synthesize priceInGold = _priceInGold;
+@synthesize itemsOrCommodities = _itemsOrCommodities;
+@synthesize inMoney = _inMoney;
+@synthesize inPaypal = _inPaypal;
+@synthesize amount = _amount;
+
+KeyboardBar *bar;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,13 +37,105 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    bar = [KeyboardBar new];
+    
+    [self barFields:NO];
+    _amount.enabled = NO;
+    bar.field = nil;
+    bar.index = -1;
 }
+
+- (void) barFields : (BOOL) all {
+    NSMutableArray *fields;
+    if (all) {
+        fields = [[NSMutableArray alloc] initWithObjects:_goldPrice, _amount, _priceInRMAH, _priceInGold, nil];
+    } else {
+        fields = [[NSMutableArray alloc] initWithObjects:_goldPrice, _priceInRMAH, _priceInGold, nil];
+    }
+    for (UITextField *f in fields) {
+        f.inputAccessoryView = bar;
+    }
+    bar.fields = fields;
+}
+
+- (IBAction)editingDidBegin:(UITextField *)sender {
+    bar.field = sender;
+}
+
+- (IBAction)editingDidEnd:(id)sender {
+    if (_itemsOrCommodities.selectedSegmentIndex == 2) {
+        _amount.enabled = YES;
+        [self barFields:YES];
+        if (_goldPrice.text.length > 0 && _amount.text.length > 0) {
+            [self calculateGold];
+        }
+    } else {
+        if (_itemsOrCommodities.selectedSegmentIndex == 0) {
+            [self barFields:NO];
+            _amount.enabled = NO;
+            _amount.text = @"1";
+        } else {
+            [self barFields:YES];
+            _amount.enabled = YES;
+        }
+        _priceInGold.enabled = YES;
+        _priceInRMAH.enabled = YES;
+        if (_priceInRMAH.text.length > 0 && _priceInGold.text.length > 0 && _goldPrice.text.length > 0) {
+            [self calculate];
+        }
+    }
+}
+
+- (void) calculate {
+    float gold = _priceInGold.text.integerValue * 0.85;
+    float inMoney, inGold;
+    inGold = _amount.text.floatValue * gold * _goldPrice.text.floatValue / 1000000 * 0.85;
+    if (_itemsOrCommodities.selectedSegmentIndex == 0) {
+        inMoney = _amount.text.floatValue * _priceInRMAH.text.floatValue - 1;
+    } else if (_itemsOrCommodities.selectedSegmentIndex == 1) {
+        inMoney = _amount.text.floatValue * _priceInRMAH.text.floatValue * 0.85;
+    }
+    if (inMoney > inGold) {
+        _inMoney.text = [NSString stringWithFormat:@"%.02f", inMoney];
+        _priceInRMAH.superview.backgroundColor = [UIColor greenColor];
+        _priceInGold.superview.backgroundColor = [UIColor clearColor];
+        _inPaypal.text = [NSString stringWithFormat:@"%.02f", inMoney * 0.85];
+    } else if (inMoney < inGold) {
+        _priceInGold.superview.backgroundColor = [UIColor greenColor];
+        _priceInRMAH.superview.backgroundColor = [UIColor clearColor];
+        _inMoney.text = [NSString stringWithFormat:@"%.02f", inGold];
+        _inPaypal.text = [NSString stringWithFormat:@"%.02f", inGold * 0.85];
+    } else {
+        _priceInRMAH.superview.backgroundColor = [UIColor clearColor];
+        _priceInGold.superview.backgroundColor = [UIColor clearColor];
+        _inPaypal.text = [NSString stringWithFormat:@"%.02f", inMoney * 0.85];
+    }
+}
+
+- (IBAction)calculateGoldPricesPerMil:(id)sender {
+    _goldPriceInBnet.text = [NSString stringWithFormat:@"%.02f",_goldPrice.text.floatValue * 0.85];
+    _goldPriceInPaypal.text = [NSString stringWithFormat:@"%.02f", _goldPriceInBnet.text.floatValue * 0.85];
+}
+
+- (IBAction)clearResults:(id)sender {
+    _inMoney.text = @"";
+    _inPaypal.text = @"";
+    _priceInGold.text = @"";
+    _amount.text = @"";
+    _priceInRMAH.text = @"";
+    _priceInRMAH.superview.backgroundColor = [UIColor clearColor];
+    _priceInGold.superview.backgroundColor = [UIColor clearColor];
+}
+
+- (void)calculateGold {
+    _inMoney.text = [NSString stringWithFormat:@"%.02f", _goldPriceInBnet.text.floatValue * _amount.text.floatValue / 1000000];
+    _inPaypal.text = [NSString stringWithFormat:@"%.02f", _goldPriceInPaypal.text.floatValue * _amount.text.floatValue / 1000000];
+    _priceInGold.text = @"-";
+    _priceInGold.enabled = NO;
+    _priceInRMAH.enabled = NO;
+    _priceInRMAH.text = @"-";
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,80 +145,21 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  
 }
 
+- (void)viewDidUnload {
+    [self setGoldPriceInBnet:nil];
+    [self setGoldPriceInPaypal:nil];
+    [self setAmount:nil];
+    [self setInMoney:nil];
+    [super viewDidUnload];
+}
 @end
