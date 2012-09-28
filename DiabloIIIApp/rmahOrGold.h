@@ -24,5 +24,7 @@
 - (IBAction)calculateGoldPricesPerMil:(id)sender;
 - (IBAction)clearResults:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *amount;
+@property (strong, nonatomic) IBOutlet UITextField *bnetInGold;
+@property (strong, nonatomic) IBOutlet UITextField *paypalInGold;
 
 @end

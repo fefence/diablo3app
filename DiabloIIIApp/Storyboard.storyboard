@@ -581,8 +581,8 @@
         <scene sceneID="JCh-3X-fdt">
             <objects>
                 <tableViewController id="MqC-g9-1tF" customClass="rmahOrGold" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xlQ-kD-LK1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xlQ-kD-LK1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -759,8 +759,36 @@
                                                         <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="2s0-fK-i1Z"/>
                                                     </connections>
                                                 </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Bnet Balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3QN-Vh-Gil">
-                                                    <rect key="frame" x="20" y="11" width="149" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Bnet Balance (€)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3QN-Vh-Gil">
+                                                    <rect key="frame" x="20" y="11" width="171" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wbL-hU-Jzb">
+                                        <rect key="frame" x="0.0" y="333" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="rZY-NS-LBV">
+                                                    <rect key="frame" x="214" y="7" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="D9u-95-FDl"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="KwE-JX-Vrf"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Bnet (gold)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0KS-es-tKN">
+                                                    <rect key="frame" x="20" y="11" width="136" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -771,7 +799,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yZk-Lm-2gy">
-                                        <rect key="frame" x="0.0" y="333" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="377" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -787,8 +815,36 @@
                                                         <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="BRW-z2-Tgz"/>
                                                     </connections>
                                                 </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Paypal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lt7-ss-fXi">
-                                                    <rect key="frame" x="20" y="11" width="112" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Paypal (€)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lt7-ss-fXi">
+                                                    <rect key="frame" x="20" y="11" width="134" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bET-FR-ehv">
+                                        <rect key="frame" x="0.0" y="421" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="hZL-Vb-h8m">
+                                                    <rect key="frame" x="214" y="7" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="editingDidBegin:" destination="MqC-g9-1tF" eventType="editingDidBegin" id="bVA-o8-ihc"/>
+                                                        <action selector="editingDidEnd:" destination="MqC-g9-1tF" eventType="editingDidEnd" id="wTs-qi-qxb"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Received in Paypal (gold)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wOw-23-pHz">
+                                                    <rect key="frame" x="20" y="11" width="149" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -805,12 +861,14 @@
                     <navigationItem key="navigationItem" title="Profit Calculator" id="6pU-dj-jdS"/>
                     <connections>
                         <outlet property="amount" destination="H7D-Sj-J0L" id="epA-wx-4q4"/>
+                        <outlet property="bnetInGold" destination="rZY-NS-LBV" id="mPk-PF-XZA"/>
                         <outlet property="goldPrice" destination="e1M-da-OkN" id="Qal-YX-Xfr"/>
                         <outlet property="goldPriceInBnet" destination="kZ7-TR-jq1" id="PrW-jB-UCp"/>
                         <outlet property="goldPriceInPaypal" destination="rHl-EP-46a" id="UnH-SY-0sh"/>
                         <outlet property="inMoney" destination="kuk-VB-TmM" id="58Q-NC-ICg"/>
                         <outlet property="inPaypal" destination="LVm-34-FhD" id="feF-Iz-oMi"/>
                         <outlet property="itemsOrCommodities" destination="y3K-8n-YTH" id="nVr-C6-rcc"/>
+                        <outlet property="paypalInGold" destination="hZL-Vb-h8m" id="bdN-Xp-BNk"/>
                         <outlet property="priceInGold" destination="aZ2-Ji-hib" id="uB9-5W-DNZ"/>
                         <outlet property="priceInRMAH" destination="GRL-HV-mlF" id="ocA-Sx-mwX"/>
                     </connections>
@@ -1852,6 +1910,7 @@
                 <relationship kind="action" name="editingDidBegin:"/>
                 <relationship kind="action" name="editingDidEnd:"/>
                 <relationship kind="outlet" name="amount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="bnetInGold" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="goldPrice" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="goldPriceInBnet" candidateClass="UITextField"/>
@@ -1859,6 +1918,7 @@
                 <relationship kind="outlet" name="inMoney" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="inPaypal" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="itemsOrCommodities" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="paypalInGold" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="priceInGold" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="priceInRMAH" candidateClass="UITextField"/>
             </relationships>

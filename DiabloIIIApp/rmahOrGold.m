@@ -24,6 +24,7 @@
 @synthesize amount = _amount;
 
 KeyboardBar *bar;
+NSNumberFormatter *formatter;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +38,8 @@ KeyboardBar *bar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    formatter = [[NSNumberFormatter alloc] init];
+    [formatter setDecimalSeparator:[[NSLocale currentLocale] objectForKey:NSLocaleDecimalSeparator]];
     bar = [KeyboardBar new];
     
     [self barFields:NO];
@@ -89,37 +92,40 @@ KeyboardBar *bar;
 - (void) calculate {
     float gold = _priceInGold.text.integerValue * 0.85;
     float inMoney, inGold;
-    inGold = _amount.text.floatValue * gold * _goldPrice.text.floatValue / 1000000 * 0.85;
+    inGold = _amount.text.integerValue * gold * [formatter numberFromString: _goldPrice.text].floatValue / 1000000 * 0.85;
     if (_itemsOrCommodities.selectedSegmentIndex == 0) {
-        inMoney = _amount.text.floatValue * _priceInRMAH.text.floatValue - 1;
+        inMoney = _amount.text.integerValue * [formatter numberFromString: _priceInRMAH.text].floatValue - 1;
     } else if (_itemsOrCommodities.selectedSegmentIndex == 1) {
-        inMoney = _amount.text.floatValue * _priceInRMAH.text.floatValue * 0.85;
+        inMoney = _amount.text.integerValue * [formatter numberFromString: _priceInRMAH.text].floatValue * 0.85;
     }
+    _inMoney.text = [NSString stringWithFormat:@"%.02f", inMoney];
+    _inPaypal.text = [NSString stringWithFormat:@"%.02f", inMoney * 0.85];
+    _bnetInGold.text = [NSString stringWithFormat:@"%.02f", inGold];
+    _paypalInGold.text = [NSString stringWithFormat:@"%.02f", inGold * 0.85];
     if (inMoney > inGold) {
-        _inMoney.text = [NSString stringWithFormat:@"%.02f", inMoney];
         _priceInRMAH.superview.backgroundColor = [UIColor greenColor];
         _priceInGold.superview.backgroundColor = [UIColor clearColor];
-        _inPaypal.text = [NSString stringWithFormat:@"%.02f", inMoney * 0.85];
+        
     } else if (inMoney < inGold) {
         _priceInGold.superview.backgroundColor = [UIColor greenColor];
         _priceInRMAH.superview.backgroundColor = [UIColor clearColor];
-        _inMoney.text = [NSString stringWithFormat:@"%.02f", inGold];
-        _inPaypal.text = [NSString stringWithFormat:@"%.02f", inGold * 0.85];
     } else {
         _priceInRMAH.superview.backgroundColor = [UIColor clearColor];
         _priceInGold.superview.backgroundColor = [UIColor clearColor];
-        _inPaypal.text = [NSString stringWithFormat:@"%.02f", inMoney * 0.85];
     }
 }
 
 - (IBAction)calculateGoldPricesPerMil:(id)sender {
-    _goldPriceInBnet.text = [NSString stringWithFormat:@"%.02f",_goldPrice.text.floatValue * 0.85];
-    _goldPriceInPaypal.text = [NSString stringWithFormat:@"%.02f", _goldPriceInBnet.text.floatValue * 0.85];
+     
+    _goldPriceInBnet.text = [NSString localizedStringWithFormat:@"%.02f", [formatter numberFromString: _goldPrice.text].floatValue * 0.85];
+    _goldPriceInPaypal.text = [NSString localizedStringWithFormat:@"%.02f", [formatter numberFromString: _goldPriceInBnet.text].floatValue * 0.85];
 }
 
 - (IBAction)clearResults:(id)sender {
     _inMoney.text = @"";
     _inPaypal.text = @"";
+    _bnetInGold.text = @"";
+    _paypalInGold.text = @"";
     _priceInGold.text = @"";
     _amount.text = @"";
     _priceInRMAH.text = @"";
@@ -128,8 +134,8 @@ KeyboardBar *bar;
 }
 
 - (void)calculateGold {
-    _inMoney.text = [NSString stringWithFormat:@"%.02f", _goldPriceInBnet.text.floatValue * _amount.text.floatValue / 1000000];
-    _inPaypal.text = [NSString stringWithFormat:@"%.02f", _goldPriceInPaypal.text.floatValue * _amount.text.floatValue / 1000000];
+    _inMoney.text = [NSString stringWithFormat:@"%.02f", [formatter numberFromString: _goldPriceInBnet.text].floatValue * _amount.text.integerValue / 1000000];
+    _inPaypal.text = [NSString stringWithFormat:@"%.02f", [formatter numberFromString: _goldPriceInPaypal.text].floatValue * _amount.text.integerValue / 1000000];
     _priceInGold.text = @"-";
     _priceInGold.enabled = NO;
     _priceInRMAH.enabled = NO;
@@ -160,6 +166,8 @@ KeyboardBar *bar;
     [self setGoldPriceInPaypal:nil];
     [self setAmount:nil];
     [self setInMoney:nil];
+    [self setBnetInGold:nil];
+    [self setPaypalInGold:nil];
     [super viewDidUnload];
 }
 @end
