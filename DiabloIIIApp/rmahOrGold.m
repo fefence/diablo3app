@@ -22,6 +22,7 @@
 @synthesize inMoney = _inMoney;
 @synthesize inPaypal = _inPaypal;
 @synthesize amount = _amount;
+@synthesize tableView = _tableView;
 
 KeyboardBar *bar;
 NSNumberFormatter *formatter;
@@ -46,6 +47,8 @@ NSNumberFormatter *formatter;
     _amount.enabled = NO;
     bar.field = nil;
     bar.index = -1;
+    [_tableView viewWithTag:1000].hidden = YES;
+
 }
 
 - (void) barFields : (BOOL) all {
@@ -72,12 +75,15 @@ NSNumberFormatter *formatter;
         if (_goldPrice.text.length > 0 && _amount.text.length > 0) {
             [self calculateGold];
         }
+        [_tableView viewWithTag:1000].hidden = NO;
     } else {
         if (_itemsOrCommodities.selectedSegmentIndex == 0) {
             [self barFields:NO];
             _amount.enabled = NO;
             _amount.text = @"1";
+            [_tableView viewWithTag:1000].hidden = YES;
         } else {
+            [_tableView viewWithTag:1000].hidden = NO;
             [self barFields:YES];
             _amount.enabled = YES;
         }
@@ -161,6 +167,15 @@ NSNumberFormatter *formatter;
   
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSString *currencyString = [numberFormatter stringFromNumber:[NSNumber numberWithInt:_priceInGold.text.integerValue]];
+    _priceInGold.text = currencyString;
+    
+    return YES;
+}
+
 - (void)viewDidUnload {
     [self setGoldPriceInBnet:nil];
     [self setGoldPriceInPaypal:nil];
@@ -168,6 +183,7 @@ NSNumberFormatter *formatter;
     [self setInMoney:nil];
     [self setBnetInGold:nil];
     [self setPaypalInGold:nil];
+    [self setTableView:nil];
     [super viewDidUnload];
 }
 @end
