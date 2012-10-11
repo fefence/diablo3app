@@ -47,8 +47,7 @@ NSNumberFormatter *formatter;
     _amount.enabled = NO;
     bar.field = nil;
     bar.index = -1;
-    [_tableView viewWithTag:1000].hidden = YES;
-
+    [self hideAmountRow];
 }
 
 - (void) barFields : (BOOL) all {
@@ -71,21 +70,20 @@ NSNumberFormatter *formatter;
 - (IBAction)editingDidEnd:(id)sender {
     if (_itemsOrCommodities.selectedSegmentIndex == 2) {
         _amount.enabled = YES;
+        [self showAmountRow];
         [self barFields:YES];
         if (_goldPrice.text.length > 0 && _amount.text.length > 0) {
             [self calculateGold];
         }
-        [_tableView viewWithTag:1000].hidden = NO;
     } else {
         if (_itemsOrCommodities.selectedSegmentIndex == 0) {
             [self barFields:NO];
             _amount.enabled = NO;
-            _amount.text = @"1";
-            [_tableView viewWithTag:1000].hidden = YES;
+            [self hideAmountRow];
         } else {
-            [_tableView viewWithTag:1000].hidden = NO;
             [self barFields:YES];
             _amount.enabled = YES;
+            [self showAmountRow];
         }
         _priceInGold.enabled = YES;
         _priceInRMAH.enabled = YES;
@@ -167,13 +165,19 @@ NSNumberFormatter *formatter;
   
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSString *currencyString = [numberFormatter stringFromNumber:[NSNumber numberWithInt:_priceInGold.text.integerValue]];
-    _priceInGold.text = currencyString;
+- (void)insertRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
     
-    return YES;
+}
+
+-(void)showAmountRow {
+    [_tableView viewWithTag:1000].hidden = NO;
+
+}
+
+
+-(void)hideAmountRow {
+    [_tableView viewWithTag:1000].hidden = YES;
+    
 }
 
 - (void)viewDidUnload {
