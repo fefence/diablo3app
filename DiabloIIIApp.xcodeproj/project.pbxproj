@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90FFA0C1626A90B002E2C93 /* 122-stats.png in Resources */ = {isa = PBXBuildFile; fileRef = D90FFA0B1626A90B002E2C93 /* 122-stats.png */; };
+		D90FFA0F1626AA11002E2C93 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = D90FFA0E1626AA11002E2C93 /* 20-gear2.png */; };
+		D90FFA111626ABCF002E2C93 /* 161-calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = D90FFA101626ABCF002E2C93 /* 161-calculator.png */; };
+		D90FFA131626ACE3002E2C93 /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = D90FFA121626ACE3002E2C93 /* 17-bar-chart.png */; };
 		D91834E915FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D91834E615FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png */; };
 		D91834EA15FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D91834E715FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png */; };
 		D91834EB15FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D91834E815FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */; };
@@ -66,6 +70,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D90FFA0B1626A90B002E2C93 /* 122-stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "122-stats.png"; path = "../../../../Downloads/glyphish-icons/PNG icons/122-stats.png"; sourceTree = "<group>"; };
+		D90FFA0E1626AA11002E2C93 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "../../../../Downloads/glyphish-icons/PNG icons/20-gear2.png"; sourceTree = "<group>"; };
+		D90FFA101626ABCF002E2C93 /* 161-calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "161-calculator.png"; path = "../../../../Downloads/glyphish-icons/PNG icons/161-calculator.png"; sourceTree = "<group>"; };
+		D90FFA121626ACE3002E2C93 /* 17-bar-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "17-bar-chart.png"; path = "../../../../Downloads/glyphish-icons/PNG icons/17-bar-chart.png"; sourceTree = "<group>"; };
 		D91834E615FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crafting_training_tome_inferno_demonhunter_male.png; path = Resources/crafting_training_tome_inferno_demonhunter_male.png; sourceTree = SOURCE_ROOT; };
 		D91834E715FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crafting_training_page_jeweler_demonhunter_male.png; path = Resources/crafting_training_page_jeweler_demonhunter_male.png; sourceTree = SOURCE_ROOT; };
 		D91834E815FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crafting_training_tome_jeweler_hell_demonhunter_male.png; path = Resources/crafting_training_tome_jeweler_hell_demonhunter_male.png; sourceTree = SOURCE_ROOT; };
@@ -216,6 +224,10 @@
 		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D90FFA121626ACE3002E2C93 /* 17-bar-chart.png */,
+				D90FFA101626ABCF002E2C93 /* 161-calculator.png */,
+				D90FFA0E1626AA11002E2C93 /* 20-gear2.png */,
+				D90FFA0B1626A90B002E2C93 /* 122-stats.png */,
 				D954849B1612141600BCCD54 /* battlenet-logo-small.png */,
 				D954849C1612141600BCCD54 /* paypal-logo-small.png */,
 				D9548496161211B500BCCD54 /* battlenet-logo.png */,
@@ -395,6 +407,10 @@
 				D9548499161211B500BCCD54 /* paypal-logo.jpg in Resources */,
 				D954849D1612141600BCCD54 /* battlenet-logo-small.png in Resources */,
 				D954849E1612141600BCCD54 /* paypal-logo-small.png in Resources */,
+				D90FFA0C1626A90B002E2C93 /* 122-stats.png in Resources */,
+				D90FFA0F1626AA11002E2C93 /* 20-gear2.png in Resources */,
+				D90FFA111626ABCF002E2C93 /* 161-calculator.png in Resources */,
+				D90FFA131626ACE3002E2C93 /* 17-bar-chart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
