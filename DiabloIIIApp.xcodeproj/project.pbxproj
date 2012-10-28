@@ -27,8 +27,8 @@
 		D954849D1612141600BCCD54 /* battlenet-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849B1612141600BCCD54 /* battlenet-logo-small.png */; };
 		D954849E1612141600BCCD54 /* paypal-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849C1612141600BCCD54 /* paypal-logo-small.png */; };
 		D95484A11612162E00BCCD54 /* rmahOrGold.m in Sources */ = {isa = PBXBuildFile; fileRef = D95484A01612162E00BCCD54 /* rmahOrGold.m */; };
+		F200193D163D6C7C00B5259D /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F200193C163D6C7C00B5259D /* PopoverView.m */; };
 		F2016602163BDA8E0054A4EA /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = F2016601163BDA8E0054A4EA /* LogIn.m */; };
-		F201661D163BE37A0054A4EA /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F201661C163BE37A0054A4EA /* PopoverView.m */; };
 		F208059915FCDA8700C2DBB5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059815FCDA8700C2DBB5 /* GradientButton.m */; };
 		F208059C15FCDAEC00C2DBB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059B15FCDAEC00C2DBB5 /* ViewController.m */; };
 		F226A0B215E2238300AFF97D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B115E2238300AFF97D /* UIKit.framework */; };
@@ -94,10 +94,10 @@
 		D954849C1612141600BCCD54 /* paypal-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paypal-logo-small.png"; path = "Resources/paypal-logo-small.png"; sourceTree = SOURCE_ROOT; };
 		D954849F1612162E00BCCD54 /* rmahOrGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rmahOrGold.h; sourceTree = "<group>"; };
 		D95484A01612162E00BCCD54 /* rmahOrGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rmahOrGold.m; sourceTree = "<group>"; };
+		F200193B163D6C7C00B5259D /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		F200193C163D6C7C00B5259D /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		F2016600163BDA8E0054A4EA /* LogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogIn.h; sourceTree = "<group>"; };
 		F2016601163BDA8E0054A4EA /* LogIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogIn.m; sourceTree = "<group>"; };
-		F201661B163BE37A0054A4EA /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
-		F201661C163BE37A0054A4EA /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		F208059715FCDA8700C2DBB5 /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
 		F208059815FCDA8700C2DBB5 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
 		F208059A15FCDAEC00C2DBB5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -182,16 +182,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F201661A163BE37A0054A4EA /* PopoverView */ = {
-			isa = PBXGroup;
-			children = (
-				F201661B163BE37A0054A4EA /* PopoverView.h */,
-				F201661C163BE37A0054A4EA /* PopoverView.m */,
-			);
-			name = PopoverView;
-			path = "../../../Downloads/runway20-PopoverView-e896603/PopoverView";
-			sourceTree = "<group>";
-		};
 		F226A0A215E2238300AFF97D = {
 			isa = PBXGroup;
 			children = (
@@ -323,7 +313,8 @@
 		F2B5398B15F370B1007887FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F201661A163BE37A0054A4EA /* PopoverView */,
+				F200193B163D6C7C00B5259D /* PopoverView.h */,
+				F200193C163D6C7C00B5259D /* PopoverView.m */,
 				F208059715FCDA8700C2DBB5 /* GradientButton.h */,
 				F208059815FCDA8700C2DBB5 /* GradientButton.m */,
 				F2E2AA5B15E3B28E003F749C /* KeyboardBar.h */,
@@ -480,7 +471,7 @@
 				D95484A11612162E00BCCD54 /* rmahOrGold.m in Sources */,
 				F298F31A163401F800753AF9 /* Settings.m in Sources */,
 				F2016602163BDA8E0054A4EA /* LogIn.m in Sources */,
-				F201661D163BE37A0054A4EA /* PopoverView.m in Sources */,
+				F200193D163D6C7C00B5259D /* PopoverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
