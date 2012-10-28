@@ -26,6 +26,7 @@
 		D93527BF163D83BE00124DE4 /* bedge_grunge.png in Resources */ = {isa = PBXBuildFile; fileRef = D935279D163D83BE00124DE4 /* bedge_grunge.png */; };
 		D93527C0163D83BE00124DE4 /* bedge_grunge_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D935279E163D83BE00124DE4 /* bedge_grunge_@2X.png */; };
 		D93527CC163D83BE00124DE4 /* emerald_14_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D93527AA163D83BE00124DE4 /* emerald_14_demonhunter_male.png */; };
+		D941F153163DCA1C0045F7B7 /* 0077@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D941F152163DCA190045F7B7 /* 0077@2x.png */; };
 		D9548498161211B500BCCD54 /* battlenet-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D9548496161211B500BCCD54 /* battlenet-logo.png */; };
 		D9548499161211B500BCCD54 /* paypal-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9548497161211B500BCCD54 /* paypal-logo.jpg */; };
 		D954849D1612141600BCCD54 /* battlenet-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849B1612141600BCCD54 /* battlenet-logo-small.png */; };
@@ -119,6 +120,7 @@
 		D93527B3163D83BE00124DE4 /* shield_207_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_207_barbarian_male.png; sourceTree = "<group>"; };
 		D93527B4163D83BE00124DE4 /* shoulders_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoulders_206_barbarian_male.png; sourceTree = "<group>"; };
 		D93527B5163D83BE00124DE4 /* sword_1h_208_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sword_1h_208_barbarian_male.png; sourceTree = "<group>"; };
+		D941F152163DCA190045F7B7 /* 0077@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0077@2x.png"; sourceTree = "<group>"; };
 		D9548496161211B500BCCD54 /* battlenet-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "battlenet-logo.png"; path = "Resources/battlenet-logo.png"; sourceTree = SOURCE_ROOT; };
 		D9548497161211B500BCCD54 /* paypal-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "paypal-logo.jpg"; path = "Resources/paypal-logo.jpg"; sourceTree = SOURCE_ROOT; };
 		D954849B1612141600BCCD54 /* battlenet-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "battlenet-logo-small.png"; path = "Resources/battlenet-logo-small.png"; sourceTree = SOURCE_ROOT; };
@@ -216,6 +218,7 @@
 		D9352795163D83BE00124DE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D941F152163DCA190045F7B7 /* 0077@2x.png */,
 				D9352796163D83BE00124DE4 /* 122-stats.png */,
 				D9352797163D83BE00124DE4 /* 161-calculator.png */,
 				D9352798163D83BE00124DE4 /* 17-bar-chart.png */,
@@ -503,6 +506,7 @@
 				D93527BF163D83BE00124DE4 /* bedge_grunge.png in Resources */,
 				D93527C0163D83BE00124DE4 /* bedge_grunge_@2X.png in Resources */,
 				D93527CC163D83BE00124DE4 /* emerald_14_demonhunter_male.png in Resources */,
+				D941F153163DCA1C0045F7B7 /* 0077@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -97,7 +97,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tVo-Sq-7XH">
-                                <rect key="frame" x="205" y="150" width="95" height="87"/>
+                                <rect key="frame" x="205" y="141" width="95" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
@@ -119,7 +119,7 @@ Calculator</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4xq-d1-uOs">
-                                <rect key="frame" x="60" y="150" width="95" height="87"/>
+                                <rect key="frame" x="60" y="141" width="95" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Max
 Values</string>
@@ -131,7 +131,7 @@ Values</string>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="20-gear2.png" id="pZH-RI-pox">
-                                <rect key="frame" x="178" y="180" width="26" height="28"/>
+                                <rect key="frame" x="178" y="171" width="26" height="28"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="161-calculator.png" id="Tgs-1p-HSv">
@@ -139,7 +139,7 @@ Values</string>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="17-bar-chart.png" id="gUT-On-M1B">
-                                <rect key="frame" x="31" y="182" width="29" height="24"/>
+                                <rect key="frame" x="31" y="173" width="29" height="24"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
