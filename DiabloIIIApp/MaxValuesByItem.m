@@ -34,6 +34,7 @@ NSArray *tableData;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     tableData = [[NSArray alloc] initWithArray:appDelegate.maxValuesByItemData.allKeys];
 	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

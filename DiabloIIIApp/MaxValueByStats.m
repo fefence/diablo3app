@@ -32,6 +32,7 @@ NSArray *tableData;
     [super viewDidLoad];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     tableData = [[NSArray alloc] initWithArray:appDelegate.maxValuesByStatData.allKeys];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -67,6 +67,7 @@ NSString *currency = @"$";
     bar.field = nil;
     bar.index = -1;
     [self hideAmountRow];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void) barFields : (BOOL) all {

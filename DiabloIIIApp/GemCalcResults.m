@@ -52,6 +52,7 @@ long pages, tomesJ, tomesS;
     tomesJ = _tomeOfJewelcraftingAvailable;
     tomesS = _tomeOfSecretsAvailable;
     [self fillInBeans];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void) fillInBeans {

@@ -22,11 +22,16 @@
 		D92E97B215E24BD60043BDAB /* shield_207_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A615E24BD60043BDAB /* shield_207_barbarian_male.png */; };
 		D92E97B315E24BD60043BDAB /* shoulders_206_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A715E24BD60043BDAB /* shoulders_206_barbarian_male.png */; };
 		D92E97B415E24BD60043BDAB /* sword_1h_208_barbarian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D92E97A815E24BD60043BDAB /* sword_1h_208_barbarian_male.png */; };
+		D9352788163D7BBB00124DE4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9352786163D7BBB00124DE4 /* Default-568h@2x.png */; };
+		D93527BF163D83BE00124DE4 /* bedge_grunge.png in Resources */ = {isa = PBXBuildFile; fileRef = D935279D163D83BE00124DE4 /* bedge_grunge.png */; };
+		D93527C0163D83BE00124DE4 /* bedge_grunge_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D935279E163D83BE00124DE4 /* bedge_grunge_@2X.png */; };
+		D93527CC163D83BE00124DE4 /* emerald_14_demonhunter_male.png in Resources */ = {isa = PBXBuildFile; fileRef = D93527AA163D83BE00124DE4 /* emerald_14_demonhunter_male.png */; };
 		D9548498161211B500BCCD54 /* battlenet-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D9548496161211B500BCCD54 /* battlenet-logo.png */; };
 		D9548499161211B500BCCD54 /* paypal-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9548497161211B500BCCD54 /* paypal-logo.jpg */; };
 		D954849D1612141600BCCD54 /* battlenet-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849B1612141600BCCD54 /* battlenet-logo-small.png */; };
 		D954849E1612141600BCCD54 /* paypal-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849C1612141600BCCD54 /* paypal-logo-small.png */; };
 		D95484A11612162E00BCCD54 /* rmahOrGold.m in Sources */ = {isa = PBXBuildFile; fileRef = D95484A01612162E00BCCD54 /* rmahOrGold.m */; };
+		D96B71E8163D700C005B99BC /* fake.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B71E7163D700C005B99BC /* fake.m */; };
 		F200193D163D6C7C00B5259D /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F200193C163D6C7C00B5259D /* PopoverView.m */; };
 		F2016602163BDA8E0054A4EA /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = F2016601163BDA8E0054A4EA /* LogIn.m */; };
 		F208059915FCDA8700C2DBB5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059815FCDA8700C2DBB5 /* GradientButton.m */; };
@@ -67,8 +72,6 @@
 		F2C06D2D15F6291C000337AA /* ByStats.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2C06D2C15F6291C000337AA /* ByStats.plist */; };
 		F2E2AA5D15E3B28E003F749C /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */; };
 		F2E5282F15EB719000B0A7C1 /* GemCalcResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */; };
-		F2EB0822160CBA64005A7E2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2EB0821160CBA64005A7E2A /* Default-568h@2x.png */; };
-		F2EB1F61160C5EE300A565BB /* cartographer.png in Resources */ = {isa = PBXBuildFile; fileRef = F2EB1F60160C5EE300A565BB /* cartographer.png */; };
 		F2ED0A0015E8FAEA00982454 /* GemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ED09FF15E8FAEA00982454 /* GemBean.m */; };
 /* End PBXBuildFile section */
 
@@ -88,12 +91,42 @@
 		D92E97A615E24BD60043BDAB /* shield_207_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shield_207_barbarian_male.png; path = Resources/shield_207_barbarian_male.png; sourceTree = SOURCE_ROOT; };
 		D92E97A715E24BD60043BDAB /* shoulders_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoulders_206_barbarian_male.png; path = Resources/shoulders_206_barbarian_male.png; sourceTree = SOURCE_ROOT; };
 		D92E97A815E24BD60043BDAB /* sword_1h_208_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sword_1h_208_barbarian_male.png; path = Resources/sword_1h_208_barbarian_male.png; sourceTree = SOURCE_ROOT; };
+		D9352786163D7BBB00124DE4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		D9352796163D83BE00124DE4 /* 122-stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "122-stats.png"; sourceTree = "<group>"; };
+		D9352797163D83BE00124DE4 /* 161-calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "161-calculator.png"; sourceTree = "<group>"; };
+		D9352798163D83BE00124DE4 /* 17-bar-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "17-bar-chart.png"; sourceTree = "<group>"; };
+		D9352799163D83BE00124DE4 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		D935279A163D83BE00124DE4 /* amulet14_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amulet14_barbarian_male.png; sourceTree = "<group>"; };
+		D935279B163D83BE00124DE4 /* battlenet-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battlenet-logo-small.png"; sourceTree = "<group>"; };
+		D935279C163D83BE00124DE4 /* battlenet-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battlenet-logo.png"; sourceTree = "<group>"; };
+		D935279D163D83BE00124DE4 /* bedge_grunge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bedge_grunge.png; sourceTree = "<group>"; };
+		D935279E163D83BE00124DE4 /* bedge_grunge_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bedge_grunge_@2X.png"; sourceTree = "<group>"; };
+		D935279F163D83BE00124DE4 /* belt_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = belt_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527A0163D83BE00124DE4 /* boots_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boots_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527A1163D83BE00124DE4 /* bracers_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bracers_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527A3163D83BE00124DE4 /* chestarmor_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chestarmor_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527A4163D83BE00124DE4 /* crafting_training_page_jeweler_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crafting_training_page_jeweler_demonhunter_male.png; sourceTree = "<group>"; };
+		D93527A5163D83BE00124DE4 /* crafting_training_tome_inferno_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crafting_training_tome_inferno_demonhunter_male.png; sourceTree = "<group>"; };
+		D93527A6163D83BE00124DE4 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crafting_training_tome_jeweler_hell_demonhunter_male.png; sourceTree = "<group>"; };
+		D93527A9163D83BE00124DE4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D93527AA163D83BE00124DE4 /* emerald_14_demonhunter_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emerald_14_demonhunter_male.png; sourceTree = "<group>"; };
+		D93527AB163D83BE00124DE4 /* gloves_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gloves_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527AE163D83BE00124DE4 /* helm_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helm_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527AF163D83BE00124DE4 /* pants_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pants_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527B0163D83BE00124DE4 /* paypal-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal-logo-small.png"; sourceTree = "<group>"; };
+		D93527B1163D83BE00124DE4 /* paypal-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "paypal-logo.jpg"; sourceTree = "<group>"; };
+		D93527B2163D83BE00124DE4 /* ring_23_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring_23_barbarian_male.png; sourceTree = "<group>"; };
+		D93527B3163D83BE00124DE4 /* shield_207_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_207_barbarian_male.png; sourceTree = "<group>"; };
+		D93527B4163D83BE00124DE4 /* shoulders_206_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoulders_206_barbarian_male.png; sourceTree = "<group>"; };
+		D93527B5163D83BE00124DE4 /* sword_1h_208_barbarian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sword_1h_208_barbarian_male.png; sourceTree = "<group>"; };
 		D9548496161211B500BCCD54 /* battlenet-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "battlenet-logo.png"; path = "Resources/battlenet-logo.png"; sourceTree = SOURCE_ROOT; };
 		D9548497161211B500BCCD54 /* paypal-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "paypal-logo.jpg"; path = "Resources/paypal-logo.jpg"; sourceTree = SOURCE_ROOT; };
 		D954849B1612141600BCCD54 /* battlenet-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "battlenet-logo-small.png"; path = "Resources/battlenet-logo-small.png"; sourceTree = SOURCE_ROOT; };
 		D954849C1612141600BCCD54 /* paypal-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paypal-logo-small.png"; path = "Resources/paypal-logo-small.png"; sourceTree = SOURCE_ROOT; };
 		D954849F1612162E00BCCD54 /* rmahOrGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rmahOrGold.h; sourceTree = "<group>"; };
 		D95484A01612162E00BCCD54 /* rmahOrGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rmahOrGold.m; sourceTree = "<group>"; };
+		D96B71E6163D700C005B99BC /* fake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fake.h; sourceTree = "<group>"; };
+		D96B71E7163D700C005B99BC /* fake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fake.m; sourceTree = "<group>"; };
 		F200193B163D6C7C00B5259D /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
 		F200193C163D6C7C00B5259D /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		F2016600163BDA8E0054A4EA /* LogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogIn.h; sourceTree = "<group>"; };
@@ -161,8 +194,6 @@
 		F2E2AA5C15E3B28E003F749C /* KeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardBar.m; sourceTree = "<group>"; };
 		F2E5282D15EB719000B0A7C1 /* GemCalcResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcResults.h; sourceTree = "<group>"; };
 		F2E5282E15EB719000B0A7C1 /* GemCalcResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcResults.m; sourceTree = "<group>"; };
-		F2EB0821160CBA64005A7E2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		F2EB1F60160C5EE300A565BB /* cartographer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cartographer.png; path = ../cartographer.png; sourceTree = "<group>"; };
 		F2ED09FE15E8FAEA00982454 /* GemBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemBean.h; sourceTree = "<group>"; };
 		F2ED09FF15E8FAEA00982454 /* GemBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemBean.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +213,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9352795163D83BE00124DE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9352796163D83BE00124DE4 /* 122-stats.png */,
+				D9352797163D83BE00124DE4 /* 161-calculator.png */,
+				D9352798163D83BE00124DE4 /* 17-bar-chart.png */,
+				D9352799163D83BE00124DE4 /* 20-gear2.png */,
+				D935279A163D83BE00124DE4 /* amulet14_barbarian_male.png */,
+				D935279B163D83BE00124DE4 /* battlenet-logo-small.png */,
+				D935279C163D83BE00124DE4 /* battlenet-logo.png */,
+				D935279D163D83BE00124DE4 /* bedge_grunge.png */,
+				D935279E163D83BE00124DE4 /* bedge_grunge_@2X.png */,
+				D935279F163D83BE00124DE4 /* belt_206_barbarian_male.png */,
+				D93527A0163D83BE00124DE4 /* boots_206_barbarian_male.png */,
+				D93527A1163D83BE00124DE4 /* bracers_206_barbarian_male.png */,
+				D93527A3163D83BE00124DE4 /* chestarmor_206_barbarian_male.png */,
+				D93527A4163D83BE00124DE4 /* crafting_training_page_jeweler_demonhunter_male.png */,
+				D93527A5163D83BE00124DE4 /* crafting_training_tome_inferno_demonhunter_male.png */,
+				D93527A6163D83BE00124DE4 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */,
+				D93527A9163D83BE00124DE4 /* Default-568h@2x.png */,
+				D93527AA163D83BE00124DE4 /* emerald_14_demonhunter_male.png */,
+				D93527AB163D83BE00124DE4 /* gloves_206_barbarian_male.png */,
+				D93527AE163D83BE00124DE4 /* helm_206_barbarian_male.png */,
+				D93527AF163D83BE00124DE4 /* pants_206_barbarian_male.png */,
+				D93527B0163D83BE00124DE4 /* paypal-logo-small.png */,
+				D93527B1163D83BE00124DE4 /* paypal-logo.jpg */,
+				D93527B2163D83BE00124DE4 /* ring_23_barbarian_male.png */,
+				D93527B3163D83BE00124DE4 /* shield_207_barbarian_male.png */,
+				D93527B4163D83BE00124DE4 /* shoulders_206_barbarian_male.png */,
+				D93527B5163D83BE00124DE4 /* sword_1h_208_barbarian_male.png */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
 		F226A0A215E2238300AFF97D = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +299,7 @@
 		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D9352795163D83BE00124DE4 /* Resources */,
 				F24CF0DC1626B5FC001E7BA1 /* 17-bar-chart.png */,
 				F24CF0DD1626B5FC001E7BA1 /* 20-gear2.png */,
 				F24CF0DE1626B5FC001E7BA1 /* 122-stats.png */,
@@ -242,8 +308,7 @@
 				D954849C1612141600BCCD54 /* paypal-logo-small.png */,
 				D9548496161211B500BCCD54 /* battlenet-logo.png */,
 				D9548497161211B500BCCD54 /* paypal-logo.jpg */,
-				F2EB0821160CBA64005A7E2A /* Default-568h@2x.png */,
-				F2EB1F60160C5EE300A565BB /* cartographer.png */,
+				D9352786163D7BBB00124DE4 /* Default-568h@2x.png */,
 				D91834E615FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png */,
 				D91834E715FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png */,
 				D91834E815FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png */,
@@ -348,6 +413,8 @@
 				F22B79AE15F61E9800EC6DC5 /* MaxValueByStatsStatList.m */,
 				F22B79B015F61EB700EC6DC5 /* MaxValueByStatsItems.h */,
 				F22B79B115F61EB700EC6DC5 /* MaxValueByStatsItems.m */,
+				D96B71E6163D700C005B99BC /* fake.h */,
+				D96B71E7163D700C005B99BC /* fake.m */,
 			);
 			name = MaxValues;
 			sourceTree = "<group>";
@@ -378,7 +445,7 @@
 		F226A0A415E2238300AFF97D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Vesela Popova";
 			};
 			buildConfigurationList = F226A0A715E2238300AFF97D /* Build configuration list for PBXProject "DiabloIIIApp" */;
@@ -424,8 +491,6 @@
 				D91834E915FCB1380028E558 /* crafting_training_tome_inferno_demonhunter_male.png in Resources */,
 				D91834EA15FCB1380028E558 /* crafting_training_page_jeweler_demonhunter_male.png in Resources */,
 				D91834EB15FCB1380028E558 /* crafting_training_tome_jeweler_hell_demonhunter_male.png in Resources */,
-				F2EB1F61160C5EE300A565BB /* cartographer.png in Resources */,
-				F2EB0822160CBA64005A7E2A /* Default-568h@2x.png in Resources */,
 				D9548498161211B500BCCD54 /* battlenet-logo.png in Resources */,
 				D9548499161211B500BCCD54 /* paypal-logo.jpg in Resources */,
 				D954849D1612141600BCCD54 /* battlenet-logo-small.png in Resources */,
@@ -434,6 +499,10 @@
 				F24CF0E11626B5FC001E7BA1 /* 20-gear2.png in Resources */,
 				F24CF0E21626B5FC001E7BA1 /* 122-stats.png in Resources */,
 				F24CF0E31626B5FC001E7BA1 /* 161-calculator.png in Resources */,
+				D9352788163D7BBB00124DE4 /* Default-568h@2x.png in Resources */,
+				D93527BF163D83BE00124DE4 /* bedge_grunge.png in Resources */,
+				D93527C0163D83BE00124DE4 /* bedge_grunge_@2X.png in Resources */,
+				D93527CC163D83BE00124DE4 /* emerald_14_demonhunter_male.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +541,7 @@
 				F298F31A163401F800753AF9 /* Settings.m in Sources */,
 				F2016602163BDA8E0054A4EA /* LogIn.m in Sources */,
 				F200193D163D6C7C00B5259D /* PopoverView.m in Sources */,
+				D96B71E8163D700C005B99BC /* fake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

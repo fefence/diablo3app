@@ -81,6 +81,7 @@ CGPoint svos;
     }
     bar.index = -1;
     bar.field = nil;
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 

@@ -76,14 +76,15 @@ int animatedDis;
     [_startingGem setInputView:_gemPicker];
     [_desiredGem setInputView:_gemPicker];
     [self initKeyboardBar];
-    [_pageOfJewelcraftingLabel.layer setBorderColor: [[UIColor colorWithRed: 195/255 green: 195/255 blue: 195/255 alpha:0.7] CGColor]];
+    [_pageOfJewelcraftingLabel.layer setBorderColor: [[UIColor colorWithRed: 59/255 green: 25/255 blue: 29/255 alpha:1.0] CGColor]];
     [_pageOfJewelcraftingLabel.layer setBorderWidth: 1.0];
-    [_tomeOfSecretsLabel.layer setBorderColor: [[UIColor colorWithRed: 195/255 green: 195/255 blue: 195/255 alpha:0.7] CGColor]];
+    [_tomeOfSecretsLabel.layer setBorderColor: [[UIColor colorWithRed: 59/255 green: 25/255 blue: 29/255 alpha:1.0] CGColor]];
     [_tomeOfSecretsLabel.layer setBorderWidth: 1.0];
-    [_tomeOfJewelcraftingLabel.layer setBorderColor: [[UIColor colorWithRed: 195/255 green: 195/255 blue: 195/255 alpha:0.7] CGColor]];
+    [_tomeOfJewelcraftingLabel.layer setBorderColor: [[UIColor colorWithRed: 59/255 green: 25/255 blue: 29/255 alpha:1.0] CGColor]];
     [_tomeOfJewelcraftingLabel.layer setBorderWidth: 1.0];
     _amount.enabled = NO;
     _button.hidden = YES;
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 -(void) initKeyboardBar {

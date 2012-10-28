@@ -36,6 +36,7 @@ NSDictionary *tmp;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     tmp = [appDelegate.maxValuesByItemData objectForKey:item];
     statsGroups = tmp.allKeys;
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

@@ -31,7 +31,8 @@ NSMutableArray *currencies;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    currencies = [NSMutableArray arrayWithObjects:@"EUR", @"USD", @"other", nil];
+    currencies = [NSMutableArray arrayWithObjects:@"EUR", @"USD", @"AUD", @"MXN", @"BRL", @"CLP", @"ARS", @"GBP", @"RUB", nil];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning

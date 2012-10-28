@@ -195,6 +195,7 @@ NSMutableString *text;
     }
     [text appendString:[NSString stringWithFormat:@"%d %@ for %d gold.\nPage of Jewelcrafting needed %ld\n Tomes of Jewelcrafting needed %ld\n Tome of Secrets needed %ld", bigger, [_gemTypes objectAtIndex:_gemTypes.count - 1], price, pagesNeeded, tjNeeded, tsNeeded]];
     _summary.text = text;
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewDidUnload

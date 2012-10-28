@@ -92,6 +92,7 @@ KeyboardBar *bar;
     }
     bar.field = nil;
     bar.index = -1;
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 

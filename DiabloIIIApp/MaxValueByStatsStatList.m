@@ -34,6 +34,7 @@ NSDictionary *tmp;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     tmp = [appDelegate.maxValuesByStatData objectForKey:_statsGroup];
     stats = [tmp allKeys];
+    self.view.backgroundColor = [UIColor clearColor];
     
 }
 

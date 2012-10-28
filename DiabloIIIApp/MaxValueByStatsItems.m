@@ -30,6 +30,7 @@ NSArray *keys;
 {
     [super viewDidLoad];
     keys = [_items allKeys];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

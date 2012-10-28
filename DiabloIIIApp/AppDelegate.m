@@ -37,6 +37,17 @@
    // // Override point for customization after application launch.
    // self.window.backgroundColor = [UIColor whiteColor];
     //[self.window makeKeyAndVisible];
+    
+    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bedge_grunge_@2X.png"]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:(79.0f/225.0f) green:(67.0f/225.0f) blue:(29.0f/225.0f) alpha:1.0f]];
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+    [attributes setValue:[UIColor colorWithRed:(247.0f/225.0f) green:(231.0f/225.0f) blue:(206.0f/225.0f) alpha:1.0f] forKey:UITextAttributeTextColor];
+    
+  //  [attributes setValue:[UIColor whiteColor] forKey:UITextAttributeTextShadowColor];
+//    [attributes setValue:[NSValue valueWithUIOffset:UIOffsetMake(0, 1)] forKey:UITextAttributeTextShadowOffset];
+    [attributes setValue:[UIFont fontWithName:@"Gill Sans" size:20.0] forKey:UITextAttributeFont];
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    
     return YES;
 }
 

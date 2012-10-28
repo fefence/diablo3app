@@ -50,6 +50,7 @@
     _needToCraft.text = (_bean.amountToCraft == 0? @"-": [NSString stringWithFormat:@"%ld", _bean.amountToCraft]);
     _amountNeeded.text = (_bean.amountNeeded == 0? @"-": [NSString stringWithFormat:@"%ld", _bean.amountNeeded]);
     _available.text = (_bean.available == 0? @"-": [NSString stringWithFormat:@"%ld", _bean.available]);
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewDidUnload

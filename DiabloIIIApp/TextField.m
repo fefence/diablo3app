@@ -16,9 +16,9 @@
 {
     if ((self = [super initWithCoder:aDecoder])) {
         [self setBorderStyle:UITextBorderStyleRoundedRect];
-        [self setBackgroundColor:[UIColor colorWithRed:(93.0f/225.0f) green:(123.0f/225.0f) blue:(147.0f/225.0f) alpha:1.0f]];
-        [self setTextColor:[UIColor whiteColor]];
-        [self setFont:[UIFont fontWithName:@"Cochin-Bold" size:15.0]];
+        [self setBackgroundColor:[UIColor colorWithRed:(244.0f/225.0f) green:(233.0f/225.0f) blue:(227.0f/225.0f) alpha:1.0f]];
+        [self setTextColor:[UIColor colorWithRed:(139.0f/225.0f) green:(69.0f/225.0f) blue:(19.0f/225.0f) alpha:1.0f]];
+        [self setFont:[UIFont fontWithName:@"Gill Sans" size:18.0]];
     }
     return self;
 }

@@ -30,6 +30,7 @@ NSArray *keys;
 {
     [super viewDidLoad];
     keys = [_stats allKeys];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
