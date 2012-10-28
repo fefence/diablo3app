@@ -11,6 +11,7 @@
 @interface rmahOrGold : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *button;
+@property (strong, nonatomic) IBOutlet UILabel *currency;
 @property (strong, nonatomic) IBOutlet UITextField *goldPrice;
 @property (strong, nonatomic) IBOutlet UITextField *priceInRMAH;
 @property (strong, nonatomic) IBOutlet UITextField *priceInGold;

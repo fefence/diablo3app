@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="User" syncable="YES">
+        <attribute name="bnetTag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-117" positionY="-108" width="128" height="73"/>
+    </elements>
 </model>

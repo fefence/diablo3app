@@ -27,6 +27,8 @@
 		D954849D1612141600BCCD54 /* battlenet-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849B1612141600BCCD54 /* battlenet-logo-small.png */; };
 		D954849E1612141600BCCD54 /* paypal-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849C1612141600BCCD54 /* paypal-logo-small.png */; };
 		D95484A11612162E00BCCD54 /* rmahOrGold.m in Sources */ = {isa = PBXBuildFile; fileRef = D95484A01612162E00BCCD54 /* rmahOrGold.m */; };
+		F2016602163BDA8E0054A4EA /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = F2016601163BDA8E0054A4EA /* LogIn.m */; };
+		F201661D163BE37A0054A4EA /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F201661C163BE37A0054A4EA /* PopoverView.m */; };
 		F208059915FCDA8700C2DBB5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059815FCDA8700C2DBB5 /* GradientButton.m */; };
 		F208059C15FCDAEC00C2DBB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059B15FCDAEC00C2DBB5 /* ViewController.m */; };
 		F226A0B215E2238300AFF97D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B115E2238300AFF97D /* UIKit.framework */; };
@@ -54,6 +56,7 @@
 		F24CF0E21626B5FC001E7BA1 /* 122-stats.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DE1626B5FC001E7BA1 /* 122-stats.png */; };
 		F24CF0E31626B5FC001E7BA1 /* 161-calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DF1626B5FC001E7BA1 /* 161-calculator.png */; };
 		F292ABC315E6617300865B52 /* UIView+FormScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = F292ABC215E6617300865B52 /* UIView+FormScroll.m */; };
+		F298F31A163401F800753AF9 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = F298F319163401F800753AF9 /* Settings.m */; };
 		F2ADB4CC1607952E00C97205 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ADB4CB1607952E00C97205 /* TextField.m */; };
 		F2ADB4D016079CE800C97205 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ADB4CF16079CE800C97205 /* Label.m */; };
 		F2B1C45A1608A60900AAC345 /* GemDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1C4591608A60900AAC345 /* GemDetails.m */; };
@@ -91,6 +94,10 @@
 		D954849C1612141600BCCD54 /* paypal-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paypal-logo-small.png"; path = "Resources/paypal-logo-small.png"; sourceTree = SOURCE_ROOT; };
 		D954849F1612162E00BCCD54 /* rmahOrGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rmahOrGold.h; sourceTree = "<group>"; };
 		D95484A01612162E00BCCD54 /* rmahOrGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rmahOrGold.m; sourceTree = "<group>"; };
+		F2016600163BDA8E0054A4EA /* LogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogIn.h; sourceTree = "<group>"; };
+		F2016601163BDA8E0054A4EA /* LogIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogIn.m; sourceTree = "<group>"; };
+		F201661B163BE37A0054A4EA /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		F201661C163BE37A0054A4EA /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		F208059715FCDA8700C2DBB5 /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
 		F208059815FCDA8700C2DBB5 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
 		F208059A15FCDAEC00C2DBB5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -135,6 +142,8 @@
 		F24CF0DF1626B5FC001E7BA1 /* 161-calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "161-calculator.png"; path = "Resources/161-calculator.png"; sourceTree = SOURCE_ROOT; };
 		F292ABC115E6617300865B52 /* UIView+FormScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FormScroll.h"; sourceTree = "<group>"; };
 		F292ABC215E6617300865B52 /* UIView+FormScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FormScroll.m"; sourceTree = "<group>"; };
+		F298F318163401F800753AF9 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		F298F319163401F800753AF9 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		F2ADB4CA1607952E00C97205 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
 		F2ADB4CB1607952E00C97205 /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
 		F2ADB4CE16079CE800C97205 /* Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
@@ -173,6 +182,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F201661A163BE37A0054A4EA /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				F201661B163BE37A0054A4EA /* PopoverView.h */,
+				F201661C163BE37A0054A4EA /* PopoverView.m */,
+			);
+			name = PopoverView;
+			path = "../../../Downloads/runway20-PopoverView-e896603/PopoverView";
+			sourceTree = "<group>";
+		};
 		F226A0A215E2238300AFF97D = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +229,7 @@
 				F226A0CD15E223A700AFF97D /* Storyboard.storyboard */,
 				F226A0D215E2285E00AFF97D /* MainViewController.h */,
 				F226A0D315E2285E00AFF97D /* MainViewController.m */,
+				F298F316163401DB00753AF9 /* Settings */,
 				F2B1C45B160A35EA00AAC345 /* RMAHorGAH */,
 				F2B5398C15F371ED007887FB /* MaxValues */,
 				F2B5398A15F37094007887FB /* GemCalculator */,
@@ -259,6 +279,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F298F316163401DB00753AF9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F298F318163401F800753AF9 /* Settings.h */,
+				F298F319163401F800753AF9 /* Settings.m */,
+				F2016600163BDA8E0054A4EA /* LogIn.h */,
+				F2016601163BDA8E0054A4EA /* LogIn.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		F2B1C45B160A35EA00AAC345 /* RMAHorGAH */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +323,7 @@
 		F2B5398B15F370B1007887FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F201661A163BE37A0054A4EA /* PopoverView */,
 				F208059715FCDA8700C2DBB5 /* GradientButton.h */,
 				F208059815FCDA8700C2DBB5 /* GradientButton.m */,
 				F2E2AA5B15E3B28E003F749C /* KeyboardBar.h */,
@@ -446,6 +478,9 @@
 				F2B1C45A1608A60900AAC345 /* GemDetails.m in Sources */,
 				F23DC122160C677800A38479 /* Button.m in Sources */,
 				D95484A11612162E00BCCD54 /* rmahOrGold.m in Sources */,
+				F298F31A163401F800753AF9 /* Settings.m in Sources */,
+				F2016602163BDA8E0054A4EA /* LogIn.m in Sources */,
+				F201661D163BE37A0054A4EA /* PopoverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "rmahOrGold.h"
 #import "KeyboardBar.h"
+#import "AppDelegate.h"
 @interface rmahOrGold ()
 
 @end
@@ -26,6 +27,7 @@
 
 KeyboardBar *bar;
 NSNumberFormatter *formatter;
+NSString *currency = @"$";
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,13 +40,30 @@ NSNumberFormatter *formatter;
 
 - (void)viewDidLoad
 {
+    AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+    NSEntityDescription *entityDesc =
+    [NSEntityDescription entityForName:@"User"
+                inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    NSError *error;
+    NSArray *objects = [context executeFetchRequest:request
+                                              error:&error];
+    if ([objects count] == 0) {
+        currency = @"EUR";
+    } else {
+        NSManagedObject *matches = [objects objectAtIndex:0];
+        currency = [matches valueForKey:@"currency"];
+    }
+    
+    _currency.text = currency;
     [super viewDidLoad];
     formatter = [[NSNumberFormatter alloc] init];
     [formatter setDecimalSeparator:[[NSLocale currentLocale] objectForKey:NSLocaleDecimalSeparator]];
+
     bar = [KeyboardBar new];
-    
     [self barFields:NO];
-    _amount.enabled = NO;
     bar.field = nil;
     bar.index = -1;
     [self hideAmountRow];
@@ -69,7 +88,6 @@ NSNumberFormatter *formatter;
 
 - (IBAction)editingDidEnd:(id)sender {
     if (_itemsOrCommodities.selectedSegmentIndex == 2) {
-        _amount.enabled = YES;
         [self showAmountRow];
         [self barFields:YES];
         if (_goldPrice.text.length > 0 && _amount.text.length > 0) {
@@ -78,11 +96,9 @@ NSNumberFormatter *formatter;
     } else {
         if (_itemsOrCommodities.selectedSegmentIndex == 0) {
             [self barFields:NO];
-            _amount.enabled = NO;
             [self hideAmountRow];
         } else {
             [self barFields:YES];
-            _amount.enabled = YES;
             [self showAmountRow];
         }
         _priceInGold.enabled = YES;
@@ -170,14 +186,27 @@ NSNumberFormatter *formatter;
 }
 
 -(void)showAmountRow {
-    [_tableView viewWithTag:1000].hidden = NO;
-
+    [self.view viewWithTag:1000].hidden = NO;
+    [_tableView reloadData];
 }
 
 
 -(void)hideAmountRow {
-    [_tableView viewWithTag:1000].hidden = YES;
-    
+    [self.view viewWithTag:1000].hidden = YES;
+    [_tableView reloadData];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 69;
+    } else {
+        if (indexPath.row == 0) {
+            return 40;
+        } else if (indexPath.row == 1) {
+            if (_itemsOrCommodities.selectedSegmentIndex == 0) return 0;
+        }
+    }
+    return 35;
 }
 
 - (void)viewDidUnload {
@@ -188,6 +217,9 @@ NSNumberFormatter *formatter;
     [self setBnetInGold:nil];
     [self setPaypalInGold:nil];
     [self setTableView:nil];
+    [self setCurrency:nil];
     [super viewDidUnload];
 }
+
+
 @end

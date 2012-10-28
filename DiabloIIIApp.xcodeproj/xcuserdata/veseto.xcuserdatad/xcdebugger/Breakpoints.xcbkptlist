@@ -151,12 +151,51 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DiabloIIIApp/rmahOrGold.m"
-         timestampString = "371571060.844646"
+         timestampString = "372509018.817894"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "124"
-         endingLineNumber = "124"
+         startingLineNumber = "140"
+         endingLineNumber = "140"
          landmarkName = "-calculateGoldPricesPerMil:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "DiabloIIIApp/rmahOrGold.m"
+         timestampString = "372509018.817894"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
+         landmarkName = "-editingDidEnd:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "DiabloIIIApp/rmahOrGold.m"
+         timestampString = "372509018.817894"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
+         landmarkName = "-editingDidEnd:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "DiabloIIIApp/Settings.m"
+         timestampString = "373119608.149087"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
+         landmarkName = "-popoverView:didSelectItemAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
