@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PopoverView.h"
-@interface Settings : UIViewController <PopoverViewDelegate>
+@interface Settings : UITableViewController <PopoverViewDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *currency;
-- (IBAction)saveSettings:(id)sender;
 - (IBAction)showPopOver:(UIButton *)sender;
 
 @end

@@ -24,6 +24,7 @@
 @synthesize inPaypal = _inPaypal;
 @synthesize amount = _amount;
 @synthesize tableView = _tableView;
+@synthesize bnetInGold = _bnetInGold;
 
 KeyboardBar *bar;
 NSNumberFormatter *formatter;

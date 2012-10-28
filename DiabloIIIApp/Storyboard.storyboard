@@ -93,17 +93,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jOE-qg-Cf8" kind="push" id="CPa-wS-zej"/>
+                                    <segue destination="3lE-jd-8xe" kind="push" id="aSP-K0-1m1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tVo-Sq-7XH">
-                                <rect key="frame" x="205" y="141" width="95" height="87"/>
+                                <rect key="frame" x="197" y="141" width="95" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5O7-8K-urC">
-                                <rect key="frame" x="205" y="28" width="95" height="87"/>
+                                <rect key="frame" x="200" y="28" width="95" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Profit
 Calculator</string>
@@ -111,7 +111,7 @@ Calculator</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xZV-39-vg7">
-                                <rect key="frame" x="60" y="28" width="95" height="87"/>
+                                <rect key="frame" x="55" y="28" width="95" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Gem
 Calculator</string>
@@ -119,7 +119,7 @@ Calculator</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4xq-d1-uOs">
-                                <rect key="frame" x="60" y="141" width="95" height="87"/>
+                                <rect key="frame" x="55" y="141" width="95" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Max
 Values</string>
@@ -127,7 +127,7 @@ Values</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="122-stats.png" id="oFF-8W-vOL">
-                                <rect key="frame" x="178" y="62" width="27" height="19"/>
+                                <rect key="frame" x="176" y="62" width="27" height="19"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="20-gear2.png" id="pZH-RI-pox">
@@ -135,11 +135,11 @@ Values</string>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="161-calculator.png" id="Tgs-1p-HSv">
-                                <rect key="frame" x="34" y="58" width="22" height="28"/>
+                                <rect key="frame" x="32" y="58" width="22" height="28"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="17-bar-chart.png" id="gUT-On-M1B">
-                                <rect key="frame" x="31" y="173" width="29" height="24"/>
+                                <rect key="frame" x="35" y="173" width="29" height="24"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -339,61 +339,6 @@ Values</string>
             </objects>
             <point key="canvasLocation" x="990" y="1820"/>
         </scene>
-        <!--Settings - Settings-->
-        <scene sceneID="TPG-1h-IYF">
-            <objects>
-                <viewController id="jOE-qg-Cf8" customClass="Settings" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n4I-Gf-DVG">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Currency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xXD-Of-cna">
-                                <rect key="frame" x="43" y="36" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BKD-qU-osl">
-                                <rect key="frame" x="208" y="90" width="60" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveSettings:" destination="jOE-qg-Cf8" eventType="touchUpInside" id="ElW-cg-nX9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="qRX-xn-Enh">
-                                <rect key="frame" x="155" y="29" width="54" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="EUR">
-                                    <color key="titleColor" red="0.050980396568775177" green="0.023529414087533951" blue="0.011764707043766975" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showPopOver:" destination="jOE-qg-Cf8" eventType="touchUpInside" id="l6U-gQ-IaY"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="hkB-Gd-eVF"/>
-                    <connections>
-                        <outlet property="currency" destination="qRX-xn-Enh" id="uDQ-Nc-NcL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HnV-G9-r3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="536" y="712"/>
-        </scene>
         <!--Max Value By Stats - Stats groups-->
         <scene sceneID="UlU-PN-cMR">
             <objects>
@@ -499,6 +444,60 @@ Values</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muy-rk-LLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2126" y="1265"/>
+        </scene>
+        <!--Settings - Settings-->
+        <scene sceneID="J2F-BC-EPu">
+            <objects>
+                <tableViewController id="3lE-jd-8xe" customClass="Settings" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Id7-nL-7HZ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Currency" id="usq-hR-5Of">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aSN-EO-ET0">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rmX-QK-c2Z">
+                                                    <rect key="frame" x="144" y="0.0" width="95" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="EUR">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showPopOver:" destination="3lE-jd-8xe" eventType="touchUpInside" id="m4v-JC-Kn5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="3lE-jd-8xe" id="6nD-KQ-Yen"/>
+                            <outlet property="delegate" destination="3lE-jd-8xe" id="ROs-qm-Nr7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="QAl-QV-dVG"/>
+                    <connections>
+                        <outlet property="currency" destination="rmX-QK-c2Z" id="XvG-2k-Aya"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qo0-rc-8P8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="692"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="pGb-h8-uMM">
@@ -1942,10 +1941,9 @@ A typical workflow:
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
         </class>
-        <class className="Settings" superclassName="UIViewController">
+        <class className="Settings" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Settings.h"/>
             <relationships>
-                <relationship kind="action" name="saveSettings:"/>
                 <relationship kind="action" name="showPopOver:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="currency" candidateClass="UIButton"/>
             </relationships>

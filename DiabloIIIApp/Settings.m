@@ -46,7 +46,7 @@ NSMutableArray *currencies;
     [self setCurrency:nil];
     [super viewDidUnload];
 }
-- (IBAction)saveSettings:(id)sender {
+- (void)saveSettings {
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
     NSEntityDescription *entityDesc =
@@ -69,12 +69,13 @@ NSMutableArray *currencies;
 }
 
 - (IBAction)showPopOver:(UIButton *)sender {
-    CGPoint point = CGPointMake(sender.frame.origin.x, sender.frame.origin.y + 26);
-    [PopoverView showPopoverAtPoint:point inView:self.view withStringArray:[NSArray arrayWithObjects:@"EUR", @"USD", @"other", nil] delegate:self];
+    CGPoint point = CGPointMake(sender.frame.origin.x + 40, sender.frame.origin.y + 90);
+    [PopoverView showPopoverAtPoint:point inView:self.view withStringArray:currencies delegate:self];
 
 }
 - (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
     _currency.titleLabel.text = [currencies objectAtIndex:index];
+    [self saveSettings];
     [popoverView dismiss];
 }
 
