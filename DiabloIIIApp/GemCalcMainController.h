@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GemCalcMainController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface GemCalcMainController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *startingGem;
 @property (strong, nonatomic) IBOutlet UITextField *desiredGem;

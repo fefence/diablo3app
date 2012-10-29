@@ -38,7 +38,7 @@
 @synthesize pageOfJewelcraftingLabel = _pageOfJewelcraftingLabel;
 
 KeyboardBar * bar;
-int animatedDis;
+//int animatedDis;
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
@@ -68,7 +68,7 @@ int animatedDis;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    animatedDis = 0;
+//    animatedDis = 0;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     _gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
     [_gemPicker setHidden:YES];
@@ -130,7 +130,7 @@ int animatedDis;
 }
 
 - (IBAction)changeCurrentTextField:(UITextField *)sender {
-    [self animateTextField:sender up:YES];
+  //  [self animateTextField:sender up:YES];
     [self initKeyboardBar];
     [_gemPicker setHidden:YES];
     [bar setField:sender];
@@ -168,7 +168,7 @@ int animatedDis;
     if (_desiredGem.text.length > 0 && _startingGem.text.length >0) {
         [_button setEnabled:YES];
     }
-    [self animateTextField:sender up:NO];
+  //  [self animateTextField:sender up:NO];
 }
 
 - (IBAction)useMineSwitch:(UISwitch *)sender {
@@ -193,7 +193,7 @@ int animatedDis;
 
 - (IBAction)changeDropDown:(UITextField *)sender {
     [self initKeyboardBar];
-    [self animateTextField:sender up:YES];
+  //  [self animateTextField:sender up:YES];
     [bar setField:sender];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [_gemTypes removeAllObjects];
@@ -228,62 +228,62 @@ int animatedDis;
 }
 
 
-- (void) animateTextField: (UITextField*) textField up: (BOOL) up
-{
-    CGPoint temp = [self.view convertPoint:textField.frame.origin toView:nil];
-    UIInterfaceOrientation orientation =
-    [[UIApplication sharedApplication] statusBarOrientation];
-    if (orientation == UIInterfaceOrientationPortrait){
-        
-        if(up) {
-            int moveUpValue = temp.y+textField.frame.size.height;
-            animatedDis = 264-(480-moveUpValue-5);
-        }
-    }
-    else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
-        if(up) {
-            int moveUpValue = 1004-temp.y+textField.frame.size.height;
-            animatedDis = 264-(1004-moveUpValue-5);
-        }
-    }
-    else if(orientation == UIInterfaceOrientationLandscapeLeft) {
-        if(up) {
-            int moveUpValue = temp.x+textField.frame.size.height;
-            animatedDis = 352-(768-moveUpValue-5);
-        }
-    }
-    else
-    {
-        if(up) {
-            int moveUpValue = 768-temp.x+textField.frame.size.height;
-            animatedDis = 352-(768-moveUpValue-5);
-        }
-        
-    }
-    if(animatedDis>0) {
-        const int movementDistance = animatedDis;
-        const float movementDuration = 0.3f;
-        int movement = (up ? -movementDistance : movementDistance);
-        [UIView beginAnimations: nil context: nil];
-        [UIView setAnimationBeginsFromCurrentState: YES];
-        [UIView setAnimationDuration: movementDuration];
-        if (orientation == UIInterfaceOrientationPortrait){
-            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-        }
-        else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
-            
-            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-        }
-        else if(orientation == UIInterfaceOrientationLandscapeLeft) {
-            
-            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-        }
-        else {
-            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-        }
-        
-        [UIView commitAnimations];
-    }
-}
+//- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+//{
+//    CGPoint temp = [self.view convertPoint:textField.frame.origin toView:nil];
+//    UIInterfaceOrientation orientation =
+//    [[UIApplication sharedApplication] statusBarOrientation];
+//    if (orientation == UIInterfaceOrientationPortrait){
+//        
+//        if(up) {
+//            int moveUpValue = temp.y+textField.frame.size.height;
+//            animatedDis = 264-(480-moveUpValue-5);
+//        }
+//    }
+//    else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
+//        if(up) {
+//            int moveUpValue = 1004-temp.y+textField.frame.size.height;
+//            animatedDis = 264-(1004-moveUpValue-5);
+//        }
+//    }
+//    else if(orientation == UIInterfaceOrientationLandscapeLeft) {
+//        if(up) {
+//            int moveUpValue = temp.x+textField.frame.size.height;
+//            animatedDis = 352-(768-moveUpValue-5);
+//        }
+//    }
+//    else
+//    {
+//        if(up) {
+//            int moveUpValue = 768-temp.x+textField.frame.size.height;
+//            animatedDis = 352-(768-moveUpValue-5);
+//        }
+//        
+//    }
+//    if(animatedDis>0) {
+//        const int movementDistance = animatedDis;
+//        const float movementDuration = 0.3f;
+//        int movement = (up ? -movementDistance : movementDistance);
+//        [UIView beginAnimations: nil context: nil];
+//        [UIView setAnimationBeginsFromCurrentState: YES];
+//        [UIView setAnimationDuration: movementDuration];
+//        if (orientation == UIInterfaceOrientationPortrait){
+//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+//        }
+//        else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
+//            
+//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+//        }
+//        else if(orientation == UIInterfaceOrientationLandscapeLeft) {
+//            
+//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+//        }
+//        else {
+//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+//        }
+//        
+//        [UIView commitAnimations];
+//    }
+//}
 
 @end
