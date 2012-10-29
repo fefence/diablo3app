@@ -33,6 +33,7 @@
 		D954849E1612141600BCCD54 /* paypal-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849C1612141600BCCD54 /* paypal-logo-small.png */; };
 		D95484A11612162E00BCCD54 /* rmahOrGold.m in Sources */ = {isa = PBXBuildFile; fileRef = D95484A01612162E00BCCD54 /* rmahOrGold.m */; };
 		D96B71E8163D700C005B99BC /* fake.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B71E7163D700C005B99BC /* fake.m */; };
+		D9A79280163ECC0400A56344 /* 0271@2x rotated.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A7927F163ECC0400A56344 /* 0271@2x rotated.png */; };
 		F200193D163D6C7C00B5259D /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F200193C163D6C7C00B5259D /* PopoverView.m */; };
 		F2016602163BDA8E0054A4EA /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = F2016601163BDA8E0054A4EA /* LogIn.m */; };
 		F208059915FCDA8700C2DBB5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059815FCDA8700C2DBB5 /* GradientButton.m */; };
@@ -129,6 +130,7 @@
 		D95484A01612162E00BCCD54 /* rmahOrGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rmahOrGold.m; sourceTree = "<group>"; };
 		D96B71E6163D700C005B99BC /* fake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fake.h; sourceTree = "<group>"; };
 		D96B71E7163D700C005B99BC /* fake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fake.m; sourceTree = "<group>"; };
+		D9A7927F163ECC0400A56344 /* 0271@2x rotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0271@2x rotated.png"; sourceTree = "<group>"; };
 		F200193B163D6C7C00B5259D /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
 		F200193C163D6C7C00B5259D /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		F2016600163BDA8E0054A4EA /* LogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogIn.h; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		D9352795163D83BE00124DE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D9A7927F163ECC0400A56344 /* 0271@2x rotated.png */,
 				D941F152163DCA190045F7B7 /* 0077@2x.png */,
 				D9352796163D83BE00124DE4 /* 122-stats.png */,
 				D9352797163D83BE00124DE4 /* 161-calculator.png */,
@@ -507,6 +510,7 @@
 				D93527C0163D83BE00124DE4 /* bedge_grunge_@2X.png in Resources */,
 				D93527CC163D83BE00124DE4 /* emerald_14_demonhunter_male.png in Resources */,
 				D941F153163DCA1C0045F7B7 /* 0077@2x.png in Resources */,
+				D9A79280163ECC0400A56344 /* 0271@2x rotated.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
