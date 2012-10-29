@@ -459,17 +459,17 @@ Values</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Currency" id="usq-hR-5Of">
+                            <tableViewSection headerTitle="Currency" id="PoU-K4-kIb">
                                 <cells>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aSN-EO-ET0">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Mdj-Uu-T4W">
                                         <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="tailTruncation" hasAttributedTitle="YES" id="rmX-QK-c2Z">
-                                                    <rect key="frame" x="219" y="7" width="80" height="30"/>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="tailTruncation" hasAttributedTitle="YES" id="LSC-be-CaX">
+                                                    <rect key="frame" x="213" y="7" width="80" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" red="0.87058830259999997" green="0.80000007149999997" blue="0.54901963470000004" alpha="1" colorSpace="deviceRGB"/>
@@ -486,11 +486,11 @@ Values</string>
                                                         </attributedString>
                                                     </state>
                                                     <connections>
-                                                        <action selector="showPopOver:" destination="3lE-jd-8xe" eventType="touchUpInside" id="m4v-JC-Kn5"/>
+                                                        <action selector="showPopOver:" destination="3lE-jd-8xe" eventType="touchUpInside" id="O5S-Ry-6Z6"/>
                                                     </connections>
                                                 </button>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="0271@2x rotated.png" id="yJx-jh-NKy">
-                                                    <rect key="frame" x="261" y="11" width="45" height="25"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="0271@2x rotated.png" id="WWh-PQ-bIL">
+                                                    <rect key="frame" x="255" y="7" width="45" height="25"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -507,7 +507,7 @@ Values</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="QAl-QV-dVG"/>
                     <connections>
-                        <outlet property="currency" destination="rmX-QK-c2Z" id="XvG-2k-Aya"/>
+                        <outlet property="currency" destination="LSC-be-CaX" id="XHI-zv-lHB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qo0-rc-8P8" userLabel="First Responder" sceneMemberID="firstResponder"/>

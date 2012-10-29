@@ -33,6 +33,23 @@ NSMutableArray *currencies;
     [super viewDidLoad];
     currencies = [NSMutableArray arrayWithObjects:@"EUR", @"USD", @"AUD", @"MXN", @"BRL", @"CLP", @"ARS", @"GBP", @"RUB", nil];
     self.view.backgroundColor = [UIColor clearColor];
+    AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+    NSEntityDescription *entityDesc =
+    [NSEntityDescription entityForName:@"User"
+                inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    NSError *error;
+    NSArray *objects = [context executeFetchRequest:request
+                                              error:&error];
+    if ([objects count] == 0) {
+        _currency.titleLabel.text = @"EUR";
+    } else {
+        NSManagedObject *matches = [objects objectAtIndex:0];
+        _currency.titleLabel.text = [matches valueForKey:@"currency"];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,7 +86,7 @@ NSMutableArray *currencies;
 }
 
 - (IBAction)showPopOver:(UIButton *)sender {
-    CGPoint point = CGPointMake(sender.frame.origin.x + 40, sender.frame.origin.y + 90);
+    CGPoint point = CGPointMake(sender.frame.origin.x + 40, sender.frame.origin.y + 80);
     [PopoverView showPopoverAtPoint:point inView:self.view withStringArray:currencies delegate:self];
 
 }
