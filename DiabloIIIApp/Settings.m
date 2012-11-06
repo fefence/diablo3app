@@ -8,7 +8,6 @@
 
 #import "Settings.h"
 #import "AppDelegate.h"
-#import "PopoverView.h"
 
 @interface Settings ()
 
@@ -33,6 +32,7 @@ NSMutableArray *currencies;
     [super viewDidLoad];
     currencies = [NSMutableArray arrayWithObjects:@"EUR", @"USD", @"AUD", @"MXN", @"BRL", @"CLP", @"ARS", @"GBP", @"RUB", nil];
     [_currency setStringArray:currencies];
+    [_currency setDelegate:self];
     self.view.backgroundColor = [UIColor clearColor];
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
@@ -84,10 +84,8 @@ NSMutableArray *currencies;
 }
 
 
-- (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
-    [_currency setString: [currencies objectAtIndex:index]];
+- (void)dropDown:(DropDown *)dropDown didSelectItem:(NSString *)item {
     [self saveSettings];
-    [popoverView dismiss];
 }
 
 @end

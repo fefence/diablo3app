@@ -10,19 +10,23 @@
 #import "PopoverView.h"
 
 @implementation DropDown
+@synthesize delegate = _delegate;
+@synthesize button;
+@synthesize text;
 
-UITextField * text;
-UIButton *button;
 NSMutableArray *stringArray;
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
     if ((self = [super initWithCoder:aDecoder])) {
+        
         [self setBackgroundColor:[UIColor clearColor]];
         [self setUserInteractionEnabled:YES];
         
         text = [[UITextField alloc]  initWithFrame:CGRectMake(0, 0, 100, 25)];
         [text setEnabled:NO];
         [text setBackground:[UIImage imageNamed:@"images.jpeg"]];
+        [text addTarget:self action:@selector(selectItem) forControlEvents:UIControlEventValueChanged];
+
         [self addSubview:text];
         
         button = [[UIButton alloc] initWithFrame:CGRectMake(100, 0, 40, 25)];
@@ -48,6 +52,9 @@ NSMutableArray *stringArray;
 
 - (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
     text.text = [stringArray objectAtIndex:index];
+    if(_delegate && [_delegate respondsToSelector:@selector(dropDown:didSelectItem:)]) {
+        [_delegate dropDown:self didSelectItem:text.text];
+    }
     [popoverView dismiss];
 }
 
@@ -58,5 +65,6 @@ NSMutableArray *stringArray;
 -(void)setString:(NSString *)string {
     text.text = string;
 }
+
 
 @end

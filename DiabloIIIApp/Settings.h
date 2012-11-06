@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PopoverView.h"
 #import "DropDown.h"
 
-@interface Settings : UITableViewController <PopoverViewDelegate, UITableViewDataSource>
+@interface Settings : UITableViewController <DropDownDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet DropDown *currency;
 
