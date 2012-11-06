@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PopoverView.h"
 
-@interface Button : UIButton
+@interface Button : UIButton <PopoverViewDelegate>
+
+@property NSMutableArray *stringArrays;
 
 @end

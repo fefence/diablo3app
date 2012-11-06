@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PopoverView.h"
-@interface Settings : UITableViewController <PopoverViewDelegate>
-@property (strong, nonatomic) IBOutlet UIButton *currency;
-- (IBAction)showPopOver:(UIButton *)sender;
+#import "DropDown.h"
+
+@interface Settings : UITableViewController <PopoverViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet DropDown *currency;
+
 
 @end

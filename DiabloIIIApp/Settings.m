@@ -32,6 +32,7 @@ NSMutableArray *currencies;
 {
     [super viewDidLoad];
     currencies = [NSMutableArray arrayWithObjects:@"EUR", @"USD", @"AUD", @"MXN", @"BRL", @"CLP", @"ARS", @"GBP", @"RUB", nil];
+    [_currency setStringArray:currencies];
     self.view.backgroundColor = [UIColor clearColor];
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
@@ -44,10 +45,10 @@ NSMutableArray *currencies;
     NSArray *objects = [context executeFetchRequest:request
                                               error:&error];
     if ([objects count] == 0) {
-        _currency.titleLabel.text = @"EUR";
+        [_currency setString: @"EUR"];
     } else {
         NSManagedObject *matches = [objects objectAtIndex:0];
-        _currency.titleLabel.text = [matches valueForKey:@"currency"];
+        [_currency setString: [matches valueForKey:@"currency"]];
     }
     
 }
@@ -60,15 +61,12 @@ NSMutableArray *currencies;
 
 - (void)viewDidUnload {
     [self setCurrency:nil];
-    [self setCurrency:nil];
     [super viewDidUnload];
 }
 - (void)saveSettings {
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
-    NSEntityDescription *entityDesc =
-    [NSEntityDescription entityForName:@"User"
-                inManagedObjectContext:context];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
     NSError *error;
@@ -80,18 +78,14 @@ NSMutableArray *currencies;
     } else {
         settings = [objects objectAtIndex:0];
     }
-    [settings setValue:_currency.titleLabel.text forKey:@"currency"];
+    [settings setValue:[_currency getString] forKey:@"currency"];
     [context save:&error];
     
 }
 
-- (IBAction)showPopOver:(UIButton *)sender {
-    CGPoint point = CGPointMake(sender.frame.origin.x + 40, sender.frame.origin.y + 80);
-    [PopoverView showPopoverAtPoint:point inView:self.view withStringArray:currencies delegate:self];
 
-}
 - (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
-    _currency.titleLabel.text = [currencies objectAtIndex:index];
+    [_currency setString: [currencies objectAtIndex:index]];
     [self saveSettings];
     [popoverView dismiss];
 }

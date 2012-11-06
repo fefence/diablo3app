@@ -14,6 +14,7 @@
 
 @implementation LogIn
 @synthesize bnetTag = _bnetTag;
+@synthesize dropDown = _dropDown;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _dropDown.stringArrays = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
     self.view.backgroundColor = [UIColor clearColor];
 	// Do any additional setup after loading the view.
 }
@@ -39,6 +41,7 @@
 
 - (void)viewDidUnload {
     [self setBnetTag:nil];
+    [self setDropDown:nil];
     [super viewDidUnload];
 }
 - (IBAction)logInUser:(id)sender {

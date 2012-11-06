@@ -32,7 +32,6 @@
 		D954849D1612141600BCCD54 /* battlenet-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849B1612141600BCCD54 /* battlenet-logo-small.png */; };
 		D954849E1612141600BCCD54 /* paypal-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D954849C1612141600BCCD54 /* paypal-logo-small.png */; };
 		D95484A11612162E00BCCD54 /* rmahOrGold.m in Sources */ = {isa = PBXBuildFile; fileRef = D95484A01612162E00BCCD54 /* rmahOrGold.m */; };
-		D96B71E8163D700C005B99BC /* fake.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B71E7163D700C005B99BC /* fake.m */; };
 		D9A79280163ECC0400A56344 /* 0271@2x rotated.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A7927F163ECC0400A56344 /* 0271@2x rotated.png */; };
 		F200193D163D6C7C00B5259D /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F200193C163D6C7C00B5259D /* PopoverView.m */; };
 		F2016602163BDA8E0054A4EA /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = F2016601163BDA8E0054A4EA /* LogIn.m */; };
@@ -57,6 +56,8 @@
 		F234FC0F15F8C9C400D9A1D7 /* UseMineSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC0E15F8C9C400D9A1D7 /* UseMineSettings.m */; };
 		F234FC1315F8C9DA00D9A1D7 /* UseMineResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */; };
 		F23DC122160C677800A38479 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = F23DC121160C677800A38479 /* Button.m */; };
+		F247320D1648471E00653AB0 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F247320C1648471E00653AB0 /* images.jpeg */; };
+		F248017716414020008E35C3 /* DropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = F248017616414020008E35C3 /* DropDown.m */; };
 		F249ED8015E7720300E79E6B /* GemCalcSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */; };
 		F24CF0E01626B5FC001E7BA1 /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DC1626B5FC001E7BA1 /* 17-bar-chart.png */; };
 		F24CF0E11626B5FC001E7BA1 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DD1626B5FC001E7BA1 /* 20-gear2.png */; };
@@ -128,8 +129,6 @@
 		D954849C1612141600BCCD54 /* paypal-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paypal-logo-small.png"; path = "Resources/paypal-logo-small.png"; sourceTree = SOURCE_ROOT; };
 		D954849F1612162E00BCCD54 /* rmahOrGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rmahOrGold.h; sourceTree = "<group>"; };
 		D95484A01612162E00BCCD54 /* rmahOrGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rmahOrGold.m; sourceTree = "<group>"; };
-		D96B71E6163D700C005B99BC /* fake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fake.h; sourceTree = "<group>"; };
-		D96B71E7163D700C005B99BC /* fake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fake.m; sourceTree = "<group>"; };
 		D9A7927F163ECC0400A56344 /* 0271@2x rotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0271@2x rotated.png"; sourceTree = "<group>"; };
 		F200193B163D6C7C00B5259D /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
 		F200193C163D6C7C00B5259D /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
@@ -171,6 +170,9 @@
 		F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseMineResults.m; sourceTree = "<group>"; };
 		F23DC120160C677800A38479 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
 		F23DC121160C677800A38479 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
+		F247320C1648471E00653AB0 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = ../../../Downloads/images.jpeg; sourceTree = "<group>"; };
+		F248017516414020008E35C3 /* DropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDown.h; sourceTree = "<group>"; };
+		F248017616414020008E35C3 /* DropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDown.m; sourceTree = "<group>"; };
 		F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcSettingsController.h; sourceTree = "<group>"; };
 		F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemCalcSettingsController.m; sourceTree = "<group>"; };
 		F24CF0DC1626B5FC001E7BA1 /* 17-bar-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "17-bar-chart.png"; path = "Resources/17-bar-chart.png"; sourceTree = SOURCE_ROOT; };
@@ -305,6 +307,7 @@
 		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F247320C1648471E00653AB0 /* images.jpeg */,
 				D9352795163D83BE00124DE4 /* Resources */,
 				F24CF0DC1626B5FC001E7BA1 /* 17-bar-chart.png */,
 				F24CF0DD1626B5FC001E7BA1 /* 20-gear2.png */,
@@ -398,6 +401,8 @@
 				F2ADB4CF16079CE800C97205 /* Label.m */,
 				F23DC120160C677800A38479 /* Button.h */,
 				F23DC121160C677800A38479 /* Button.m */,
+				F248017516414020008E35C3 /* DropDown.h */,
+				F248017616414020008E35C3 /* DropDown.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -419,8 +424,6 @@
 				F22B79AE15F61E9800EC6DC5 /* MaxValueByStatsStatList.m */,
 				F22B79B015F61EB700EC6DC5 /* MaxValueByStatsItems.h */,
 				F22B79B115F61EB700EC6DC5 /* MaxValueByStatsItems.m */,
-				D96B71E6163D700C005B99BC /* fake.h */,
-				D96B71E7163D700C005B99BC /* fake.m */,
 			);
 			name = MaxValues;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				D93527CC163D83BE00124DE4 /* emerald_14_demonhunter_male.png in Resources */,
 				D941F153163DCA1C0045F7B7 /* 0077@2x.png in Resources */,
 				D9A79280163ECC0400A56344 /* 0271@2x rotated.png in Resources */,
+				F247320D1648471E00653AB0 /* images.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +553,7 @@
 				F298F31A163401F800753AF9 /* Settings.m in Sources */,
 				F2016602163BDA8E0054A4EA /* LogIn.m in Sources */,
 				F200193D163D6C7C00B5259D /* PopoverView.m in Sources */,
-				D96B71E8163D700C005B99BC /* fake.m in Sources */,
+				F248017716414020008E35C3 /* DropDown.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

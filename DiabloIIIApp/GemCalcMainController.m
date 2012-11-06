@@ -12,6 +12,7 @@
 #import "GemCalcSettingsController.h"
 #import "UseMineSettings.h"
 #import "QuartzCore/QuartzCore.h"
+#import "PopoverView.h"
 
 @interface GemCalcMainController ()
 
@@ -31,7 +32,6 @@
 @synthesize tomeOfSecretsAvailable = _tomeOfSecretsAvailable;
 @synthesize tomeOfSecretsPrice = _tomeOfSecretsPrice;
 @synthesize gemTypes = _gemTypes;
-@synthesize gemPicker = _gemPicker;
 @synthesize useMineFirst = _useMineFirst;
 @synthesize fields = _fields;
 @synthesize button = _button;
@@ -39,22 +39,6 @@
 
 KeyboardBar * bar;
 //int animatedDis;
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return [_gemTypes count];
-}
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [self.gemTypes objectAtIndex:row];
-}
-
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component {
-        bar.field.text = [_gemTypes objectAtIndex:row];
-}
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,10 +55,6 @@ KeyboardBar * bar;
 //    animatedDis = 0;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     _gemTypes = [[NSMutableArray alloc] initWithArray:appDelegate.gemTypes];
-    [_gemPicker setHidden:YES];
-    [_gemPicker selectRow:0 inComponent:0 animated:NO];
-    [_startingGem setInputView:_gemPicker];
-    [_desiredGem setInputView:_gemPicker];
     [self initKeyboardBar];
     [_pageOfJewelcraftingLabel.layer setBorderColor: [[UIColor colorWithRed: 59/255 green: 25/255 blue: 29/255 alpha:1.0] CGColor]];
     [_pageOfJewelcraftingLabel.layer setBorderWidth: 1.0];
@@ -113,7 +93,6 @@ KeyboardBar * bar;
     [self setTomeOfJewelcraftingPrice:nil];
     [self setTomeOfSecretsAvailable:nil];
     [self setTomeOfSecretsPrice:nil];
-    [self setGemPicker:nil];
     [self setUseMineFirst:nil];
     [self setButton:nil];
     [self setMineButton:nil];
@@ -130,11 +109,9 @@ KeyboardBar * bar;
 }
 
 - (IBAction)changeCurrentTextField:(UITextField *)sender {
-  //  [self animateTextField:sender up:YES];
     [self initKeyboardBar];
-    [_gemPicker setHidden:YES];
     [bar setField:sender];
-    }
+}
 
 
 
@@ -198,11 +175,8 @@ KeyboardBar * bar;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [_gemTypes removeAllObjects];
     [_gemTypes addObjectsFromArray:appDelegate.gemTypes];
-    [_gemPicker reloadAllComponents];
-    [_gemPicker selectRow:0 inComponent:0 animated:NO];
     if (sender.tag == 0) {
         _startingGem.text = [_gemTypes objectAtIndex:0];
-        [_gemPicker setHidden:NO];
     } else if (sender.tag == 1) {
         if (_startingGem.text.length > 0) {
             int i;
@@ -217,9 +191,7 @@ KeyboardBar * bar;
             }
         }
         _desiredGem.text = [_gemTypes objectAtIndex:0];
-        [_gemPicker setHidden:NO];
     }
-    [_gemPicker reloadAllComponents];
     [appDelegate.beans removeAllObjects];
     if (_startingGem.text.length > 0 && _desiredGem.text.length > 0) {
         _button.enabled = YES;
@@ -228,62 +200,16 @@ KeyboardBar * bar;
 }
 
 
-//- (void) animateTextField: (UITextField*) textField up: (BOOL) up
-//{
-//    CGPoint temp = [self.view convertPoint:textField.frame.origin toView:nil];
-//    UIInterfaceOrientation orientation =
-//    [[UIApplication sharedApplication] statusBarOrientation];
-//    if (orientation == UIInterfaceOrientationPortrait){
-//        
-//        if(up) {
-//            int moveUpValue = temp.y+textField.frame.size.height;
-//            animatedDis = 264-(480-moveUpValue-5);
-//        }
-//    }
-//    else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
-//        if(up) {
-//            int moveUpValue = 1004-temp.y+textField.frame.size.height;
-//            animatedDis = 264-(1004-moveUpValue-5);
-//        }
-//    }
-//    else if(orientation == UIInterfaceOrientationLandscapeLeft) {
-//        if(up) {
-//            int moveUpValue = temp.x+textField.frame.size.height;
-//            animatedDis = 352-(768-moveUpValue-5);
-//        }
-//    }
-//    else
-//    {
-//        if(up) {
-//            int moveUpValue = 768-temp.x+textField.frame.size.height;
-//            animatedDis = 352-(768-moveUpValue-5);
-//        }
-//        
-//    }
-//    if(animatedDis>0) {
-//        const int movementDistance = animatedDis;
-//        const float movementDuration = 0.3f;
-//        int movement = (up ? -movementDistance : movementDistance);
-//        [UIView beginAnimations: nil context: nil];
-//        [UIView setAnimationBeginsFromCurrentState: YES];
-//        [UIView setAnimationDuration: movementDuration];
-//        if (orientation == UIInterfaceOrientationPortrait){
-//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-//        }
-//        else if(orientation == UIInterfaceOrientationPortraitUpsideDown) {
-//            
-//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-//        }
-//        else if(orientation == UIInterfaceOrientationLandscapeLeft) {
-//            
-//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-//        }
-//        else {
-//            self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-//        }
-//        
-//        [UIView commitAnimations];
-//    }
-//}
+- (IBAction)dropDown:(UITextField *)sender {
+    [self initKeyboardBar];
+    CGPoint point = CGPointMake(sender.frame.origin.x + 40, sender.frame.origin.y + 80);
+    [PopoverView showPopoverAtPoint:point inView:self.view withStringArray:_gemTypes delegate:self];
+    [bar setField:sender];
 
+}
+
+- (void)popoverView:(PopoverView *)popoverView didSelectItemAtIndex:(NSInteger)index {
+    _startingGem.text = [_gemTypes objectAtIndex:index];
+    [popoverView dismiss];
+}
 @end

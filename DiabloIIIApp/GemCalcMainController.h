@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PopoverView.h"
 
-@interface GemCalcMainController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface GemCalcMainController : UITableViewController <PopoverViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *startingGem;
 @property (strong, nonatomic) IBOutlet UITextField *desiredGem;
@@ -20,7 +21,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *tomeOfSecretsAvailable;
 @property (strong, nonatomic) IBOutlet UITextField *tomeOfSecretsPrice;
 @property NSMutableArray *gemTypes;
-@property (strong, nonatomic) IBOutlet UIPickerView *gemPicker;
 @property (strong, nonatomic) IBOutlet UISwitch *useMineFirst;
 @property (strong, nonatomic) NSMutableArray  *fields;
 @property (strong, nonatomic) IBOutlet UIButton *button;
@@ -32,5 +32,6 @@
 - (IBAction)changeDropDown:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *tomeOfSecretsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *tomeOfJewelcraftingLabel;
+- (IBAction)dropDown:(UITextField *)sender;
 
 @end

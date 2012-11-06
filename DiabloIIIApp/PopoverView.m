@@ -86,7 +86,7 @@
 // FONTS
 
 //normal text font
-#define kTextFont [UIFont fontWithName:@"HelveticaNeue" size:16.f]
+#define kTextFont [UIFont fontWithName:@"Gill Sans" size:16.0]
 
 //normal text color
 #define kTextColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:1]
@@ -95,7 +95,7 @@
 #define kTextAlignment UITextAlignmentCenter
 
 //title font
-#define kTitleFont [UIFont fontWithName:@"HelveticaNeue-Bold" size:16.f]
+#define kTitleFont [UIFont fontWithName:@"Gill Sans" size:18.0]
 
 //title text color
 #define kTitleColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:1]
@@ -253,7 +253,7 @@
 }
 
 - (void)showAtPoint:(CGPoint)point inView:(UIView *)view withViewArray:(NSArray *)viewArray {
-    UIView *container = [[UIView alloc] initWithFrame:CGRectZero];
+    UIScrollView *container = [[UIScrollView alloc] initWithFrame:CGRectZero];
     
     float totalHeight = 0.f;
     float totalWidth = 0.f;
@@ -280,13 +280,18 @@
         i++;
     }
     
+    totalWidth += 10;
     //If dividers are enabled, then we allocate the divider rect array.  This will hold NSValues
     if(kShowDividersBetweenViews) {
         dividerRects = [[NSMutableArray alloc] initWithCapacity:viewArray.count-1];
     }
     
-    container.frame = CGRectMake(0, 0, totalWidth, totalHeight);
-    
+    if (totalHeight < 150) {
+        container.frame = CGRectMake(0, 0, totalWidth, totalHeight);
+    } else {
+        container.frame = CGRectMake(0, 0, totalWidth, 150);
+        [container setContentSize:CGSizeMake(totalWidth, totalHeight)];
+    }
     i = 0;
     
     totalHeight = 0;

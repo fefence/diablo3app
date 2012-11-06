@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="mDz-86-cZU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="mDz-86-cZU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Main View Controller - Diablo III Helper-->
@@ -84,6 +84,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Lr6-DQ-9UU" kind="push" id="rnJ-hS-Kn4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E1l-Jj-JjX">
                                 <rect key="frame" x="165" y="135" width="135" height="105"/>
@@ -468,31 +471,11 @@ Values</string>
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="tailTruncation" hasAttributedTitle="YES" id="LSC-be-CaX">
-                                                    <rect key="frame" x="213" y="7" width="80" height="30"/>
+                                                <view contentMode="scaleToFill" id="Pko-LQ-NPl" customClass="DropDown">
+                                                    <rect key="frame" x="141" y="6" width="150" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="tintColor" red="0.87058830259999997" green="0.80000007149999997" blue="0.54901963470000004" alpha="1" colorSpace="deviceRGB"/>
-                                                    <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    <state key="normal">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="EUR">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.63921568630000003" green="0.4941176471" blue="0.34509803919999998" alpha="1" colorSpace="deviceRGB"/>
-                                                                    <font key="NSFont" size="20" name="GillSans"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="showPopOver:" destination="3lE-jd-8xe" eventType="touchUpInside" id="O5S-Ry-6Z6"/>
-                                                    </connections>
-                                                </button>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="0271@2x rotated.png" id="WWh-PQ-bIL">
-                                                    <rect key="frame" x="255" y="7" width="45" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -507,7 +490,7 @@ Values</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="QAl-QV-dVG"/>
                     <connections>
-                        <outlet property="currency" destination="LSC-be-CaX" id="XHI-zv-lHB"/>
+                        <outlet property="currency" destination="Pko-LQ-NPl" id="tjc-CJ-E8C"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qo0-rc-8P8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1323,10 +1306,6 @@ A typical workflow:
                                                     <rect key="frame" x="25" y="2" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                                 </imageView>
-                                                <pickerView contentMode="scaleToFill" id="1ys-bV-43J">
-                                                    <rect key="frame" x="295" y="-86" width="25" height="216"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                </pickerView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -1426,7 +1405,6 @@ A typical workflow:
                         <outlet property="amount" destination="ajp-XV-QDy" id="gcq-ju-Ocm"/>
                         <outlet property="button" destination="abG-Zo-zLT" id="gVD-wj-sAI"/>
                         <outlet property="desiredGem" destination="eRj-t5-qMm" id="VSX-RL-cpu"/>
-                        <outlet property="gemPicker" destination="1ys-bV-43J" id="BmL-B8-QsY"/>
                         <outlet property="pageOfJewelcraftingAvailable" destination="v8C-DE-jlc" id="HQk-Ei-cFo"/>
                         <outlet property="pageOfJewelcraftingPrice" destination="L37-Sv-RL9" id="wak-cN-OBP"/>
                         <outlet property="startingGem" destination="yay-eD-xPg" id="Wgt-yc-lUp"/>
@@ -1812,58 +1790,18 @@ A typical workflow:
             <objects>
                 <viewController id="Lr6-DQ-9UU" customClass="LogIn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="isJ-Vh-7NS">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="WQb-am-3qg">
-                                <rect key="frame" x="90" y="166" width="134" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6We-Hk-6Tf">
-                                <rect key="frame" x="240" y="159" width="69" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Log in">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logInUser:" destination="Lr6-DQ-9UU" eventType="touchUpInside" id="GfI-BH-553"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bnet tag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j0G-hn-9YO">
-                                <rect key="frame" x="13" y="169" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="83O-Y8-fr2">
-                                <rect key="frame" x="84" y="215" width="147" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Log in as a guest">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logInGuest:" destination="Lr6-DQ-9UU" eventType="touchUpInside" id="bsV-eQ-dxn"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" id="wbv-eL-bo6" customClass="DropDown">
+                                <rect key="frame" x="140" y="46" width="159" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="bnetTag" destination="WQb-am-3qg" id="xe7-Bx-dDp"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="bHK-JL-v5r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeD-k4-iAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1894,7 +1832,6 @@ A typical workflow:
         </scene>
     </scenes>
     <resources>
-        <image name="0271@2x rotated.png" width="24" height="24"/>
         <image name="122-stats.png" width="27" height="19"/>
         <image name="161-calculator.png" width="22" height="28"/>
         <image name="17-bar-chart.png" width="29" height="24"/>
@@ -1918,17 +1855,23 @@ A typical workflow:
         <image name="sword_1h_208_barbarian_male.png" width="64" height="128"/>
     </resources>
     <classes>
+        <class className="Button" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Button.h"/>
+        </class>
+        <class className="DropDown" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DropDown.h"/>
+        </class>
         <class className="GemCalcMainController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GemCalcMainController.h"/>
             <relationships>
                 <relationship kind="action" name="changeCurrentTextField:"/>
                 <relationship kind="action" name="changeDropDown:"/>
+                <relationship kind="action" name="dropDown:" candidateClass="UITextField"/>
                 <relationship kind="action" name="scrollBack:"/>
                 <relationship kind="action" name="useMineSwitch:"/>
                 <relationship kind="outlet" name="amount" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="desiredGem" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gemPicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="mineButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="pageOfJewelcraftingAvailable" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="pageOfJewelcraftingLabel" candidateClass="UIImageView"/>
@@ -1986,6 +1929,7 @@ A typical workflow:
                 <relationship kind="action" name="logInGuest:"/>
                 <relationship kind="action" name="logInUser:"/>
                 <relationship kind="outlet" name="bnetTag" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dropDown" candidateClass="Button"/>
             </relationships>
         </class>
         <class className="MainViewController" superclassName="UIViewController">
@@ -2016,7 +1960,6 @@ A typical workflow:
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Settings.h"/>
             <relationships>
                 <relationship kind="action" name="showPopOver:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="currency" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="TextField" superclassName="UITextField">
