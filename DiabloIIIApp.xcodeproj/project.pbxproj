@@ -56,7 +56,7 @@
 		F234FC0F15F8C9C400D9A1D7 /* UseMineSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC0E15F8C9C400D9A1D7 /* UseMineSettings.m */; };
 		F234FC1315F8C9DA00D9A1D7 /* UseMineResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */; };
 		F23DC122160C677800A38479 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = F23DC121160C677800A38479 /* Button.m */; };
-		F247320D1648471E00653AB0 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F247320C1648471E00653AB0 /* images.jpeg */; };
+		F247320F1649231F00653AB0 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F247320E1649231F00653AB0 /* images.jpeg */; };
 		F248017716414020008E35C3 /* DropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = F248017616414020008E35C3 /* DropDown.m */; };
 		F249ED8015E7720300E79E6B /* GemCalcSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F249ED7F15E7720300E79E6B /* GemCalcSettingsController.m */; };
 		F24CF0E01626B5FC001E7BA1 /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DC1626B5FC001E7BA1 /* 17-bar-chart.png */; };
@@ -170,7 +170,7 @@
 		F234FC1215F8C9DA00D9A1D7 /* UseMineResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseMineResults.m; sourceTree = "<group>"; };
 		F23DC120160C677800A38479 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
 		F23DC121160C677800A38479 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
-		F247320C1648471E00653AB0 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = ../../../Downloads/images.jpeg; sourceTree = "<group>"; };
+		F247320E1649231F00653AB0 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = Resources/images.jpeg; sourceTree = SOURCE_ROOT; };
 		F248017516414020008E35C3 /* DropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDown.h; sourceTree = "<group>"; };
 		F248017616414020008E35C3 /* DropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDown.m; sourceTree = "<group>"; };
 		F249ED7E15E7720300E79E6B /* GemCalcSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemCalcSettingsController.h; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 		F226A0BA15E2238300AFF97D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F247320C1648471E00653AB0 /* images.jpeg */,
+				F247320E1649231F00653AB0 /* images.jpeg */,
 				D9352795163D83BE00124DE4 /* Resources */,
 				F24CF0DC1626B5FC001E7BA1 /* 17-bar-chart.png */,
 				F24CF0DD1626B5FC001E7BA1 /* 20-gear2.png */,
@@ -514,7 +514,7 @@
 				D93527CC163D83BE00124DE4 /* emerald_14_demonhunter_male.png in Resources */,
 				D941F153163DCA1C0045F7B7 /* 0077@2x.png in Resources */,
 				D9A79280163ECC0400A56344 /* 0271@2x rotated.png in Resources */,
-				F247320D1648471E00653AB0 /* images.jpeg in Resources */,
+				F247320F1649231F00653AB0 /* images.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
