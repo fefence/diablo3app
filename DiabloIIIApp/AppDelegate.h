@@ -21,6 +21,7 @@
 @property NSDictionary *maxValuesByItemData;
 @property NSDictionary *maxValuesByStatData;
 @property NSMutableDictionary *myGemsAvailable;
+@property NSString *currentUser;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

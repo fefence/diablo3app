@@ -12,6 +12,7 @@
 @interface Settings : UITableViewController <DropDownDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet DropDown *currency;
+@property (strong, nonatomic) IBOutlet UILabel *bNetTag;
 
 
 @end

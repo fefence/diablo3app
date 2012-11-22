@@ -15,6 +15,7 @@
 
 @implementation Settings
 @synthesize currency = _currency;
+@synthesize bNetTag = _bNetTag;
 
 NSMutableArray *currencies;
 
@@ -40,14 +41,18 @@ NSMutableArray *currencies;
     [NSEntityDescription entityForName:@"User"
                 inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId == %@", [delegate currentUser]];
+    [request setPredicate:predicate];
+
     [request setEntity:entityDesc];
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request
                                               error:&error];
     if ([objects count] == 0) {
-        [_currency setString: @"EUR"];
+        //[_currency setString: @"EUR"];
     } else {
         NSManagedObject *matches = [objects objectAtIndex:0];
+        _bNetTag.text = [matches valueForKey:@"userId"];
         [_currency setString: [matches valueForKey:@"currency"]];
     }
     
@@ -61,6 +66,7 @@ NSMutableArray *currencies;
 
 - (void)viewDidUnload {
     [self setCurrency:nil];
+    [self setBNetTag:nil];
     [super viewDidUnload];
 }
 - (void)saveSettings {
@@ -69,12 +75,14 @@ NSMutableArray *currencies;
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId == %@", [delegate currentUser]];
+    [request setPredicate:predicate];
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request error:&error];
     NSManagedObject *settings;
     if ([objects count] == 0) {
-        settings = [NSEntityDescription insertNewObjectForEntityForName:@"User"
-                                                 inManagedObjectContext:context];
+        //settings = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+          //                                       inManagedObjectContext:context];
     } else {
         settings = [objects objectAtIndex:0];
     }

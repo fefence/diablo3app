@@ -20,7 +20,11 @@ NSMutableArray *stringArray;
     if ((self = [super initWithCoder:aDecoder])) {
         
         [self setBackgroundColor:[UIColor clearColor]];
-        [self setUserInteractionEnabled:YES];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+        tap.cancelsTouchesInView = NO; 
+        [self addGestureRecognizer:tap];
+        
+        self.userInteractionEnabled = YES;
         
         text = [[UITextField alloc]  initWithFrame:CGRectMake(0, 0, 100, 25)];
         [text setEnabled:NO];
@@ -30,7 +34,7 @@ NSMutableArray *stringArray;
         [self addSubview:text];
         
         button = [[UIButton alloc] initWithFrame:CGRectMake(100, 0, 40, 25)];
-        [button addTarget:self action:@selector(showPopOver) forControlEvents:UIControlEventTouchUpInside];
+       // [button addTarget:self action:@selector(showPopOver) forControlEvents:UIControlEventTouchUpInside];
         [button setImage:[UIImage imageNamed:@"0271@2x rotated.png"] forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage imageNamed:@"images.jpeg"] forState:UIControlStateNormal];
 
@@ -65,6 +69,8 @@ NSMutableArray *stringArray;
 -(void)setString:(NSString *)string {
     text.text = string;
 }
-
+- (void)tapped:(UITapGestureRecognizer *)tap {
+    [self showPopOver];
+}
 
 @end

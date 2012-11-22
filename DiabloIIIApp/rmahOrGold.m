@@ -47,18 +47,20 @@ NSString *currency = @"$";
     [NSEntityDescription entityForName:@"User"
                 inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId == %@", [delegate currentUser]];
+    [request setPredicate:predicate];
+    
     [request setEntity:entityDesc];
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request
                                               error:&error];
     if ([objects count] == 0) {
-        currency = @"EUR";
+        //[_currency setString: @"EUR"];
     } else {
-        NSManagedObject *matches = [objects objectAtIndex:0];
-        currency = [matches valueForKey:@"currency"];
+        _currency.text = [[objects objectAtIndex:0] valueForKey:@"currency"];
     }
+
     
-    _currency.text = currency;
     [super viewDidLoad];
     formatter = [[NSNumberFormatter alloc] init];
     [formatter setDecimalSeparator:[[NSLocale currentLocale] objectForKey:NSLocaleDecimalSeparator]];
@@ -113,7 +115,7 @@ NSString *currency = @"$";
 
 - (void) calculate {
     float gold = _priceInGold.text.integerValue * 0.85;
-    float inMoney, inGold;
+    float inMoney = 0, inGold;
     inGold = _amount.text.integerValue * gold * [formatter numberFromString: _goldPrice.text].floatValue / 1000000 * 0.85;
     if (_itemsOrCommodities.selectedSegmentIndex == 0) {
         inMoney = _amount.text.integerValue * [formatter numberFromString: _priceInRMAH.text].floatValue - 1;

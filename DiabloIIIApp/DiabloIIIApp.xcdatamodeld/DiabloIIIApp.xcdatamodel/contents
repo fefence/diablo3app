@@ -2,8 +2,10 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="User" syncable="YES">
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-117" positionY="-108" width="128" height="58"/>
+        <element name="User" positionX="-117" positionY="-108" width="128" height="88"/>
     </elements>
 </model>

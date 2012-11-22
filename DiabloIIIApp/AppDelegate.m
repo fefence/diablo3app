@@ -19,6 +19,7 @@
 @synthesize maxValuesByItemData = _maxValuesByItemData;
 @synthesize maxValuesByStatData = _maxValuesByStatData;
 @synthesize myGemsAvailable = _myGemsAvailable;
+@synthesize currentUser = _currentUser;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

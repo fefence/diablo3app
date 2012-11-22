@@ -37,6 +37,7 @@
 		F2016602163BDA8E0054A4EA /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = F2016601163BDA8E0054A4EA /* LogIn.m */; };
 		F208059915FCDA8700C2DBB5 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059815FCDA8700C2DBB5 /* GradientButton.m */; };
 		F208059C15FCDAEC00C2DBB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F208059B15FCDAEC00C2DBB5 /* ViewController.m */; };
+		F21F0C391655122F00107DBF /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F0C381655122F00107DBF /* Stats.m */; };
 		F226A0B215E2238300AFF97D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B115E2238300AFF97D /* UIKit.framework */; };
 		F226A0B415E2238300AFF97D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B315E2238300AFF97D /* Foundation.framework */; };
 		F226A0B615E2238300AFF97D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A0B515E2238300AFF97D /* CoreGraphics.framework */; };
@@ -63,6 +64,8 @@
 		F24CF0E11626B5FC001E7BA1 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DD1626B5FC001E7BA1 /* 20-gear2.png */; };
 		F24CF0E21626B5FC001E7BA1 /* 122-stats.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DE1626B5FC001E7BA1 /* 122-stats.png */; };
 		F24CF0E31626B5FC001E7BA1 /* 161-calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = F24CF0DF1626B5FC001E7BA1 /* 161-calculator.png */; };
+		F2805EEE1653CD7900EB13AD /* HeroList.m in Sources */ = {isa = PBXBuildFile; fileRef = F2805EED1653CD7900EB13AD /* HeroList.m */; };
+		F2805EF11653D73300EB13AD /* Equipment.m in Sources */ = {isa = PBXBuildFile; fileRef = F2805EF01653D73300EB13AD /* Equipment.m */; };
 		F292ABC315E6617300865B52 /* UIView+FormScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = F292ABC215E6617300865B52 /* UIView+FormScroll.m */; };
 		F298F31A163401F800753AF9 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = F298F319163401F800753AF9 /* Settings.m */; };
 		F2ADB4CC1607952E00C97205 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ADB4CB1607952E00C97205 /* TextField.m */; };
@@ -138,6 +141,8 @@
 		F208059815FCDA8700C2DBB5 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
 		F208059A15FCDAEC00C2DBB5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F208059B15FCDAEC00C2DBB5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F21F0C371655122F00107DBF /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		F21F0C381655122F00107DBF /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stats.m; sourceTree = "<group>"; };
 		F226A0AD15E2238300AFF97D /* DiabloIIIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabloIIIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F226A0B115E2238300AFF97D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F226A0B315E2238300AFF97D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +184,10 @@
 		F24CF0DD1626B5FC001E7BA1 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "Resources/20-gear2.png"; sourceTree = SOURCE_ROOT; };
 		F24CF0DE1626B5FC001E7BA1 /* 122-stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "122-stats.png"; path = "Resources/122-stats.png"; sourceTree = SOURCE_ROOT; };
 		F24CF0DF1626B5FC001E7BA1 /* 161-calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "161-calculator.png"; path = "Resources/161-calculator.png"; sourceTree = SOURCE_ROOT; };
+		F2805EEC1653CD7900EB13AD /* HeroList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroList.h; sourceTree = "<group>"; };
+		F2805EED1653CD7900EB13AD /* HeroList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroList.m; sourceTree = "<group>"; };
+		F2805EEF1653D73300EB13AD /* Equipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Equipment.h; sourceTree = "<group>"; };
+		F2805EF01653D73300EB13AD /* Equipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Equipment.m; sourceTree = "<group>"; };
 		F292ABC115E6617300865B52 /* UIView+FormScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FormScroll.h"; sourceTree = "<group>"; };
 		F292ABC215E6617300865B52 /* UIView+FormScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FormScroll.m"; sourceTree = "<group>"; };
 		F298F318163401F800753AF9 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -292,6 +301,7 @@
 				F226A0CD15E223A700AFF97D /* Storyboard.storyboard */,
 				F226A0D215E2285E00AFF97D /* MainViewController.h */,
 				F226A0D315E2285E00AFF97D /* MainViewController.m */,
+				F2805EE71653C90400EB13AD /* ProfileImport */,
 				F298F316163401DB00753AF9 /* Settings */,
 				F2B1C45B160A35EA00AAC345 /* RMAHorGAH */,
 				F2B5398C15F371ED007887FB /* MaxValues */,
@@ -341,6 +351,19 @@
 				F2C06D2C15F6291C000337AA /* ByStats.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2805EE71653C90400EB13AD /* ProfileImport */ = {
+			isa = PBXGroup;
+			children = (
+				F2805EEC1653CD7900EB13AD /* HeroList.h */,
+				F2805EED1653CD7900EB13AD /* HeroList.m */,
+				F2805EEF1653D73300EB13AD /* Equipment.h */,
+				F2805EF01653D73300EB13AD /* Equipment.m */,
+				F21F0C371655122F00107DBF /* Stats.h */,
+				F21F0C381655122F00107DBF /* Stats.m */,
+			);
+			name = ProfileImport;
 			sourceTree = "<group>";
 		};
 		F298F316163401DB00753AF9 /* Settings */ = {
@@ -554,6 +577,9 @@
 				F2016602163BDA8E0054A4EA /* LogIn.m in Sources */,
 				F200193D163D6C7C00B5259D /* PopoverView.m in Sources */,
 				F248017716414020008E35C3 /* DropDown.m in Sources */,
+				F2805EEE1653CD7900EB13AD /* HeroList.m in Sources */,
+				F2805EF11653D73300EB13AD /* Equipment.m in Sources */,
+				F21F0C391655122F00107DBF /* Stats.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

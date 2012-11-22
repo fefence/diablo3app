@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Button.h"
+#import "TextField.h"
+
 @interface LogIn : UIViewController
-
-- (IBAction)logInUser:(id)sender;
-- (IBAction)logInGuest:(id)sender;
-@property (strong, nonatomic) IBOutlet Button *dropDown;
-
-@property (strong, nonatomic) IBOutlet UITextField *bnetTag;
+@property (strong, nonatomic) IBOutlet TextField *userId;
+- (IBAction)logIn:(id)sender;
 @end
