@@ -12,6 +12,8 @@
 
 @interface GemCalcMainController : UITableViewController <DropDownDelegate>
 
+@property (strong, nonatomic) IBOutlet UIButton *goCraftSettingsButton;
+@property (strong, nonatomic) IBOutlet UIButton *goMineSettingsButton;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet DropDown *startingGem;
 @property (strong, nonatomic) IBOutlet DropDown *desiredGem;
@@ -25,5 +27,6 @@
 @property (strong, nonatomic) IBOutlet TextField *tomeOfSecretsPrice;
 - (IBAction)editingDidEnd:(id)sender;
 - (IBAction)editingDidBegin:(id)sender;
+- (IBAction)changeUpgradeMine:(id)sender;
 
 @end

@@ -15,5 +15,6 @@
 
 @property (nonatomic, retain) UITextField *field;
 @property (nonatomic, retain) NSMutableArray * fields;
+@property NSSet *lineIndexes;
 @property int index;
 @end

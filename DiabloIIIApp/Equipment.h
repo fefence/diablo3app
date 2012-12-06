@@ -11,7 +11,7 @@
 @interface Equipment : UIViewController
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property int heroIndex;
+@property NSString* heroIndex;
 - (IBAction)changePage:(id)sender;
 
 @end

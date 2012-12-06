@@ -33,7 +33,7 @@ NSDictionary *json;
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSString *userId = [delegate currentUser];
     userId = [userId stringByReplacingOccurrencesOfString:@"#" withString:@"-"];
-    NSString * url = [NSString stringWithFormat:@"http://eu.battle.net/api/d3/profile/%@/hero/%d", userId, _heroIndex];
+    NSString * url = [NSString stringWithFormat:@"http://eu.battle.net/api/d3/profile/%@/hero/%@", userId, _heroIndex];
     NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSError* error;
     json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];

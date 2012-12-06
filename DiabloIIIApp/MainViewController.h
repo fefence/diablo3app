@@ -10,6 +10,7 @@
 
 @interface MainViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *bTag;
 
 
 @end

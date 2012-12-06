@@ -14,6 +14,7 @@
 @synthesize field;
 @synthesize fields = _fields;
 @synthesize index = _index;
+@synthesize lineIndexes = _lineIndexes;
 
 UIBarButtonItem *previous;
 UIBarButtonItem *next;

@@ -169,7 +169,7 @@ int _page;
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSString *userId = [delegate currentUser];
     userId = [userId stringByReplacingOccurrencesOfString:@"#" withString:@"-"];
-    NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://eu.battle.net/api/d3/profile/%@/hero/%d", userId, _heroIndex]]];
+    NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://eu.battle.net/api/d3/profile/%@/hero/%@", userId, _heroIndex]]];
 
 }
 

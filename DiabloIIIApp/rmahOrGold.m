@@ -70,7 +70,22 @@ NSString *currency = @"$";
     bar.field = nil;
     bar.index = -1;
     [self hideAmountRow];
+    [_priceInGold addTarget:self action:@selector(textFieldDidChange) forControlEvents:UIControlEventEditingChanged];
+
     self.view.backgroundColor = [UIColor clearColor];
+}
+
+- (void) textFieldDidChange {
+    NSNumberFormatter *decimal = [[NSNumberFormatter alloc] init];
+    [decimal setNumberStyle:NSNumberFormatterNoStyle];
+    
+    NSString *s = [_priceInGold.text stringByReplacingOccurrencesOfString:@"," withString:@""];
+    s = [s stringByReplacingOccurrencesOfString:@" " withString:@""];
+    s = [s stringByReplacingOccurrencesOfString:@"." withString:@""];
+    NSNumber *n = [decimal numberFromString:s];
+    [decimal setNumberStyle:NSNumberFormatterDecimalStyle];
+    s = [decimal stringFromNumber:n];
+    _priceInGold.text = s;
 }
 
 - (void) barFields : (BOOL) all {

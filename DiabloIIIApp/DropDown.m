@@ -28,8 +28,15 @@ NSMutableArray *stringArray;
         
         text = [[UITextField alloc]  initWithFrame:CGRectMake(0, 0, 100, 25)];
         [text setEnabled:NO];
-        [text setBackground:[UIImage imageNamed:@"images.jpeg"]];
+        
+      //  [text setBackground:[UIImage imageNamed:@"images.jpeg"]];
+        [text setBorderStyle:UITextBorderStyleLine];
         [text addTarget:self action:@selector(selectItem) forControlEvents:UIControlEventValueChanged];
+        [text setTextColor:[UIColor colorWithRed:(139.0f/225.0f) green:(69.0f/225.0f) blue:(19.0f/225.0f) alpha:1.0f]];
+        [text setFont:[UIFont fontWithName:@"Gill Sans" size:18.0]];
+        [text setTextAlignment:NSTextAlignmentCenter];
+
+        [text setText:@"Select"];
 
         [self addSubview:text];
         

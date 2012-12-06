@@ -132,7 +132,8 @@ NSDictionary* json;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
     Equipment *next = [segue destinationViewController];
-    next.heroIndex = [_tableView indexPathForCell:sender].row + 1;
+    NSDictionary *hero = [heroList objectAtIndex:[_tableView indexPathForCell:sender].row];
+    next.heroIndex = [hero objectForKey:@"id"];
 }
 
 

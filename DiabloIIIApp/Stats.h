@@ -10,5 +10,5 @@
 
 @interface Stats : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *tmp;
-@property int heroIndex;
+@property NSString* heroIndex;
 @end
